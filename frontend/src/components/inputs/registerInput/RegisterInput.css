@@ -1,0 +1,7 @@
+.input_error_border {
+  border-color: red !important;
+}
+.err_message {
+  color: red;
+  font-weight: 700;
+}

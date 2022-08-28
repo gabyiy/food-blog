@@ -1,0 +1,54 @@
+.image_login {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://www.tastingtable.com/img/gallery/classic-broccoli-cheddar-soup/l-intro-1653325397.jpg")
+    center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_form {
+  height: 200px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputOneAndTwo {
+  margin: 10px 0;
+  padding: 10px;
+  min-width: 300px;
+  text-align: center;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+}
+.inputOneAndTwo:focus {
+  border-color: green;
+}
+.btn_login {
+  width: 100%;
+  height: 50px;
+  font-style: 17px;
+  font-weight: 700;
+  user-select: none;
+}
+.forgot_password {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.forgot_password:hover {
+  text-decoration: underline;
+}

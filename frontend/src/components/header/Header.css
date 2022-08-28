@@ -1,0 +1,54 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 0rem 1rem;
+}
+.main_div {
+  width: 86rem;
+  align-self: center;
+  padding: 0;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: 600;
+  font-size: 300%;
+  cursor: pointer;
+  color: rgba(114, 63, 95, 0.9) !important;
+  text-decoration: none !important;
+}
+
+.logo:hover {
+  color: #fcb900 !important;
+}
+.active {
+  border-bottom: 3px solid rgba(114, 63, 95, 0.9);
+  border-radius: 0;
+  height: 69px;
+  transform: translateX(0);
+}
+
+.dropdown {
+  padding-top: 1.5rem;
+  background-color: white;
+  font-weight: 400;
+}
+.dropdown-toggle {
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: 700;
+}
+.border_b {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.links {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 16px;
+  padding-top: 25px;
+  color: black !important;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}

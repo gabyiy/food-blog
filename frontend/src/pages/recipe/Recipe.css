@@ -1,0 +1,39 @@
+.recipeName {
+  color: rgba(114, 63, 95, 0.9);
+}
+.section1 {
+  display: flex;
+  width: auto;
+  height: 20rem;
+  background: #e6e6e6;
+  justify-content: center;
+  height: fit-content;
+
+}
+.mainDiv{
+  display: flex;
+  width: 90rem;
+  align-items: center;
+
+}
+
+.imgFeatures{
+  padding-right: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.recipeImg {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+}
+.featuredLink{
+  margin-top: 1rem;
+
+  text-align: center;
+}
+.recipeName{
+  font-size: 3rem;
+ font-weight: 700;
+}

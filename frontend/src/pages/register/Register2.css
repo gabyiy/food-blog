@@ -1,0 +1,119 @@
+.page_blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.768);
+}
+.main_register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: fit-content;
+  color: #050505;
+  padding: 15px;
+
+  background: url("https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F5f7f5bd6-6fc7-11e8-b8aa-6e92c706c88b.jpg?crop=2143%2C1205%2C54%2C192")
+    center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.register_header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e6eb;
+  align-items: center;
+}
+.header {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+.header span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.register_form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.reg_line {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 7px 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.input_wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.input_wrap input {
+  height: 50px;
+  font-size: 17px;
+  outline: none;
+  border: 1px solid #e4e6eb;
+  padding-left: 10px;
+}
+
+.register_input_wrap input {
+  width: 100% !important;
+  background: transparent;
+}
+
+.wrap_input input {
+  width: 370px;
+  height: 50px;
+  font-size: 17px;
+  outline: none;
+  border: 1px solid #e4e6eb;
+  padding-left: 10px;
+  background: #f0f2f5;
+
+  outline: none;
+}
+
+.reg_btn_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+}
+
+.btn_register {
+  border: none;
+  outline: none;
+  background: var (--blue-color);
+  padding: 8.5px 12px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 600;
+  font-style: 14px;
+  background: rgba(114, 63, 95, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  width: 70%;
+}
