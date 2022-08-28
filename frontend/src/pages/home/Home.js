@@ -47,7 +47,7 @@ const Home = () => {
         <section>
           <div className="intro">
             <div>
-              <span className="left_text">Simple recipes made for</span>
+              <span className="left_text">Simple recipes made for you</span>
             </div>
             <div>
               <sapn className="rigth_text">real, actual, everyday life</sapn>
