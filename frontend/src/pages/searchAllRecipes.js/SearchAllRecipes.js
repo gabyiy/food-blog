@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 };
 
 const SearchAllRecipes = () => {
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState('');
   const [limit, setLimit] = useState(4);
 
   const [{ error, loading, recipes }, dispach] = useReducer(reducer, {
@@ -37,26 +37,25 @@ const SearchAllRecipes = () => {
       }
     };
     fetchRecipes();
-   
   }, [page, error]);
 
   console.log(recipes);
   return (
     <div>
-   {loading ? (
-            <LoadingBox></LoadingBox>
-          ) : error ? (
-            <h1>{error}</h1>
-          ) : (
-            <div>
-            {recipes.map((recipe)=>(
-<h1>{recipe.name}</h1>
-            ))}
- </div>
-          )}
-          <button onClick={()=>setPage( 1 + page)}>+</button>
-          <button onClick={()=>setPage( page ===0? 0:page- 1)}>-</button>
-
+      {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <h1>{error}</h1>
+      ) : (
+        <div>
+          {recipes.map((recipe) => (
+            <h1>{recipe.name}</h1>
+          ))}
+        </div>
+      )}
+      <button onClick={() =>recipes.length===1?setPage(page) :setPage(1 + page)}>+</button>
+      <button onClick={() => setPage(page ===0 ? 0 : page - 1)}>-</button>
+      
     </div>
   );
 };
