@@ -54,7 +54,7 @@ const SearchAllRecipes = () => {
         </div>
       )}
       <button onClick={() =>recipes.length===1?setPage(page) :setPage(1 + page)}>+</button>
-      <button onClick={() => setPage(page ===0 ? 0 : page - 1)}>-</button>
+      <button onClick={() => setPage(page ===0 ? page===0 : page - 1)}>-</button>
       
     </div>
   );
