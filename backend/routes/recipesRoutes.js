@@ -42,6 +42,8 @@ function paginatedResults(model) {
   }
 }
 
+
+
 recipeRouter.get("/getAllRecipes",paginatedResults(Recipe),(req,res)=>{
  
   res.send(res.paginatedResults)
@@ -138,4 +140,35 @@ recipeRouter.get(
 );
 
 
+
+
+recipeRouter.post(
+  '/:id/reviews',
+
+  expressAsyncHandler(async (req, res) => {
+    const recipeId = req.params._id;
+    const recipe = await Recipe.findById(recipeId);
+    if (recipe) {
+      // if (recipe.reviews.find((x) => x.name === req.user.name)) {
+      //   return res
+      //     .status(400)
+      //     .send({ message: 'You already submitted a review' });
+      // }
+      const review = {
+        name: req.body.name,
+        comment: req.body.comment,
+      };
+      recipe.reviews.push(review);
+      recipe.numReviews = recipe.reviews.length;
+     
+      const updateRecipe = await recipe.save();
+      res.status(201).send({
+        message: 'Review Created',
+        review: updateRecipe.reviews[updateRecipe.reviews.length - 1],
+      });
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  })
+);
 export default recipeRouter;
