@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import User from "./models/userModel.js";
 
 export const generateToken = (user) => {
   return jwt.sign(
@@ -14,3 +15,6 @@ export const generateToken = (user) => {
     }
   );
 };
+
+
+

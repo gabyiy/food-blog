@@ -60,7 +60,7 @@ const Header = () => {
             {userInfo ? (
               <div className="dropdown ">
                 <button
-                  class="btn  dropdown-toggle"
+                  className="btn  dropdown-toggle"
                   type="button"
                   id="dropdownMenu2"
                   data-bs-toggle="dropdown"
@@ -68,10 +68,10 @@ const Header = () => {
                 >
                   {userInfo.name}
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li>
                     <button
-                      class="dropdown-item"
+                      className="dropdown-item"
                       type="button"
                       onClick={signoutHandler}
                     >
@@ -80,13 +80,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to="/userProfile">
-                      <button class="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button">
                         Profile
                       </button>
                     </Link>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
+                    <button className="dropdown-item" type="button">
                       Something else here
                     </button>
                   </li>

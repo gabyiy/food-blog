@@ -2,7 +2,7 @@ import express from "express";
 import bcrypt from "bcryptjs";
 import expressAsyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
-import { generateToken } from "../utils.js";
+import {  generateToken } from "../utils.js";
 
 
 const userRouter = express.Router();
@@ -28,7 +28,6 @@ userRouter.post(
   })
 );
 
-export default userRouter;
 
 userRouter.post(
   "/signup",
@@ -48,3 +47,15 @@ userRouter.post(
     });
   })
 );
+userRouter.put("/emailCheck",expressAsyncHandler(async(req,res)=>{
+const {email}=req.body.email
+const user = await User.findOne({email})
+if(!user){
+  res.status(400).send({message:"This email is not register"})
+
+  const ac_token= createToken.access({id:user._id})
+}
+}))
+
+
+export default userRouter;

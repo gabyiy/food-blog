@@ -40,8 +40,8 @@ const SearchAllRecipes = () => {
     fetchRecipes();
   }, [page, error,limit]);
 
-  console.log(recipes);
-  console.log(page);
+ 
+
   return (
     <div>
       {loading ? (
@@ -50,8 +50,8 @@ const SearchAllRecipes = () => {
         <h1>{error}</h1>
       ) : (
         <div>
-          {recipes.map((recipe) => (
-            <h1>{recipe.name}</h1>
+          {recipes.map((recipe,i) => (
+            <h1 key={i}>{recipe.name}</h1>
           ))}
         </div>
       )}

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import LoadingBox from "../../components/LoadingBox";
 import { Store } from "../../Store";
@@ -7,6 +7,8 @@ import MessageBox from '../../components/messageBox/MessageBox.js';
 
 
 const reducer = (state, action) => {
+
+  const navigate = useNavigate
 
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -22,12 +24,13 @@ const reducer = (state, action) => {
 
 const HowToMakeRecipe = () => {
 
-  
+  const navigate = useNavigate()
   const { state } = useContext(Store);
   const { userInfo } = state;
 
   const [comment,setComment]=useState("")
 const[name,setName]=useState("")
+const [refresh,setRefresh]=useState(false)
 
 const[recipes,setRecipes]=useState([])
   const params = useParams();
@@ -53,8 +56,9 @@ const[recipes,setRecipes]=useState([])
       }
     };
     fetchMainRecipe();
-
   }, [_id,error]);
+
+
 
 const submitHandler= async(e)=>{
   e.preventDefault()
@@ -65,8 +69,10 @@ comment,name
   }catch(err){
 
   }
+  
 }
-console.log(recipe._id,recipe.reviews);
+
+console.log(recipe._id);
 
   return (
     <div>
@@ -101,7 +107,11 @@ console.log(recipe._id,recipe.reviews);
 </div>
 <div>
   <textarea value={comment} onChange={(e)=>setComment(e.target.value)}></textarea>
+  
+  <button type="submit">Post comment</button>
+  
 </div>
+
             </form>
             :<div>You need to login to leave a cmment</div>}
           </li>
@@ -115,7 +125,3 @@ console.log(recipe._id,recipe.reviews);
 
 export default HowToMakeRecipe;
 
- {/* <div>
-     
-      </div>
-   */}
