@@ -54,7 +54,7 @@ const[recipes,setRecipes]=useState([])
     };
     fetchMainRecipe();
 
-  }, [_id]);
+  }, [_id,error]);
 
 const submitHandler= async(e)=>{
   e.preventDefault()

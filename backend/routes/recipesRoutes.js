@@ -145,9 +145,11 @@ recipeRouter.get(
 recipeRouter.post(
   '/:id/reviews',
 
-  expressAsyncHandler(async (req, res) => {
-    const recipeId = req.params._id;
+  expressAsyncHandler(async (req, res) => {  
+    const recipeId = req.params.id;
+
     const recipe = await Recipe.findById(recipeId);
+    
     if (recipe) {
       // if (recipe.reviews.find((x) => x.name === req.user.name)) {
       //   return res
@@ -167,7 +169,7 @@ recipeRouter.post(
         review: updateRecipe.reviews[updateRecipe.reviews.length - 1],
       });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Recipe Not Found' });
     }
   })
 );
