@@ -27,7 +27,7 @@ const HowToMakeRecipe = () => {
   const { userInfo } = state;
 
   const [comment,setComment]=useState("")
-const[name,setName]=useState(userInfo.name)
+const[name,setName]=useState("")
 
 const[recipes,setRecipes]=useState([])
   const params = useParams();
@@ -47,11 +47,13 @@ const[recipes,setRecipes]=useState([])
         dispach({ type: "FETCH_REQUEST" });
         const result = await axios.get(`/api/recipes/makeRecipe/${_id}`);
         dispach({ type: "FETCH_SUCCESS", payload: result.data });
+        setName(userInfo.name)
       } catch (error) {
         dispach({ type: "FETCH_FAIL", payload: error.data });
       }
     };
     fetchMainRecipe();
+
   }, [_id]);
 
 const submitHandler= async(e)=>{
