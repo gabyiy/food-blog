@@ -92,7 +92,7 @@ console.log(recipe._id,recipe.reviews);
            </li> 
           ))}
           <li>
-            {userInfo?
+            {name?
             <form onSubmit={submitHandler}>
 <div>
   <h2>Write a comment</h2>
