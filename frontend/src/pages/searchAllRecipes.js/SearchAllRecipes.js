@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 };
 
 const SearchAllRecipes = () => {
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState("1");
   const [limit, setLimit] = useState(4);
 
   const [{ error, loading, recipes }, dispach] = useReducer(reducer, {
@@ -28,6 +28,7 @@ const SearchAllRecipes = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
+
         const { data } = await axios.get(
           `/api/recipes/getAllRecipes?page=${page}&limit=${limit}`
         );
@@ -37,9 +38,10 @@ const SearchAllRecipes = () => {
       }
     };
     fetchRecipes();
-  }, [page, error]);
+  }, [page, error,limit]);
 
   console.log(recipes);
+  console.log(page);
   return (
     <div>
       {loading ? (
@@ -53,8 +55,8 @@ const SearchAllRecipes = () => {
           ))}
         </div>
       )}
-      <button onClick={() =>recipes.length===1?setPage(page) :setPage(1 + page)}>+</button>
-      <button onClick={() => setPage(page ===0 ? page===0 : page - 1)}>-</button>
+      <button onClick={() =>recipes.length==4?setPage(Number(page) +1) :setPage( +1)}>+</button>
+      <button onClick={() => setPage(page ==1 ?  page ==1: page - 1)}>-</button>
       
     </div>
   );
