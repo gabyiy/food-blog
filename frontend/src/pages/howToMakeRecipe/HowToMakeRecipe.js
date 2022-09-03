@@ -101,7 +101,7 @@ console.log(recipe._id,recipe.reviews);
   <textarea value={comment} onChange={(e)=>setComment(e.target.value)}></textarea>
 </div>
             </form>
-            :<div>You need to login to leave a comment</div>}
+            :<div>You need to login to leave a cmment</div>}
           </li>
         </ul>
   </div>
