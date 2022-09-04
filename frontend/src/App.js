@@ -12,6 +12,7 @@ import HowToMakeRecipe from "./pages/howToMakeRecipe/HowToMakeRecipe";
 import SearchScreen from "./pages/searchScreen/SearchScreen";
 import SearchAllRecipes from "./pages/searchAllRecipes.js/SearchAllRecipes";
 import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
+import ResetPassword from "./pages/resetPassword/ResetPassword";
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path='search' element={<SearchScreen/>}/>
-          <Route path="/reset" element={<RecoverPassword/>}/>
+          <Route path="/recover" element={<RecoverPassword/>}/>
+          <Route path="reset" element={<ResetPassword/>}/>
 <Route path="/searchAll" element={ <SearchAllRecipes/>}/>
         </Routes>
       </div>
