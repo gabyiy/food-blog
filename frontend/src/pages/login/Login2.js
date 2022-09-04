@@ -40,7 +40,7 @@ const Login2 = () => {
         <div className="register_header">
           <div className="header">
             <Link to="/">
-              <span>x</span>
+              <span>z</span>
             </Link>
           </div>
           <h1>Login</h1>
