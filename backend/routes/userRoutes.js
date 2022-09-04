@@ -67,7 +67,7 @@ userRouter.post(
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "gabyiy2000@hotmail.com",
+          user: "adarsh438tcsckandivali@gmail.com",
           pass: "rmdklolcsmswvyfw",
         },
       });
