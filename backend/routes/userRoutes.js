@@ -51,9 +51,7 @@ userRouter.post(
 userRouter.post(
   '/forgot-password',
   expressAsyncHandler(async (req, res) => {
-    const { email } = req.body
-
-    console.log(email);
+    const { email } = req.body;
     try {
       const oldUser = await User.findOne({ email });
       if (!oldUser) {
@@ -65,7 +63,7 @@ userRouter.post(
         secret,
         { expiresIn: '5m' }
       );
-      const link = `https://food-blog-gabi.herokuapp.com/api/users/reset-password/${oldUser._id}/${token}`;
+      const link = `http://localhost:5000/api/users/reset-password/${oldUser._id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
