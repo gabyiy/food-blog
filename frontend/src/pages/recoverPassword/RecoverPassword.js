@@ -15,7 +15,7 @@ const RecoverPassword = () => {
     )
     setKey(data)
   }
-  console.log(key);
+  console.log(email);
   return (
     <div>
       <form onSubmit={submitHandler}>

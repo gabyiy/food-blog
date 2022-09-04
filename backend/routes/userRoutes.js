@@ -52,6 +52,8 @@ userRouter.post(
   '/forgot-password',
   expressAsyncHandler(async (req, res) => {
     const { email } = req.body.email;
+
+    console.log(email);
     try {
       const oldUser = await User.findOne({ email });
       if (!oldUser) {
