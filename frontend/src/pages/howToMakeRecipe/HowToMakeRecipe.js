@@ -56,7 +56,7 @@ const[recipes,setRecipes]=useState([])
       }
     };
     fetchMainRecipe();
-  }, [_id,error]);
+  }, [_id,error,refresh]);
 
 
 
@@ -66,13 +66,13 @@ const submitHandler= async(e)=>{
 const{ data }=await axios.post(`/api/recipes/${_id}/reviews`,{
 comment,name
 })
+setRefresh(refresh=>!refresh)
   }catch(err){
 
   }
-  
+  setComment("")
 }
 
-console.log(recipe._id);
 
   return (
     <div>

@@ -41,7 +41,6 @@ const Home = () => {
     };
     fetchMainRecipe();
   }, []);
-  console.log(recipes);
   return (
     <>
       <main className="main">
