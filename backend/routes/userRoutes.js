@@ -51,7 +51,7 @@ userRouter.post(
 userRouter.post(
   '/forgot-password',
   expressAsyncHandler(async (req, res) => {
-    const { email } = req.body.email;
+    const { email } = req.body
 
     console.log(email);
     try {
