@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import HowToMakeRecipe from "./pages/howToMakeRecipe/HowToMakeRecipe";
 import SearchScreen from "./pages/searchScreen/SearchScreen";
 import SearchAllRecipes from "./pages/searchAllRecipes.js/SearchAllRecipes";
+import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path='search' element={<SearchScreen/>}/>
+          <Route path="/reset" element={<RecoverPassword/>}/>
 <Route path="/searchAll" element={ <SearchAllRecipes/>}/>
         </Routes>
       </div>

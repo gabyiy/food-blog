@@ -5,11 +5,15 @@ import path from "path"
 import seedRouter from './routes/seedRoutes.js';
 import recipeRouter from './routes/recipesRoutes.js';
 import userRouter from './routes/userRoutes.js';
+import nodemailer from "nodemailer"
+
 
 dotenv.config();
 const app = express();
 //ca sa ne citeasca rutele din postman trebuie sa folosim  exress.json
 app.use(express.json());
+app.set("view engine","ejs")
+app.use(express.urlencoded({extended:false}))
 
 mongoose
   .connect(process.env.MONGODB_URI)
