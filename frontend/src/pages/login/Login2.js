@@ -40,7 +40,7 @@ const Login2 = () => {
         <div className="register_header">
           <div className="header">
             <Link to="/">
-              <span>z</span>
+              <span>x</span>
             </Link>
           </div>
           <h1>Login</h1>
@@ -74,6 +74,9 @@ const Login2 = () => {
             </button>
           </div>
         </form>
+        <Link to="/reset">
+        <p>Recover Password</p>
+        </Link>
       </div>
     </div>
   );
