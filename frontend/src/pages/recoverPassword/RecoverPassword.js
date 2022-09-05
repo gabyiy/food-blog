@@ -47,7 +47,6 @@ const RecoverPassword = () => {
   };
 
   // console.log(user.token);
-  console.log(userReset);
   return (
     <div>
       <form onSubmit={submitHandler}>
