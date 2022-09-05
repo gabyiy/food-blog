@@ -1,22 +1,29 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
+import { toast } from "react-toastify";
 import { Store } from "../../Store";
+import { getError } from "../../utils";
 
 const ResetPassword = () => {
   const { state } = useContext(Store);
   const { userReset } = state;
   const [newPassword, setNewPassword] = useState("");
-
+  const [confirmNewPassword,setconfirmNewPassword]= useState("")
+  
   console.log(userReset);
   const submitHandler = async (e) => {
     e.preventDefault();
-
+try{
     const { data } = await axios.post(
       `/api/users/reset-password/${userReset.oldUser._id}/${userReset.token}`,
       {
         newPassword,
+        confirmNewPassword
       }
     );
+}catch(err){
+  toast.error(getError(err))
+}
   };
   return (
     <div>
@@ -34,6 +41,7 @@ const ResetPassword = () => {
           name="confirm-password"
           id="confirm-password"
           placeholder="confirm-password"
+          onChange={(e)=>setconfirmNewPassword(e.target.value)}
         />
         <br />
         <button type="submit" value="submit">

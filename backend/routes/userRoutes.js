@@ -4,8 +4,8 @@ import expressAsyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import { generateToken } from "../utils.js";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import e from "express";
 
 const userRouter = express.Router();
 
@@ -51,12 +51,14 @@ userRouter.post(
 userRouter.post(
   "/forgot-password",
   expressAsyncHandler(async (req, res) => {
-    const { email } = req.body;
-    try {
+    const  email  = req.body.email
+
       const oldUser = await User.findOne({ email });
-      if (!oldUser) {
-        return res.send({ message: "User don exist" });
-      }
+      console.log(oldUser);  
+      if (oldUser.email !==email) {
+         res.status(500).send({ message: "User dont exist" }); 
+      }else{
+
       const secret = process.env.JWT_SECRET + oldUser.password;
       const token = jwt.sign(
         { email: oldUser.email, id: oldUser._id },
@@ -73,7 +75,7 @@ userRouter.post(
       });
 
       var mailOptions = {
-        from: "youremail@gmail.com",
+        from: "food@blog.com",
         to: "gabyiy2000@hotmail.com",
         subject: "Password Reset",
         text: link,
@@ -87,11 +89,11 @@ userRouter.post(
         }
       });
       res.send({ oldUser, token });
-    } catch (err) {}
+    }
   })
 );
 
-userRouter.get("/reset-password/:id/:token", async (req, res) => {
+userRouter.get("/reset-password/:id/:token",expressAsyncHandler( async (req, res) => {
   const { id, token } = req.params;
   const oldUser = await User.findOne({ _id: id });
   if (!oldUser) {
@@ -105,37 +107,38 @@ userRouter.get("/reset-password/:id/:token", async (req, res) => {
     console.log(error);
     res.send("Not Verified");
   }
-});
+}));
 
-userRouter.post("/reset-password/:id/:token", async (req, res) => {
+userRouter.post("/reset-password/:id/:token",expressAsyncHandler( async (req, res) => {
   const { id, token } = req.params;
-  const password = req.body;
+  const password = req.body.newPassword
+  const confirmPassword= req.body.confirmNewPassword
+  
 
-  console.log(password);
 
   const oldUser = await User.findOne({ _id: id });
   if (!oldUser) {
     return res.json({ status: "User Not Exists!!" });
   }
   const secret = process.env.JWT_SECRET + oldUser.password;
-  try {
     const verify = jwt.verify(token, secret);
-    const encryptedPassword = await bcrypt.hash(password, 10);
+    if(password==confirmPassword){
     await User.updateOne(
       {
         _id: id,
       },
       {
         $set: {
-          password: encryptedPassword,
+          password:  bcrypt.hashSync( req.body.newPassword),
         },
       }
     );
-    res.send("all good");
-    //   res.render("index", { email: verify.email, status: "verified" });
-  } catch (err) {
-    res.send({ message: "Somthing went wrong" });
-  }
-});
+    }else{
+   
+ 
+    res.status(404).send({ message: "Password dont match" });
+  
+    }
+}));
 
 export default userRouter;

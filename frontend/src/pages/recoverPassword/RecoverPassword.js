@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useState, useReducer, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { Store } from "../../Store";
+import { getError } from "../../utils";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,6 +18,7 @@ const reducer = (state, action) => {
   }
 };
 const RecoverPassword = () => {
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [key, setKey] = useState("");
@@ -37,7 +40,10 @@ const RecoverPassword = () => {
       dispach({ type: "FETCH_SUCCESS", payload: data });
       ctxDispatch({ type: "USER_RESET", payload: data });
       localStorage.setItem("userReset", JSON.stringify(data));
-    } catch (err) {}
+      navigate("/")
+    } catch (err) {
+      toast.error(getError(err))
+    }
   };
 
   // console.log(user.token);

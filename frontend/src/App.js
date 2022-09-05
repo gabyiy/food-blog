@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path="search" element={<SearchScreen />} />
           <Route path="/recover" element={<RecoverPassword />} />
-          {!userReset ? (
+          {userReset ? (
             ""
           ) : (
             <Route
