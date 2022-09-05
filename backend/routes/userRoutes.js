@@ -54,10 +54,10 @@ userRouter.post(
     const  email  = req.body.email
 
       const oldUser = await User.findOne({ email });
-      console.log(oldUser);  
-      if (oldUser.email !==email) {
+
+      if (oldUser==null) {
          res.status(500).send({ message: "User dont exist" }); 
-      }else{
+      }else{  
 
       const secret = process.env.JWT_SECRET + oldUser.password;
       const token = jwt.sign(

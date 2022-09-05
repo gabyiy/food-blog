@@ -17,7 +17,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-const RecoverPassword = () => {
+const RecoverPassword = () => {  
 
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
