@@ -74,7 +74,7 @@ const Login2 = () => {
             </button>
           </div>
         </form>
-        <Link to="/reset">
+        <Link to="/recover">
         <p>Recover Password</p>
         </Link>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
@@ -13,8 +13,13 @@ import SearchScreen from "./pages/searchScreen/SearchScreen";
 import SearchAllRecipes from "./pages/searchAllRecipes.js/SearchAllRecipes";
 import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
+import { Store } from "./Store";
 
 const App = () => {
+  const { state } = useContext(Store);
+  const { userReset } = state;
+
+  console.log(userReset);
   return (
     <BrowserRouter>
       <div className="app">
@@ -28,10 +33,18 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
-          <Route path='search' element={<SearchScreen/>}/>
-          <Route path="/recover" element={<RecoverPassword/>}/>
-          <Route path="reset" element={<ResetPassword/>}/>
-<Route path="/searchAll" element={ <SearchAllRecipes/>}/>
+          <Route path="search" element={<SearchScreen />} />
+          <Route path="/recover" element={<RecoverPassword />} />
+          {!userReset ? (
+            ""
+          ) : (
+            <Route
+              path={`/reset-password/${userReset.oldUser._id}/${userReset.token}`}
+              element={<ResetPassword />}
+            />
+          )}
+
+          <Route path="/searchAll" element={<SearchAllRecipes />} />
         </Routes>
       </div>
     </BrowserRouter>

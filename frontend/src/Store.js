@@ -6,6 +6,9 @@ const initialState = {
   userInfo: localStorage.getItem("userInfo")
     ? JSON.parse(localStorage.getItem("userInfo"))
     : null,
+  userReset: localStorage.getItem("userReset")
+    ? JSON.parse(localStorage.getItem("userReset"))
+    : null,
 };
 
 function reducer(state, action) {
@@ -14,8 +17,10 @@ function reducer(state, action) {
       return { ...state, userInfo: action.payload };
     case "USER_SIGNOUT":
       return { ...state, userInfo: null };
-      default:
-   return   state
+    case "USER_RESET":
+      return { ...state, userReset: action.payload };
+    default:
+      return state;
   }
 }
 export function StoreProvider(props) {
