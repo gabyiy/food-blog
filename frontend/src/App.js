@@ -19,6 +19,8 @@ const App = () => {
   const { state } = useContext(Store);
   const { userReset } = state;
 
+
+  console.log(userReset);
   return (
     <BrowserRouter>
       <div className="app">
