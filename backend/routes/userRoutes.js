@@ -60,12 +60,8 @@ userRouter.post(
       }else{  
 
       const secret = process.env.JWT_SECRET + oldUser.password;
-      const token = jwt.sign(
-        { email: oldUser.email, id: oldUser._id },
-        secret,
-        { expiresIn: "5m" }
-      );
-      const link = `http://localhost:3000/reset-password/${oldUser._id}/${token}`;
+    
+      const link = `http://localhost:3000/reset-password/${oldUser._id}/${oldUser.token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
