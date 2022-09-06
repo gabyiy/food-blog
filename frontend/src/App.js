@@ -20,7 +20,7 @@ const App = () => {
   const { userReset } = state;
 
 
-  //console.log(userReset);
+  console.log(userReset.oldUser._id);
   return (
     <BrowserRouter>
       <div className="app">
