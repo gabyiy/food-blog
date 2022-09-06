@@ -65,7 +65,7 @@ userRouter.post(
         secret,
         { expiresIn: "5m" }
       );
-      const link = `https://food-blog-gabi.herokuapp.com/reset-password/${oldUser._id}`;
+      const link = `https://food-blog-gabi.herokuapp.com/reset-password`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {

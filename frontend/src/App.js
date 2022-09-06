@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/recover" element={<RecoverPassword />} />
      
             <Route
-              path={`/reset-password/${userReset.oldUser._id}`}
+              path={`/reset-password`}
               element={<ResetPassword />}
             />
           
