@@ -60,8 +60,9 @@ userRouter.post(
       }else{  
 
       const secret = process.env.JWT_SECRET + oldUser.password;
-    
-      const link = `http://localhost:3000/reset-password/${oldUser._id}/${oldUser.token}`;
+     
+  
+      const link = `https://food-blog-gabi.herokuapp.com/reset-password/${oldUser._id}/${olduser.token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
