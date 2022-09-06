@@ -53,9 +53,9 @@ const RecoverPassword = () => {
         <input onChange={(e) => setEmail(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      {/* <Link to={`/reset-password/${user.oldUser._id}/${user.token}`}>
+     * <Link to={`/reset-password`}>
         <h1>Res</h1>
-      </Link> */}
+      </Link> 
     </div>
   );
 };
