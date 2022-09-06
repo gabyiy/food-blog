@@ -20,6 +20,7 @@ const App = () => {
   const { userReset } = state;
 
 
+  //console.log(userReset);
   return (
     <BrowserRouter>
       <div className="app">
@@ -37,7 +38,7 @@ const App = () => {
           <Route path="/recover" element={<RecoverPassword />} />
      
             <Route
-              path={`/reset-password`}
+              path={`/reset-password/${userReset.oldUser._id}/${userReset.token}`}
               element={<ResetPassword />}
             />
           
