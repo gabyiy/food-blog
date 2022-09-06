@@ -59,14 +59,13 @@ userRouter.post(
          res.status(500).send({ message: "User dont exist" }); 
       }else{  
 
-        console.log(oldUser);
       const secret = process.env.JWT_SECRET + oldUser.password;
       const token = jwt.sign(
         { email: oldUser.email, id: oldUser._id },
         secret,
         { expiresIn: "5m" }
       );
-      const link = `http://localhost:3000/reset-password/${oldUser._id}`;
+      const link = `https://food-blog-gabi.herokuapp.com/reset-password/${oldUser._id}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
