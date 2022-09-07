@@ -16,8 +16,8 @@ import ResetPassword from "./pages/resetPassword/ResetPassword";
 import { Store } from "./Store";
 
 const App = () => {
-  // const { state } = useContext(Store);
-  // const { userReset } = state;
+  const { state } = useContext(Store);
+  const { userReset } = state;
 
 
   //console.log(userReset);
@@ -36,12 +36,12 @@ const App = () => {
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path="search" element={<SearchScreen />} />
           <Route path="/recover" element={<RecoverPassword />} />
-     
+     {!userReset?"":
             <Route
-              path={`/reset-password`}
+              path={`/reset-password/${userReset.oldUser._id}/${userReset.token}`}
               element={<ResetPassword />}
             />
-          
+     }
 
           <Route path="/searchAll" element={<SearchAllRecipes />} />
         </Routes>
