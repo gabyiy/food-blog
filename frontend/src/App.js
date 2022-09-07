@@ -16,8 +16,8 @@ import ResetPassword from "./pages/resetPassword/ResetPassword";
 import { Store } from "./Store";
 
 const App = () => {
-  const { state } = useContext(Store);
-  const { userReset } = state;
+  // const { state } = useContext(Store);
+  // const { userReset } = state;
 
 
   //console.log(userReset);
@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/recover" element={<RecoverPassword />} />
      
             <Route
-              path={`/reset-password/${userReset.oldUser._id}/${userReset.token}`}
+              path={`/reset-password`}
               element={<ResetPassword />}
             />
           
