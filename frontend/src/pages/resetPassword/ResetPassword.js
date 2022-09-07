@@ -44,7 +44,7 @@ try{
         />
         <br />
         <button type="submit" value="submit">
-          Push
+          Reset
         </button>
       </form>
     </div>
