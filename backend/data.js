@@ -308,27 +308,37 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       featured: `griled sausage and peppers with garlic aioli`,
       recipeDetails: [
         {
-          firstTextFirstImg: "",
+          firstTextFirstImg:
+            "Grilled Sausages, plus onions and peppers, all grilled and juicy and tucked into a toasted (but still fluffy) brioche bun swizzled with a punchy little aioli to tie it all up. SO GOOD.",
           secondTextFirstImg: "",
           thirdTextFirstImg: "",
-          firstImg: "",
-          firstTextSecondImg: "",
-          secondTextSecondImg: "",
-          thirdTextSecondImg: "",
-          secondImg: "",
+          firstImg:
+            "https://pinchofyum.com/wp-content/uploads/Sausage-and-Peppers-6.jpg",
+          firstTextSecondImg:
+            "Let me just roll this out: Italian Chicken Sausages, plus onions and peppers, all grilled and juicy and tucked into a toasted (but still fluffy) brioche bun swizzled with a punchy little aioli to tie it all up. ",
+          secondTextSecondImg: "Is it summer? I think it is almost summer.",
+          thirdTextSecondImg:
+            "I’m sending my greetings from the land where the sun now shines and grilling for dinner has once again become an option! I hope this is true for most if not all of us?! Because nothing makes quarantine life a little more exciting than taking the kitchen operations OUTSIDE. Trees. Birds. Concrete.",
+          secondImg:
+            "https://pinchofyum.com/wp-content/uploads/Sausage-and-Peppers-7.jpg",
           firstYoutubeText: "",
           secondYoutubeTxt: "",
           youtubeDescription: "",
           youtubeLink: "",
-          makingTime: "",
-          yeld: "",
-          makingDescription: "",
-          firstIngredient: "",
-          secondIngredient: "",
-          thirdIngredient: "",
-          fifthIngredient: "",
-          sixtIngredient: "",
-          sevenIngredient: "",
+          makingTime: "30 min",
+          yeld: "4",
+          makingDescription: `
+
+          Grilled Sausages, plus onions and peppers, all grilled and juicy and tucked into a toasted (but still fluffy) brioche bun swizzled with a punchy little aioli to tie it all up. SO GOOD.
+          `,
+          firstIngredient:
+            "1 package Never Any! Mild Italian Style Chicken Sausages (4 individual sausages)",
+          secondIngredient: "2 bell peppers, cut into slices",
+          thirdIngredient: "half of an onion, cut into slices",
+          fifthIngredient:
+            "1/2 tablespoon Stonemill Roasted Garlic Herb Grill Seasoning",
+          sixtIngredient: "olive oil, lemon juice, and salt",
+          sevenIngredient: "4 Specially Selected Brioche Hot Dog Buns",
           eigthIngrdient: " ",
           naineIngredient: "",
           tentIngredient: "",
@@ -337,11 +347,16 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
           thirtenIngredient: "",
           forteenIngredient: "",
           fifthIngredient: "",
-          firstInstruction: "",
+          firstInstruction: "Whisk aioli in a small bowl. Set aside.",
 
-          secondInstruction: "",
-          thirdInstruction: "",
-          forthInstruction: "",
+          secondInstruction:
+            "Toss peppers and onions with the garlic herb seasoning (or whatever other spices you want). Drizzle with enough oil so they won’t stick on the grill.",
+          thirdInstruction:
+            "Place sausages directly on the grill. Place peppers and onion slices in a grill basket or a cast iron pan on the grill. Grill both until you get nice grill marks and the veggies are soft. At the end of grilling time, add the brioche buns, cut side down, to get them toasty.",
+          forthInstruction:
+            "Transfer peppers to a bowl and toss with lemon juice, more olive oil as needed, and salt and pepper to taste.",
+          fifthInstruction:
+            "Serve each grilled chicken sausage on a toasted bun with a scoop of grilled peppers and a swizzle of your aioli. YUM. At our house, extra aioli was requested for certain grown-ups for “dipping,” so just be prepared for that.",
         },
       ],
     },
@@ -358,84 +373,109 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       featured: `soca with wipped feta and tomato salad`,
       recipeDetails: [
         {
-          firstTextFirstImg: "",
+          firstTextFirstImg:
+            "Socca with Whipped Feta and Tomato Salad! HELLO. Crispy, creamy, tangy, and summery all on one plate.",
           secondTextFirstImg: "",
           thirdTextFirstImg: "",
-          firstImg: "",
-          firstTextSecondImg: "",
-          secondTextSecondImg: "",
+          firstImg:
+            "https://pinchofyum.com/wp-content/uploads/Socca-with-Whipped-Feta-3.jpg",
+          firstTextSecondImg:
+            "Let’s talk about Socca first. The origin of Socca is heavily debated between France and Italy (known as Farinata there) but one thing is certain: this simple street food made with only chickpea flour, olive oil, water, and salt is the crispy rich snacker of your dreams.",
+          secondTextSecondImg:
+            "And here is how you make this meal that isn’t really a meal but also is everything a meal should be: take your piping hot freshly baked socca out of the cast iron, break it into a few crispy, chewy pieces, swoop it through a tangy dollop of herby whipped feta, and top the whole thing with a spoonful of juicy, vinegary tomato and cucumber salad on top for a crunchy finish. ",
           thirdTextSecondImg: "",
-          secondImg: "",
+          secondImg:
+            "https://pinchofyum.com/wp-content/uploads/Socca-with-Whipped-Feta-1.jpg",
           firstYoutubeText: "",
           secondYoutubeTxt: "",
           youtubeDescription: "",
           youtubeLink: "",
-          makingTime: "",
-          yeld: "",
-          makingDescription: "",
-          firstIngredient: "",
-          secondIngredient: "",
-          thirdIngredient: "",
-          fifthIngredient: "",
-          sixtIngredient: "",
-          sevenIngredient: "",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
+          makingTime: "30 minutes",
+          yeld: "2-4",
+          makingDescription: `
+
+          Socca with Whipped Feta and Tomato Salad! HELLO. Crispy, creamy, tangy, and summery all on one plate.
+          `,
+          firstIngredient: "1 cup chickpea flour (affiliate link)",
+          secondIngredient: "2 tablespoons olive oil (and extra for the pan)",
+          thirdIngredient: "3/4 teaspoon salt",
+          fifthIngredient: "1 1/4 cups water",
+          sixtIngredient: "2–3 cups cherry or grape tomatoes, halved",
+          sevenIngredient:
+            "1 cup cucumber slices (optional, but adds a nice crunch)",
+          eigthIngrdient: "1/4 cup olive oil ",
+          naineIngredient: "1–2 tablespoons white vinegar or lemon juice",
+          tentIngredient: "1 small clove garlic, grated or finely minced",
           elevenIngredient: "",
           tweleveIngredient: "",
           thirtenIngredient: "",
           forteenIngredient: "",
           fifthIngredient: "",
-          firstInstruction: "",
+          firstInstruction:
+            "Preheat oven to 450 degrees. While oven is preheating, mix up your tomato salad so it has a little time to sit together and get real yummy.",
 
-          secondInstruction: "",
-          thirdInstruction: "",
-          forthInstruction: "",
+          secondInstruction:
+            "Whisk all socca ingredients until smooth. Pour 1-2 tablespoons olive oil into a 10-inch cast iron skillet, and pop the skillet in the oven for 5 minutes to preheat. Pour half of the socca batter evenly into the pan and bake for 15-18 minutes, until golden around the edges. (Repeat with the second half of the batter.)",
+          thirdInstruction:
+            "While the socca is baking, blend the feta in a food processor or blender, or with a hand mixer, until smooth-ish. Add your cream cheese, yogurt, mascarpone, whatever you pick to help make the whole thing into a sort of fluffy, creamy sauce. Season with what you like – I love thyme, olive oil, and a little black pepper.",
+          forthInstruction:
+            "Tear off chunks of hot, crispy socca to be served / dipped / spread / topped with whipped feta and a bunch of fresh, garlicky tomato salad.",
         },
       ],
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-5-183x183.jpg",
-      name: "instant post",
+      name: "instant pot",
       description: `Was there ever a more magical tool in the land?! Here are a bunch of our faves using our most beloved little kitchen helper.`,
       featured: `instant pot hawaiian chicken tacos with halapeno ranch slaw`,
       recipeDetails: [
         {
-          firstTextFirstImg: "",
+          firstTextFirstImg: `These Instant Pot Hawaiian Chicken Tacos are out of this WORLD. Juicy pineapple and spiced chicken crisped under the broiler, tucked into tortillas, and rolled up with creamy jalapeño ranch slaw.
+            `,
           secondTextFirstImg: "",
           thirdTextFirstImg: "",
-          firstImg: "",
-          firstTextSecondImg: "",
-          secondTextSecondImg: "",
+          firstImg:
+            "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-5.jpg",
+          firstTextSecondImg:
+            "Can we just establish that my idea of a good dinner is one that starts with INSTANT POT and ends with juicy pineapple and spiced chicken crisped under the broiler, tucked into tortillas, and rolled up with creamy jalapeño ranch slaw?",
+          secondTextSecondImg:
+            "These tacos are springy, delicious, and just plain happy. Er, maybe it’s me that’s happy? And probably because throwing some pantry ingredients together, pressing start on the Instant Pot, taking my crew for a walk, and coming home to dinner almost done is almost the same as winning a million dollars. Almost.",
           thirdTextSecondImg: "",
-          secondImg: "",
+          secondImg:
+            "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-1.jpg",
           firstYoutubeText: "",
           secondYoutubeTxt: "",
           youtubeDescription: "",
           youtubeLink: "",
-          makingTime: "",
-          yeld: "",
-          makingDescription: "",
-          firstIngredient: "",
-          secondIngredient: "",
-          thirdIngredient: "",
-          fifthIngredient: "",
-          sixtIngredient: "",
-          sevenIngredient: "",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
+          makingTime: "40 minutes",
+          yeld: "4-6 servings",
+          makingDescription: `
+
+          These Instant Pot Hawaiian Chicken Tacos are out of this WORLD. Juicy pineapple and spiced chicken crisped under the broiler, tucked into tortillas, and rolled up with creamy jalapeño ranch slaw.
+          `,
+          firstIngredient: "1.25 lbs. boneless skinless chicken thighs",
+          secondIngredient: "2 cups fresh pineapple, finely chopped",
+          thirdIngredient: "half of a red onion, minced",
+          fifthIngredient: "3 cloves garlic, minced",
+          sixtIngredient: "1 teaspoon chili powder",
+          sevenIngredient: "1 teaspoon cumin",
+          eigthIngrdient: " 1 teaspoon salt",
+          naineIngredient: "1 tablespoon yellow mustard",
+          tentIngredient: "1/4 cup water",
           elevenIngredient: "",
           tweleveIngredient: "",
           thirtenIngredient: "",
           forteenIngredient: "",
           fifthIngredient: "",
-          firstInstruction: "",
+          firstInstruction:
+            "Prep: Preheat the oven to 475 degrees (broil setting).",
 
-          secondInstruction: "",
-          thirdInstruction: "",
-          forthInstruction: "",
+          secondInstruction:
+            "Instant Pot: Place all chicken ingredients in the Instant Pot. Cook on high pressure for 10 minutes (20 if frozen). Release the pressure and shred chicken directly in pot.",
+          thirdInstruction:
+            "Broil: Transfer shredded chicken to a baking sheet lined with foil. Broil for 10-15 minutes until browned. ",
+          forthInstruction:
+            "Sauce: Pulse jalapeño ranch ingredients in a food processor until smooth. Toss some of the dressing with finely shredded cabbage to make a slaw.",
         },
       ],
     },
