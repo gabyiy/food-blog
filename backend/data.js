@@ -486,40 +486,51 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       featured: `sheet pan bbq tofu`,
       recipeDetails: [
         {
-          firstTextFirstImg: "",
+          firstTextFirstImg: `Sheet Pan BBQ Tofu! BBQ-spice-crusted baked tofu that’s made in a snap. Serve it in bowls, add it to salads, or eat it straight off the pan!
+          `,
           secondTextFirstImg: "",
           thirdTextFirstImg: "",
-          firstImg: "",
-          firstTextSecondImg: "",
-          secondTextSecondImg: "",
-          thirdTextSecondImg: "",
-          secondImg: "",
+          firstImg:
+            "https://pinchofyum.com/wp-content/uploads/BBQ-Tofu-Bowls-4.jpg",
+          firstTextSecondImg: "This is tofu like you’ve never seen it before. ",
+          secondTextSecondImg:
+            "Like, tofu with a spice crust. (YES! THANK YOU!) Tofu that feels worthy of building a meal around. Tofu that you can eat off the pan as a snack.",
+          thirdTextSecondImg:
+            "This is sheet pan BBQ Tofu, and it is an end-of-summer, healthy eating lifesaver.",
+          secondImg:
+            "https://pinchofyum.com/wp-content/uploads/BBQ-Tofu-Bowls-1.jpg",
           firstYoutubeText: "",
           secondYoutubeTxt: "",
           youtubeDescription: "",
           youtubeLink: "",
-          makingTime: "",
-          yeld: "",
-          makingDescription: "",
-          firstIngredient: "",
-          secondIngredient: "",
-          thirdIngredient: "",
-          fifthIngredient: "",
-          sixtIngredient: "",
-          sevenIngredient: "",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
+          makingTime: "45 minutes",
+          yeld: "4-6",
+          makingDescription: `
+
+          Sheet Pan BBQ Tofu! BBQ-spice-crusted baked tofu that’s made in a snap. Serve it in bowls, add it to salads, or eat it straight off the pan! YUM.
+          `,
+          firstIngredient: "2 (16-ounce) packages extra firm tofu",
+          secondIngredient: "2 tablespoons cornstarch",
+          thirdIngredient: "1/4 cup brown sugar",
+          fifthIngredient: "1 tablespoon smoked paprika",
+          sixtIngredient: "1 teaspoon chili powder",
+          sevenIngredient: "1 teaspoon onion powder",
+          eigthIngrdient: "1 teaspoon garlic powder ",
+          naineIngredient: "2 teaspoons kosher salt ",
+          tentIngredient: "1 tablespoons olive oil",
           elevenIngredient: "",
           tweleveIngredient: "",
           thirtenIngredient: "",
           forteenIngredient: "",
           fifthIngredient: "",
-          firstInstruction: "",
+          firstInstruction: "Preheat the oven to 425 degrees.",
 
-          secondInstruction: "",
-          thirdInstruction: "",
-          forthInstruction: "",
+          secondInstruction:
+            "Press the liquid out of the tofu – you can use a tofu press, or wrap it with a towel and place a heavy pan on top of it for 10-15 minutes. Cut into cubes.",
+          thirdInstruction:
+            "Mix the cornstarch, brown sugar, spices, and salt together. Toss cubed tofu *gently* with the spices to coat, being careful not to break the tofu. Transfer to a baking sheet and drizzle with just a tiny bit of olive oil so it doesn’t stick. Bake for 30-45 minutes, until the exterior is lightly golden and dry-ish to the touch.",
+          forthInstruction:
+            "While the tofu is baking, prep your extras for the bowls (see notes for ideas). Arrange beautifully in a bowl, snap a pic for the ‘gram, and devour! ",
         },
       ],
     },
