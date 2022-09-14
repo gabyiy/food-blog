@@ -17,7 +17,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-const RecoverPassword = () => {
+const RecoverPassword = () => {  
 
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -47,16 +47,13 @@ const RecoverPassword = () => {
   };
 
   // console.log(user.token);
-  console.log(userReset);
   return (
     <div>
       <form onSubmit={submitHandler}>
         <input onChange={(e) => setEmail(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      {/* <Link to={`/reset-password/${user.oldUser._id}/${user.token}`}>
-        <h1>Res</h1>
-      </Link> */}
+     
     </div>
   );
 };

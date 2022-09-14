@@ -10,7 +10,6 @@ const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword,setconfirmNewPassword]= useState("")
   
-  console.log(userReset);
   const submitHandler = async (e) => {
     e.preventDefault();
 try{
@@ -45,7 +44,7 @@ try{
         />
         <br />
         <button type="submit" value="submit">
-          Push
+          Reset
         </button>
       </form>
     </div>

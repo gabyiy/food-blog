@@ -2,7 +2,7 @@ import express, { Router } from "express";
 import bcrypt from "bcryptjs";
 import expressAsyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
-import { generateToken } from "../utils.js";
+import { generateToken, isAuth } from "../utils.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 import e from "express";
@@ -51,21 +51,20 @@ userRouter.post(
 userRouter.post(
   "/forgot-password",
   expressAsyncHandler(async (req, res) => {
-    const  email  = req.body.email
+    const email = req.body.email;
 
-      const oldUser = await User.findOne({ email });
-      console.log(oldUser);  
-      if (oldUser.email !==email) {
-         res.status(500).send({ message: "User dont exist" }); 
-      }else{
+    const oldUser = await User.findOne({ email });
 
+    if (oldUser == null) {
+      res.status(500).send({ message: "User dont exist" });
+    } else {
       const secret = process.env.JWT_SECRET + oldUser.password;
       const token = jwt.sign(
         { email: oldUser.email, id: oldUser._id },
         secret,
         { expiresIn: "5m" }
       );
-      const link = `http://localhost:3000/reset-password/${oldUser._id}/${token}`;
+      const link = `https://food--blog-gabi.herokuapp.com/reset-password/${oldUser._id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -76,7 +75,7 @@ userRouter.post(
 
       var mailOptions = {
         from: "food@blog.com",
-        to: "gabyiy2000@hotmail.com",
+        to: oldUser.email,
         subject: "Password Reset",
         text: link,
       };
@@ -93,52 +92,79 @@ userRouter.post(
   })
 );
 
-userRouter.get("/reset-password/:id/:token",expressAsyncHandler( async (req, res) => {
-  const { id, token } = req.params;
-  const oldUser = await User.findOne({ _id: id });
-  if (!oldUser) {
-    return res.json({ status: "User Not Exists!!" });
-  }
-  const secret = process.env.JWT_SECRET + oldUser.password;
-  try {
-    const verify = jwt.verify(token, secret);
-    //  res.render("index", { email: verify.email, status: "Not Verified" });
-  } catch (error) {
-    console.log(error);
-    res.send("Not Verified");
-  }
-}));
-
-userRouter.post("/reset-password/:id/:token",expressAsyncHandler( async (req, res) => {
-  const { id, token } = req.params;
-  const password = req.body.newPassword
-  const confirmPassword= req.body.confirmNewPassword
-  
-
-
-  const oldUser = await User.findOne({ _id: id });
-  if (!oldUser) {
-    return res.json({ status: "User Not Exists!!" });
-  }
-  const secret = process.env.JWT_SECRET + oldUser.password;
-    const verify = jwt.verify(token, secret);
-    if(password==confirmPassword){
-    await User.updateOne(
-      {
-        _id: id,
-      },
-      {
-        $set: {
-          password:  bcrypt.hashSync( req.body.newPassword),
-        },
-      }
-    );
-    }else{
-   
- 
-    res.status(404).send({ message: "Password dont match" });
-  
+userRouter.get(
+  "/reset-password/:id/:token",
+  expressAsyncHandler(async (req, res) => {
+    const { id, token } = req.params;
+    const oldUser = await User.findOne({ _id: id });
+    if (!oldUser) {
+      return res.json({ status: "User Not Exists!!" });
     }
-}));
+    const secret = process.env.JWT_SECRET + oldUser.password;
+    try {
+      const verify = jwt.verify(token, secret);
+      //  res.render("index", { email: verify.email, status: "Not Verified" });
+    } catch (error) {
+      console.log(error);
+      res.send("Not Verified");
+    }
+  })
+);
+
+userRouter.post(
+  "/reset-password/:id/:token",
+  expressAsyncHandler(async (req, res) => {
+    const { id, token } = req.params;
+    const password = req.body.newPassword;
+    const confirmPassword = req.body.confirmNewPassword;
+
+    const oldUser = await User.findOne({ _id: id });
+    if (!oldUser) {
+      return res.json({ status: "User Not Exists!!" });
+    }
+    const secret = process.env.JWT_SECRET + oldUser.password;
+    const verify = jwt.verify(token, secret);
+    if (password == confirmPassword) {
+      await User.updateOne(
+        {
+          _id: id,
+        },
+        {
+          $set: {
+            password: bcrypt.hashSync(req.body.newPassword),
+          },
+        }
+      );
+    } else {
+      res.status(404).send({ message: "Password dont match" });
+    }
+  })
+);
+
+userRouter.put(
+  "/replaceProfile",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.user._id);
+    console.log(user);
+    if (user) {
+      user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email;
+      if (req.body.password) {
+        user.password = bcrypt.hashSync(req.body.password, 8);
+      }
+      const updatedUser = await user.save();
+
+      res.send({
+        _id: updatedUser._id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        token: generateToken(updatedUser),
+      });
+    } else {
+      res.status(400).send({ message: "User not found" });
+    }
+  })
+);
 
 export default userRouter;
