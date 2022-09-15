@@ -53,7 +53,7 @@ const HowToMakeRecipe = () => {
     fetchMainRecipe();
   }, [_id, error, refresh]);
 
-  console.log(recipe);
+  console.log(recipe.recipeDetails[0].firstTextFirstImg);
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -77,7 +77,9 @@ const HowToMakeRecipe = () => {
           <div>
             <h1>{recipe.featured}</h1>
           </div>
-          <div>{/* <p>{recipe.recipeDetails[0].firstTextFirstImg}</p> */}</div>
+          <div>
+            <p>{recipe.recipeDetails[0].firstTextFirstImg}</p>
+          </div>
 
           <div>
             <h2>Reviews</h2>

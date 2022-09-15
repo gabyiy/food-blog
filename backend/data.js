@@ -19,7 +19,7 @@ const data = {
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Creamy-Shrimp-Pasta-with-Corn-1-840x1200.jpg",
       name: "Pasta",
-      description: `Ugh, of COURSE we would eat pasta for every single meal if we could. But let's be reasonable, maybe just 8 times per week? Just, like, how do you choose between fork twirly or perfectly chewy or positively smothered in all the best sauces? Oh pasta, we love you so.`,
+      description: `Ugh, of COURSE we would eat pasta for every single  meal if we could. But let's be reasonable, maybe just 8 times per week? Just, like, how do you choose between fork twirly or perfectly chewy or positively smothered in all the best sauces? Oh pasta, we love you so.`,
       featured: `creamy shrimp pasta with corn and tomatos`,
       recipeDetails: [
         {
