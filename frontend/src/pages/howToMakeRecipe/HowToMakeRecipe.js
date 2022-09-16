@@ -77,11 +77,11 @@ const HowToMakeRecipe = () => {
         ) : (
           <div>
             <div>
-              <h1>{recipe.featured}</h1>
+              <p className="title">{recipe.featured}</p>
             </div>
             {recipe.recipeDetails.map((detail) => (
               <div key={detail._id}>
-                <div className="firstTextFirstImg">
+                <div className="firstTextFirstImg entry-content italic">
                   <p>{detail.firstTextFirstImg}</p>
                 </div>
                 <div className="jumpRecipe">
