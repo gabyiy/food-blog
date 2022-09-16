@@ -4,6 +4,7 @@ import axios from "axios";
 import LoadingBox from "../../components/LoadingBox";
 import { Store } from "../../Store";
 import MessageBox from "../../components/messageBox/MessageBox.js";
+import "./HowToMakeRecipe.css";
 
 const reducer = (state, action) => {
   const navigate = useNavigate;
@@ -53,7 +54,6 @@ const HowToMakeRecipe = () => {
     fetchMainRecipe();
   }, [_id, error, refresh]);
 
-  console.log(recipe.recipeDetails[0].firstTextFirstImg);
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -65,58 +65,68 @@ const HowToMakeRecipe = () => {
     } catch (err) {}
     setComment("");
   };
+  console.log(recipe.recipeDetails);
 
   return (
-    <div>
-      {loading ? (
-        <LoadingBox></LoadingBox>
-      ) : error ? (
-        <h1>{error}</h1>
-      ) : (
-        <div>
+    <div className="page">
+      <div className="mainContainer">
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <h1>{error}</h1>
+        ) : (
           <div>
-            <h1>{recipe.featured}</h1>
-          </div>
-          <div>
-            <p>{recipe.recipeDetails[0].firstTextFirstImg}</p>
-          </div>
+            <div>
+              <h1>{recipe.featured}</h1>
+            </div>
+            {recipe.recipeDetails.map((detail) => (
+              <div key={detail._id}>
+                <div className="firstTextFirstImg">
+                  <p>{detail.firstTextFirstImg}</p>
+                </div>
+                <div className="jumpRecipe">
+                  <p>Jump to recipe</p>
+                </div>
+              </div>
+            ))}
 
-          <div>
-            <h2>Reviews</h2>
-            {recipe.reviews.length === 0 && (
-              <MessageBox>There is no messages</MessageBox>
-            )}
-            <ul>
-              {recipe.reviews.map((review) => (
-                <li key={review._id}>
-                  <strong>{review.name}</strong>
-                  <p>{review.createdAt.substring(0, 10)}</p>
-                  <p>{review.comment}</p>
+            <div>
+              <h2>Reviews</h2>
+              {recipe.reviews.length === 0 && (
+                <MessageBox>There is no messages</MessageBox>
+              )}
+              <ul>
+                {recipe.reviews.map((review) => (
+                  <li key={review._id}>
+                    <strong>{review.name}</strong>
+                    <p>{review.createdAt.substring(0, 10)}</p>
+                    <p>{review.comment}</p>
+                  </li>
+                ))}
+                <li>
+                  {name ? (
+                    <form onSubmit={submitHandler}>
+                      <div>
+                        <h2>Write a comment</h2>
+                      </div>
+                      <div>
+                        <textarea
+                          value={comment}
+                          onChange={(e) => setComment(e.target.value)}
+                        ></textarea>
+
+                        <button type="submit">Post comment</button>
+                      </div>
+                    </form>
+                  ) : (
+                    <div>You need to login to leave a cmment</div>
+                  )}
                 </li>
-              ))}
-              <li>
-                {name ? (
-                  <form onSubmit={submitHandler}>
-                    <div>
-                      <h2>Write a comment</h2>
-                    </div>
-                    <div>
-                      <textarea
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                      ></textarea>
-
-                      <button type="submit">Post comment</button>
-                    </div>
-                  </form>
-                ) : (
-                  <div>You need to login to leave a cmment</div>
-                )}
-              </li>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

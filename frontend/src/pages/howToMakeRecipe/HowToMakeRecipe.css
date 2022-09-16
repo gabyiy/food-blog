@@ -1,0 +1,18 @@
+.page {
+  display: flex;
+  justify-content: center;
+}
+.mainContainer {
+  width: 50rem;
+  height: fit-content;
+}
+.firstTextFirstImg {
+}
+.jumpRecipe {
+  display: flex;
+  width: auto;
+  height: 30px;
+  background-color: #e6e6e6;
+  justify-content: center;
+  align-items: center;
+}
