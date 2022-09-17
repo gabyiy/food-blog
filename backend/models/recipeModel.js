@@ -14,10 +14,11 @@ const recipeSchema = new mongoose.Schema(
   {
     icon: { type: String, requried: true },
     name: { type: String, required: true },
-    description: { type: String, required: true },
-    featured: { type: String, required: true },
-    numReviews:{type:Number},
-    reviews:[reviewSchema]
+    description: { type: String },
+    featured: { type: String },
+    recipeDetails: [],
+    numReviews: { type: Number },
+    reviews: [reviewSchema],
   },
   {
     timestamps: true,
