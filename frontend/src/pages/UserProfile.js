@@ -30,7 +30,6 @@ const UserProfile = () => {
     loadingUpdate: false,
   });
 
-  console.log(userInfo);
   const sumbitHandler = async (e) => {
     e.preventDefault();
     try {
