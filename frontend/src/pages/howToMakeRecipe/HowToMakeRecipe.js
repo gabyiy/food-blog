@@ -1,20 +1,20 @@
-import React, { useContext, useEffect, useReducer, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
-import LoadingBox from "../../components/LoadingBox";
-import { Store } from "../../Store";
-import MessageBox from "../../components/messageBox/MessageBox.js";
-import "./HowToMakeRecipe.css";
+import React, { useContext, useEffect, useReducer, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import LoadingBox from '../../components/LoadingBox';
+import { Store } from '../../Store';
+import MessageBox from '../../components/messageBox/MessageBox.js';
+import './HowToMakeRecipe.css';
 
 const reducer = (state, action) => {
   const navigate = useNavigate;
 
   switch (action.type) {
-    case "FETCH_REQUEST":
+    case 'FETCH_REQUEST':
       return { ...state, loading: true };
-    case "FETCH_SUCCESS":
+    case 'FETCH_SUCCESS':
       return { ...state, recipe: action.payload, loading: false };
-    case "FETCH_FAIL":
+    case 'FETCH_FAIL':
       return { ...state, error: action.payload, loading: false };
     default:
       return state;
@@ -26,8 +26,8 @@ const HowToMakeRecipe = () => {
   const { state } = useContext(Store);
   const { userInfo } = state;
 
-  const [comment, setComment] = useState("");
-  const [name, setName] = useState("");
+  const [comment, setComment] = useState('');
+  const [name, setName] = useState('');
   const [refresh, setRefresh] = useState(false);
 
   const [recipes, setRecipes] = useState([]);
@@ -36,19 +36,19 @@ const HowToMakeRecipe = () => {
 
   const [{ loading, error, recipe }, dispach] = useReducer(reducer, {
     loading: true,
-    error: "",
+    error: '',
     recipe: [],
   });
 
   useEffect(() => {
     const fetchMainRecipe = async () => {
       try {
-        dispach({ type: "FETCH_REQUEST" });
+        dispach({ type: 'FETCH_REQUEST' });
         const result = await axios.get(`/api/recipes/makeRecipe/${_id}`);
-        dispach({ type: "FETCH_SUCCESS", payload: result.data });
+        dispach({ type: 'FETCH_SUCCESS', payload: result.data });
         setName(userInfo.name);
       } catch (error) {
-        dispach({ type: "FETCH_FAIL", payload: error.data });
+        dispach({ type: 'FETCH_FAIL', payload: error.data });
       }
     };
     fetchMainRecipe();
@@ -63,9 +63,9 @@ const HowToMakeRecipe = () => {
       });
       setRefresh((refresh) => !refresh);
     } catch (err) {}
-    setComment("");
+    setComment('');
   };
-  console.log(recipe.recipeDetails);
+  console.log();
 
   return (
     <div className="page">
@@ -85,7 +85,83 @@ const HowToMakeRecipe = () => {
                   <p>{detail.firstTextFirstImg}</p>
                 </div>
                 <div className="jumpRecipe">
-                  <p>Jump to recipe</p>
+                  <i class="fa fa-light fa-arrow-down"></i>
+                  <a href="#recipe">
+                    <p>JUMP TO RECIPE</p>
+                  </a>
+                </div>
+                <div className="allImg">
+                  <img src={detail.firstImg} alt="pasta" />
+                </div>
+                {recipe.reviews.length ? (
+                  <div className="featuredReview">
+                    <div className="featuredComment">
+                      <p>FEATURED COMMENT :</p>
+                      <h5>{recipe.reviews.slice(-1)[0].name}</h5>
+                    </div>
+                    <div className="comment">
+                      <p> {recipe.reviews.slice(-1)[0].comment} </p>
+                    </div>
+                  </div>
+                ) : (
+                  ''
+                )}
+                <div className="hrSeparator">
+                  <hr></hr>
+                </div>
+                <div className="firstTextSecondImg">
+                  <p>{detail.firstTextSecondImg}</p>
+                  <p>{detail.secondTextSecondImg}</p>
+                  <p>{detail.secondTextFirstImg}</p>
+                </div>
+                <div className="allImg">
+                  <img src={detail.secondImg} alt="secondIng" />
+                </div>
+                <div id="recipe">
+                
+                  <div className="saladTipe">
+                  <div className="recipeImg">
+                    <img src={detail.secondImg} alt="secondImg" />
+                  </div>
+                    <p>{recipe.featured}</p>
+                    <hr></hr>
+                    <div className="timeYeld">
+                      <p>
+                        <i class="fa fa-thin fa-clock"></i> TOTAL TIME:{' '}
+                        <span>{detail.makingTime}</span>{' '}
+                      </p>
+                      <p>
+                        {' '}
+                        <i class="fa fa-thin fa-utensils"></i> YELD:{' '}
+                        <span> {detail.yeld}</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="recipeIngredient">
+                    <p>{detail.makingDescription}</p>
+                    <hr></hr>
+                    <div className="ingredients">
+                      <p>INGREDIENTS</p>
+                      {detail.ingredients.map((ingredient) => (
+                        <ul className="ulForIngredients" key={ingredient._id}>
+                          <li>
+                            <span>{ingredient}</span>
+                          </li>
+                        </ul>
+                      ))}
+                    </div>
+                    <hr></hr>
+                    <div className="instructionDiv">
+                      <p>INSTRUCTIONS</p>
+                      {detail.instructions.map((instruction) => (
+                        <ol key={instruction._id}>
+                          <li key={instruction._id}>
+                            <span>{instruction}</span>
+                          </li>
+                        </ol>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

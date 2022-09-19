@@ -20,9 +20,9 @@ const data = {
       icon: "https://pinchofyum.com/wp-content/uploads/Creamy-Shrimp-Pasta-with-Corn-1-840x1200.jpg",
       name: "Pasta",
       description: `Ugh, of COURSE we would eat pasta for every single  meal if we could. But let's be reasonable, maybe just 8 times per week? Just, like, how do you choose between fork twirly or perfectly chewy or positively smothered in all the best sauces? Oh pasta, we love you so.`,
-      featured: `creamy shrimp pasta with corn and tomatos`,
+      featured: `Creamy Shrimp Pasta With Corn And Tomatos`,
       recipeDetails: [
-        {
+        {    
           firstTextFirstImg: `Creamy Shrimp Pasta with Corn and Tomatoes! A seriously delicious fresh summer pasta. Creamy, silky noodles, garlicky shrimp, and a punch of fresh corn, cherry tomatoes, and basil.
             `,
           secondTextFirstImg:
@@ -48,36 +48,37 @@ const data = {
             "Check Out Our Video For How To Make Creamy Shrimp Pasta:",
           youtubeLink:
             "https://i.ytimg.com/vi_webp/rNbyHGJmcJc/maxresdefault.webp",
-          makingTime: "30",
+          makingTime: "30 minutes",
           yeld: "4 generous servings",
           makingDescription:
             "Creamy Shrimp Pasta with Corn and Tomatoes! A seriously delicious fresh summer pasta. Creamy, silky noodles, garlicky shrimp, and a punch of fresh corn, cherry tomatoes, and basil.",
-          firstIngredient: "8 ounces linguine, spaghetti, or similar ",
-          secondIngredient: "1/2 cup reserved pasta water",
-          thirdIngredient: "2 tablespoons butter, divided",
-          forthIngredient:
+          ingredients:[
+           "8 ounces linguine, spaghetti, or similar ",
+          "1/2 cup reserved pasta water",
+         "2 tablespoons butter, divided",
+         
             "1 lbs. shrimp, peeled and deveined (tail off or on, it’s up to you)",
-          fifthIngredient: "1 teaspoon salt, divided",
-          sixtIngredient: "1–2 cloves garlic, minced ",
-          sevenIngredient: "2 cups cherry tomatoes, halved",
-          eigthIngrdient:
+          "1 teaspoon salt, divided",
+          "1–2 cloves garlic, minced ",
+        "2 cups cherry tomatoes, halved",
+         
             "2–3 ears cooked or grilled fresh sweet corn, kernels cut off the cob ",
-          naineIngredient: "1 cup fresh spinach, chopped",
-          tentIngredient: "squeeze of lemon juice",
-          elevenIngredient: "1/2 to 3/4 cup heavy cream",
-          tweleveIngredient: "fresh basil or Parmesan for topping",
-          thirtenIngredient: "salt and pepper to taste",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+        "1 cup fresh spinach, chopped",
+        "squeeze of lemon juice",
+         "1/2 to 3/4 cup heavy cream",
+          "fresh basil or Parmesan for topping",
+          "salt and pepper to taste",
+        ],
+        instructions:[
             "Cook pasta according to package directions. Drain, toss with oil to prevent sticking, set aside.",
 
-          secondInstruction:
+        
             "Heat a large nonstick skillet over medium heat. Add 1 tablespoon butter to the pan. Add shrimp and sprinkle with 1/2 teaspoon salt. Flip and cook until shrimp are cooked through. Set aside and cover to keep warm.",
-          thirdInstruction:
+        
             ",Add garlic and remaining 1 tablespoon butter. Add tomatoes and corn; sauté for 1-2 minutes. Add spinach; sauté until wilted. Add shrimp back to the pan. Add remaining 1/2 teaspoon salt and lemon juice. Add cream and bring to a low simmer.",
-          forthInstruction:
+    
             "Toss the cooked pasta with your sauce. Add reserved pasta water as needed. Top with basil, Parmesan, salt, or freshly cracked black pepper. GAH SO GOOD.",
+        ]
         },
       ],
     },
@@ -85,7 +86,7 @@ const data = {
       icon: "https://pinchofyum.com/wp-content/uploads/Elotes-Quinoa-Salad-2-840x1200.jpg",
       name: "Lunch",
       description: `Whether you're planning to meal prep for the week or you're looking for an amazing sandwich or salad to chomp on at your desk, we've gone through our recipes and gathered a bunch for lunch!`,
-      featured: `elote style quinoa salad`,
+      featured: `Elote Style Quinoa Salad`,
       recipeDetails: [
         {
           firstTextFirstImg:
@@ -113,30 +114,24 @@ const data = {
           Elote Quinoa Salad made with velvety peppers confit, juicy sweet corn, homemade dressing, cotija cheese, lime, and spices. Perfect for summer and so, so good! 
           `,
           type: "Salad",
-          firstIngredient: "1 cup Simple Nature Organic Quinoa, uncooked",
-          secondIngredient: "5 ears sweet corn, cut off the cob",
-          thirdIngredient: "1 can Simply Nature Organic Black Beans, rinsed",
-          fifthIngredient:
+        ingredients:["1 cup Simple Nature Organic Quinoa, uncooked",
+          "5 ears sweet corn, cut off the cob",
+        "1 can Simply Nature Organic Black Beans, rinsed",
+         
             "1 package mini sweet peppers, sliced into small rings (about 2–3 cups)",
-          sixtIngredient: "olive oil for cooking",
-          sevenIngredient: "1 cup chopped fresh cilantro",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction: "Cook quinoa and prep ingredients. ",
+         "olive oil for cooking",
+        "1 cup chopped fresh cilantro",
+        ],
+        instructions:[
+           "Cook quinoa and prep ingredients. ",
 
-          secondInstruction:
+        
             "Drizzle a generous amount of olive oil in a skillet and add the pepper rings. Cook over medium heat, stirring occasionally, for about 20 minutes or until very soft and roasty-looking. Squeeze a little lime juice in the pan to lift all the browned bits off the bottom of the pan when you’re done! More flavor!",
-          thirdInstruction:
-            "Whisk up the dressing ingredients. Taste and adjust. It’s okay if it’s super salty – it’s going on a bunch of raw, unseasoned ingredients so we want it to have lots of flavor!",
-          forthInstruction:
+              "Whisk up the dressing ingredients. Taste and adjust. It’s okay if it’s super salty – it’s going on a bunch of raw, unseasoned ingredients so we want it to have lots of flavor!",
+       
             "Toss ingredients or arrange in a bowl just before serving (quinoa, corn, beans, peppers, cilantro, and topped with dressing and cheese). Serve with grilled chicken, dip with chips, or on its own as a meal!",
-        },
+          ],
+        }
       ],
     },
 
@@ -167,26 +162,19 @@ const data = {
 
 Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for an awesome lunch. gluten & dairy free. YUM.
 `,
-          firstIngredient: "2 14–ounce cans chickpeas, drained and rinsed",
-          secondIngredient: "1/2 cup coconut milk (more as needed)",
-          thirdIngredient: "1 1/2 tablespoons red curry paste",
-          fifthIngredient: "1 tablespoon curry powder",
-          sixtIngredient: "1 clove garlic",
-          sevenIngredient: "1 teaspoon sea salt",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction: "",
+        ingredients:["2 14–ounce cans chickpeas, drained and rinsed",
+        "1/2 cup coconut milk (more as needed)",
+      "1 1/2 tablespoons red curry paste",
+         "1 tablespoon curry powder",
+         "1 clove garlic",
+       "1 teaspoon sea salt",
+        ],
+          instructions:[
 
-          secondInstruction: "Blend or pulse in a food processor until smooth.",
-          thirdInstruction:
+       "Blend or pulse in a food processor until smooth.",
+        
             "Add more coconut oil, olive oil, or water to loosen as needed, depending on how thick you want it. The end!",
-          forthInstruction: "",
+          ]
         },
       ],
     },
@@ -220,28 +208,23 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Avocado Shrimp Salad packed with chilled poached shrimp, fresh dill, creamy avocado, and a nice big lemon drench.
           `,
-          firstIngredient: "1/2 lb. shrimp (tails removed)",
-          secondIngredient: "1 ripe avocado",
-          thirdIngredient: "1/2 teaspoon salt",
-          fifthIngredient: "a sprinkle of garlic powder (optional)",
-          sixtIngredient: "squeeze of one lemon",
-          sevenIngredient: "half of a small cucumber (diced)",
-          eigthIngrdient: "a pinch of fresh dill ",
-          naineIngredient: "a pinch of chives",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+       ingredients:[ "1/2 lb. shrimp (tails removed)",
+          "1 ripe avocado",
+          "1/2 teaspoon salt",
+      "a sprinkle of garlic powder (optional)",
+           "squeeze of one lemon",
+          "half of a small cucumber (diced)",
+          "a pinch of fresh dill ",
+        "a pinch of chives",
+        ],
+          instructions:[
             "Poach the shrimp: Bring a pot of water to boil. Add the shrimp. Cook for 3-5 minutes until pink and opaque. Drain and place in a bowl of ice water to cool. When cooled, pat dry and cut into bite-sized pieces.",
 
-          secondInstruction:
+      
             "Avocado mixture: Mash the avocado. Season with salt, lemon, and garlic powder if you want.",
-          thirdInstruction:
+      
             "Assemble: Toss shrimp, avocado mix, cucumber, and herbs together. Season to taste. Eat on the deck in the summer with a cold coconut water and feel like a million bucks!",
-          forthInstruction: "",
+          ]
         },
       ],
     },
@@ -276,28 +259,25 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Bringing you these addicting Chicken Tikka Bowls! Crispy bits of chicken tenders, crispy cucumbers, and briny pickled onions, all on a bed of fluffy quinoa with a swoop of cool mint sauce on top. You absolutely cannot go wrong with these bowls. 
           `,
-          firstIngredient:
+      ingredients:[
             "a few pieces of crispy breaded chicken (homemade option, or store-bought)",
-          secondIngredient:
+     
             "1/2 cup tikka masala sauce (homemade option, or store-bought)",
-          thirdIngredient: "cooked quinoa",
-          fifthIngredient: "sliced or diced cucumbers",
-          sixtIngredient: "pickled red onion",
-          sevenIngredient:
+       "cooked quinoa",
+        "sliced or diced cucumbers",
+        "pickled red onion",
+   
             "slaw (toss a few cups of shredded cabbage and carrots tossed with mayo, vinegar, and salt, or use a store-bought slaw mix)",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction: "",
-
-          secondInstruction: "",
-          thirdInstruction: "",
-          forthInstruction: "",
+            "1/4 cup mint leaves",
+            "1/2 cup mayo or plain Greek yogurt",
+            "juice of a lime"
+          ],
+         instructions:[ "Cook the chicken according to package directions. Brush with sauce and return to oven for an additional 5 minutes.",
+"While the chicken is cooking, prep all your other elements.",
+"For the mint sauce, blend or pulse the ingredients through a food processor to make a smooth-ish sauce.",
+"Serve bowls with quinoa, slaw, cucumbers, pickled red onions, and sauce over the top. It’s crispy, salty, spicy, briney, cool, and creamy. DROOL."
+        
+        ]
         },
       ],
     },
@@ -331,32 +311,26 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Grilled Sausages, plus onions and peppers, all grilled and juicy and tucked into a toasted (but still fluffy) brioche bun swizzled with a punchy little aioli to tie it all up. SO GOOD.
           `,
-          firstIngredient:
+          ingredients:[
             "1 package Never Any! Mild Italian Style Chicken Sausages (4 individual sausages)",
-          secondIngredient: "2 bell peppers, cut into slices",
-          thirdIngredient: "half of an onion, cut into slices",
-          fifthIngredient:
+       "2 bell peppers, cut into slices",
+      "half of an onion, cut into slices",
+         
             "1/2 tablespoon Stonemill Roasted Garlic Herb Grill Seasoning",
-          sixtIngredient: "olive oil, lemon juice, and salt",
-          sevenIngredient: "4 Specially Selected Brioche Hot Dog Buns",
-          eigthIngrdient: " ",
-          naineIngredient: "",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction: "Whisk aioli in a small bowl. Set aside.",
+        "olive oil, lemon juice, and salt",
+      "4 Specially Selected Brioche Hot Dog Buns",
+          ],
+        instructions:[ "Whisk aioli in a small bowl. Set aside.",
 
-          secondInstruction:
+       
             "Toss peppers and onions with the garlic herb seasoning (or whatever other spices you want). Drizzle with enough oil so they won’t stick on the grill.",
-          thirdInstruction:
+       
             "Place sausages directly on the grill. Place peppers and onion slices in a grill basket or a cast iron pan on the grill. Grill both until you get nice grill marks and the veggies are soft. At the end of grilling time, add the brioche buns, cut side down, to get them toasty.",
-          forthInstruction:
+      
             "Transfer peppers to a bowl and toss with lemon juice, more olive oil as needed, and salt and pepper to taste.",
-          fifthInstruction:
+       
             "Serve each grilled chicken sausage on a toasted bun with a scoop of grilled peppers and a swizzle of your aioli. YUM. At our house, extra aioli was requested for certain grown-ups for “dipping,” so just be prepared for that.",
+        ]
         },
       ],
     },
@@ -396,30 +370,27 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Socca with Whipped Feta and Tomato Salad! HELLO. Crispy, creamy, tangy, and summery all on one plate.
           `,
-          firstIngredient: "1 cup chickpea flour (affiliate link)",
-          secondIngredient: "2 tablespoons olive oil (and extra for the pan)",
-          thirdIngredient: "3/4 teaspoon salt",
-          fifthIngredient: "1 1/4 cups water",
-          sixtIngredient: "2–3 cups cherry or grape tomatoes, halved",
-          sevenIngredient:
+       ingredients:[ "1 cup chickpea flour (affiliate link)",
+        "2 tablespoons olive oil (and extra for the pan)",
+         "3/4 teaspoon salt",
+          "1 1/4 cups water",
+         "2–3 cups cherry or grape tomatoes, halved",
+        
             "1 cup cucumber slices (optional, but adds a nice crunch)",
-          eigthIngrdient: "1/4 cup olive oil ",
-          naineIngredient: "1–2 tablespoons white vinegar or lemon juice",
-          tentIngredient: "1 small clove garlic, grated or finely minced",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+      "1/4 cup olive oil ",
+        "1–2 tablespoons white vinegar or lemon juice",
+      "1 small clove garlic, grated or finely minced",
+       ],
+        instructions:[
             "Preheat oven to 450 degrees. While oven is preheating, mix up your tomato salad so it has a little time to sit together and get real yummy.",
 
-          secondInstruction:
+       
             "Whisk all socca ingredients until smooth. Pour 1-2 tablespoons olive oil into a 10-inch cast iron skillet, and pop the skillet in the oven for 5 minutes to preheat. Pour half of the socca batter evenly into the pan and bake for 15-18 minutes, until golden around the edges. (Repeat with the second half of the batter.)",
-          thirdInstruction:
+      
             "While the socca is baking, blend the feta in a food processor or blender, or with a hand mixer, until smooth-ish. Add your cream cheese, yogurt, mascarpone, whatever you pick to help make the whole thing into a sort of fluffy, creamy sauce. Season with what you like – I love thyme, olive oil, and a little black pepper.",
-          forthInstruction:
+        
             "Tear off chunks of hot, crispy socca to be served / dipped / spread / topped with whipped feta and a bunch of fresh, garlicky tomato salad.",
+        ]
         },
       ],
     },
@@ -453,29 +424,26 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           These Instant Pot Hawaiian Chicken Tacos are out of this WORLD. Juicy pineapple and spiced chicken crisped under the broiler, tucked into tortillas, and rolled up with creamy jalapeño ranch slaw.
           `,
-          firstIngredient: "1.25 lbs. boneless skinless chicken thighs",
-          secondIngredient: "2 cups fresh pineapple, finely chopped",
-          thirdIngredient: "half of a red onion, minced",
-          fifthIngredient: "3 cloves garlic, minced",
-          sixtIngredient: "1 teaspoon chili powder",
-          sevenIngredient: "1 teaspoon cumin",
-          eigthIngrdient: " 1 teaspoon salt",
-          naineIngredient: "1 tablespoon yellow mustard",
-          tentIngredient: "1/4 cup water",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+      ingredients:[ "1.25 lbs. boneless skinless chicken thighs",
+           "2 cups fresh pineapple, finely chopped",
+         "half of a red onion, minced",
+         "3 cloves garlic, minced",
+          "1 teaspoon chili powder",
+       "1 teaspoon cumin",
+           " 1 teaspoon salt",
+       "1 tablespoon yellow mustard",
+       "1/4 cup water",
+        ],
+       instructions:[
             "Prep: Preheat the oven to 475 degrees (broil setting).",
 
-          secondInstruction:
+       
             "Instant Pot: Place all chicken ingredients in the Instant Pot. Cook on high pressure for 10 minutes (20 if frozen). Release the pressure and shred chicken directly in pot.",
-          thirdInstruction:
+      
             "Broil: Transfer shredded chicken to a baking sheet lined with foil. Broil for 10-15 minutes until browned. ",
-          forthInstruction:
+       
             "Sauce: Pulse jalapeño ranch ingredients in a food processor until smooth. Toss some of the dressing with finely shredded cabbage to make a slaw.",
+       ]
         },
       ],
     },
@@ -509,28 +477,25 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Sheet Pan BBQ Tofu! BBQ-spice-crusted baked tofu that’s made in a snap. Serve it in bowls, add it to salads, or eat it straight off the pan! YUM.
           `,
-          firstIngredient: "2 (16-ounce) packages extra firm tofu",
-          secondIngredient: "2 tablespoons cornstarch",
-          thirdIngredient: "1/4 cup brown sugar",
-          fifthIngredient: "1 tablespoon smoked paprika",
-          sixtIngredient: "1 teaspoon chili powder",
-          sevenIngredient: "1 teaspoon onion powder",
-          eigthIngrdient: "1 teaspoon garlic powder ",
-          naineIngredient: "2 teaspoons kosher salt ",
-          tentIngredient: "1 tablespoons olive oil",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction: "Preheat the oven to 425 degrees.",
+      ingredients:[ "2 (16-ounce) packages extra firm tofu",
+         "2 tablespoons cornstarch",
+         "1/4 cup brown sugar",
+        "1 tablespoon smoked paprika",
+          "1 teaspoon chili powder",
+          "1 teaspoon onion powder",
+       "1 teaspoon garlic powder ",
+     "2 teaspoons kosher salt ",
+       "1 tablespoons olive oil",
+        ],
+       instructions:[ "Preheat the oven to 425 degrees.",
 
-          secondInstruction:
+    
             "Press the liquid out of the tofu – you can use a tofu press, or wrap it with a towel and place a heavy pan on top of it for 10-15 minutes. Cut into cubes.",
-          thirdInstruction:
+     
             "Mix the cornstarch, brown sugar, spices, and salt together. Toss cubed tofu *gently* with the spices to coat, being careful not to break the tofu. Transfer to a baking sheet and drizzle with just a tiny bit of olive oil so it doesn’t stick. Bake for 30-45 minutes, until the exterior is lightly golden and dry-ish to the touch.",
-          forthInstruction:
+        
             "While the tofu is baking, prep your extras for the bowls (see notes for ideas). Arrange beautifully in a bowl, snap a pic for the ‘gram, and devour! ",
+      ]
         },
       ],
     },
@@ -564,30 +529,26 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           Summer Quinoa Salads with Lemon Dill Dressing! Hello shrimp, quinoa, tomato, cucumber, feta – my favorite healthy meal prep!
           `,
-          firstIngredient: "3/4 cup olive oil",
-          secondIngredient: "1/4 cup water",
-          thirdIngredient: "2 tablespoons white vinegar",
-          fifthIngredient: "1 clove garlic",
-          sixtIngredient:
+        ingredients:[ "3/4 cup olive oil",
+        "1/4 cup water",
+        "2 tablespoons white vinegar",
+        "1 clove garlic",
+      
             "2 cups quinoa (or other pasta, quinoa, couscous, etc.)",
-          sevenIngredient: "2 pints of grape tomatoes",
-          eigthIngrdient: "2 large cucumbers ",
-          naineIngredient: "1 cup feta cheese",
-          tentIngredient: "",
-          elevenIngredient: "",
-          tweleveIngredient: "",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+      "2 pints of grape tomatoes",
+        "2 large cucumbers ",
+         "1 cup feta cheese",
+        ],
+         instructions:[
             "Dressing: Blend all dressing ingredients together until smooth.",
 
-          secondInstruction:
+      
             "Grains: Cook quinoa according to package directions. Set aside to cool.",
-          thirdInstruction:
+         
             "Build Your Beautiful Jars: In each jar, layer a little bit of dressing, tomatoes, quinoa, cucumbers, sun dried peppers, and feta. Store sealed jars in the fridge up to 4 days!",
-          forthInstruction:
+     
             "Serve: When you’re ready to serve, empty the jar into a bowl. Stir to combine. Voila!",
+         ]
         },
       ],
     },
@@ -617,31 +578,29 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
           yeld: " 8 very generous servings (2 cups each) ",
           makingDescription:
             "It’s that perfect blend of comforting but also fresh-feeling that leaves you a) wanting to lick the bowl, and b) feeling really good about yourself when it’s later in the day and you remember back to all the veggies you ate for lunch. It’s LOADED TO THE MAX with veggies and whole grains and protein, and also big, yummy, Italian-style flavor.",
-          firstIngredient: "1 lb. chicken breasts",
-          secondIngredient: "1 28-ounce can crushed tomatoes",
-          thirdIngredient: "4 carrots, peeled and chopped",
-          fifthIngredient: "2 stalks celery, chopped",
-          sixtIngredient: "3 cloves minced garlic",
-          sevenIngredient:
+      ingredients:[ "1 lb. chicken breasts",
+         "1 28-ounce can crushed tomatoes",
+      "4 carrots, peeled and chopped",
+         "2 stalks celery, chopped",
+        "3 cloves minced garlic",
+        
             "1/2 cup farro (you can also use brown rice or small pasta)",
-          eigthIngrdient: " 6 cups chicken broth",
-          naineIngredient: "2 tablespoons olive oil",
-          tentIngredient: "1 teaspoon each basil and oregano",
-          elevenIngredient:
+       " 6 cups chicken broth",
+      "2 tablespoons olive oil",
+       "1 teaspoon each basil and oregano",
+       
             "Toppings: Parmesan, lemon juice, plain yogurt, fresh herbs, freshly ground pepper, etc.",
-          tweleveIngredient:
+       
             "2–3 cups of fresh sweet corn kernels, cut off the cob",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+      ],
+         instructions:[
             "Place everything except the zucchini and sweet corn in the Instant Pot or pressure cooker. Set to high pressure for 20 minutes. Release the steam.",
 
-          secondInstruction:
+       
             "Shred the chicken. Stir in the zucchini and sweet corn. Set to high pressure for another 5 minutes. Release the steam.",
-          thirdInstruction:
+
             "Let the soup rest for a few minutes – it thickens up a bit as it cools. Season with more salt and pepper and whatever toppings you like. Aaand devour!",
-          forthInstruction: "",
+         ],
         },
       ],
     },
@@ -676,30 +635,29 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
           A bright, zippy, unexpectedly delicious couscous salad that’s packed with sweet potatoes, black beans, spinach, feta, and more – all tossed with a life-changing lime basil vinaigrette!
           `,
-          firstIngredient: "3/4 cup couscous",
-          secondIngredient: "1 cup water",
-          thirdIngredient: "2 sweet potatoes, peeled and diced (about 3 cups)",
-          fifthIngredient: "1 14-ounce can black beans, drained and rinsed",
-          sixtIngredient: "2 cups baby spinach, cut into small pieces",
-          sevenIngredient: "4 ounces crumbled feta cheese",
-          eigthIngrdient: " half a red onion, thinly sliced",
-          naineIngredient: "1 bunch of fresh basil (1/2 cup packed)",
-          tentIngredient: "1/2 cup olive oil",
-          elevenIngredient: "1/2 teaspoon red pepper flakes",
-          tweleveIngredient: "1/4 to 1/2 cup water, if needed",
-          thirtenIngredient: "",
-          forteenIngredient: "",
-          fifthIngredient: "",
-          firstInstruction:
+         ingredients:[ "3/4 cup couscous",
+       "1 cup water",
+        "2 sweet potatoes, peeled and diced (about 3 cups)",
+      "1 14-ounce can black beans, drained and rinsed",
+        "2 cups baby spinach, cut into small pieces",
+        "4 ounces crumbled feta cheese",
+         " half a red onion, thinly sliced",
+         "1 bunch of fresh basil (1/2 cup packed)",
+        "1/2 cup olive oil",
+       "1/2 teaspoon red pepper flakes",
+         "1/4 to 1/2 cup water, if needed",
+         ],
+         instructions:[
             "Cook couscous in 1 cup water, according to package directions. Fluff with a fork and cool.",
 
-          secondInstruction:
+      
             "Pulse all dressing ingredients in a food processor until smooth-ish.",
-          thirdInstruction:
+        
             "Place sweet potatoes in a skillet with about 1/2 cup water and a sprinkle of salt. Cover and simmer until fork-tender. Drain and set aside to cool.",
-          forthInstruction:
+     
             "Toss all ingredients together with dressing, season with salt and pepper, and serve! (OR, store each ingredient individually for salads throughout the week.)",
-        },
+         ]
+          },
       ],
     },
 
@@ -742,7 +700,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
 
     //       secondInstruction: "",
     //       thirdInstruction: "",
-    //       forthInstruction: "",
+    //       forthInstruction: "",  
     //     },
     //   ],
     // },
