@@ -1,20 +1,20 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios';
-import LoadingBox from '../../components/LoadingBox';
-import { Store } from '../../Store';
-import MessageBox from '../../components/messageBox/MessageBox.js';
-import './HowToMakeRecipe.css';
+import React, { useContext, useEffect, useReducer, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import LoadingBox from "../../components/LoadingBox";
+import { Store } from "../../Store";
+import MessageBox from "../../components/messageBox/MessageBox.js";
+import "./HowToMakeRecipe.css";
 
 const reducer = (state, action) => {
   const navigate = useNavigate;
 
   switch (action.type) {
-    case 'FETCH_REQUEST':
+    case "FETCH_REQUEST":
       return { ...state, loading: true };
-    case 'FETCH_SUCCESS':
+    case "FETCH_SUCCESS":
       return { ...state, recipe: action.payload, loading: false };
-    case 'FETCH_FAIL':
+    case "FETCH_FAIL":
       return { ...state, error: action.payload, loading: false };
     default:
       return state;
@@ -26,8 +26,8 @@ const HowToMakeRecipe = () => {
   const { state } = useContext(Store);
   const { userInfo } = state;
 
-  const [comment, setComment] = useState('');
-  const [name, setName] = useState('');
+  const [comment, setComment] = useState("");
+  const [name, setName] = useState("");
   const [refresh, setRefresh] = useState(false);
 
   const [recipes, setRecipes] = useState([]);
@@ -36,19 +36,19 @@ const HowToMakeRecipe = () => {
 
   const [{ loading, error, recipe }, dispach] = useReducer(reducer, {
     loading: true,
-    error: '',
+    error: "",
     recipe: [],
   });
 
   useEffect(() => {
     const fetchMainRecipe = async () => {
       try {
-        dispach({ type: 'FETCH_REQUEST' });
+        dispach({ type: "FETCH_REQUEST" });
         const result = await axios.get(`/api/recipes/makeRecipe/${_id}`);
-        dispach({ type: 'FETCH_SUCCESS', payload: result.data });
+        dispach({ type: "FETCH_SUCCESS", payload: result.data });
         setName(userInfo.name);
       } catch (error) {
-        dispach({ type: 'FETCH_FAIL', payload: error.data });
+        dispach({ type: "FETCH_FAIL", payload: error.data });
       }
     };
     fetchMainRecipe();
@@ -63,7 +63,7 @@ const HowToMakeRecipe = () => {
       });
       setRefresh((refresh) => !refresh);
     } catch (err) {}
-    setComment('');
+    setComment("");
   };
   console.log();
 
@@ -104,7 +104,7 @@ const HowToMakeRecipe = () => {
                     </div>
                   </div>
                 ) : (
-                  ''
+                  ""
                 )}
                 <div className="hrSeparator">
                   <hr></hr>
@@ -118,21 +118,20 @@ const HowToMakeRecipe = () => {
                   <img src={detail.secondImg} alt="secondIng" />
                 </div>
                 <div id="recipe">
-                
                   <div className="saladTipe">
-                  <div className="recipeImg">
-                    <img src={detail.secondImg} alt="secondImg" />
-                  </div>
+                    <div className="recipeImg">
+                      <img src={detail.secondImg} alt="secondImg" />
+                    </div>
                     <p>{recipe.featured}</p>
                     <hr></hr>
                     <div className="timeYeld">
                       <p>
-                        <i class="fa fa-thin fa-clock"></i> TOTAL TIME:{' '}
-                        <span>{detail.makingTime}</span>{' '}
+                        <i class="fa fa-thin fa-clock"></i> TOTAL TIME:{" "}
+                        <span>{detail.makingTime}</span>{" "}
                       </p>
                       <p>
-                        {' '}
-                        <i class="fa fa-thin fa-utensils"></i> YELD:{' '}
+                        {" "}
+                        <i class="fa fa-thin fa-utensils"></i> YELD:{" "}
                         <span> {detail.yeld}</span>
                       </p>
                     </div>
@@ -169,31 +168,41 @@ const HowToMakeRecipe = () => {
             <div>
               <h2>Reviews</h2>
               {recipe.reviews.length === 0 && (
-                <MessageBox>There is no messages</MessageBox>
+                <MessageBox>
+                  <p className="noMessageBox"> There are no reviews</p>
+                </MessageBox>
               )}
-              <ul>
+              <ul className="ulReviews">
                 {recipe.reviews.map((review) => (
                   <li key={review._id}>
-                    <strong>{review.name}</strong>
-                    <p>{review.createdAt.substring(0, 10)}</p>
-                    <p>{review.comment}</p>
+                    <strong className="reviewName">{review.name}</strong>
+                    <p className="revviewComment">{review.comment}</p>
+                    <p className="reviewCreateAt">
+                      {review.createdAt.substring(0, 10)}
+                    </p>
                   </li>
                 ))}
                 <li>
                   {name ? (
-                    <form onSubmit={submitHandler}>
-                      <div>
-                        <h2>Write a comment</h2>
-                      </div>
-                      <div>
-                        <textarea
-                          value={comment}
-                          onChange={(e) => setComment(e.target.value)}
-                        ></textarea>
-
-                        <button type="submit">Post comment</button>
-                      </div>
-                    </form>
+                    <div className="formDiv">
+                      <form onSubmit={submitHandler}>
+                        <div className="h2FormDiv">
+                          <h2>Write a review</h2>
+                        </div>
+                        <div>
+                          <textarea
+                            className="textArea"
+                            value={comment}
+                            onChange={(e) => setComment(e.target.value)}
+                          ></textarea>
+                        </div>
+                        <div className="divButtonCommit">
+                          <button type="submit" className="buttonComment">
+                            POST COMMENT
+                          </button>
+                        </div>
+                      </form>
+                    </div>
                   ) : (
                     <div>You need to login to leave a cmment</div>
                   )}
