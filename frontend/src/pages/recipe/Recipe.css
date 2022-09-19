@@ -7,7 +7,8 @@
   height: 20rem;
   background: #e6e6e6;
   justify-content: center;
-  height: fit-content;
+  height: 30rem;
+ 
 
 }
 .mainDiv{
@@ -23,7 +24,7 @@
   align-items: center;
   padding-top: 3rem;
 }
-.recipeImg {
+.recipeImgR {
   height: 13rem;
   width: 13rem;
   border-radius: 50%;
@@ -33,7 +34,35 @@
 
   text-align: center;
 }
+.nameDescription{
+  padding-left: 20px;
+}
 .recipeName{
   font-size: 3rem;
  font-weight: 700;
+}
+.descriptionP{
+  padding-top: 10px;
+  line-height: 1.625;
+  opacity: 0.75;
+  font-size: 1.5rem;
+}
+.linkFeature:hover{
+background-color: rgba(114, 63, 95, 0.9);
+color: white;
+transition: all 0.5s linear;
+}
+.spanFeature {
+  text-decoration: none;
+  color:rgba(114, 63, 95, 0.9);
+}
+
+.featuredRecipe{
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #A9A9A9;
+}
+.linkFeature span{
+font-size: 1.5rem;
+font-weight: 650;
 }

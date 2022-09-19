@@ -49,6 +49,7 @@ const Recipe = () => {
   const submitHandler=(e)=>{
     e.preventDefault()
   }
+  console.log(recipe);
   return loading ? (
     <div>Loading...</div>
   ) : error ? (
@@ -58,25 +59,27 @@ const Recipe = () => {
       <div className="mainDiv">
         <div className="imgFeatures">
           <div>
-            <img src={recipe.icon} className="recipeImg" />
+            <img src={recipe.icon} className="recipeImgR" alt='img' />
           </div>
           <div className="featuredLink">
             <div>
-              <span>FEATURED RECIPE:</span>
+              <span className='featuredRecipe'>FEATURED RECIPE:</span>
             </div>
-            <div>
-              <Link to={`/recipes/howIsMade/${recipe._id}`}>
+           
+              <Link   to={`/recipes/howIsMade/${recipe._id}`}>
+              <div className='spanFeature linkFeature'>
                 <span>{recipe.featured}</span>
+                </div>
               </Link>
-            </div>
+           
           </div>
         </div>
-        <div>
+        <div className='nameDescription'>
           <div>
             <span className="recipeName">{recipe.name} Recipe</span>
           </div>
           <div>
-            <h1>{recipe.description}</h1>
+            <p className='descriptionP'>{recipe.description}</p>
           </div>
         </div>
       </div>
