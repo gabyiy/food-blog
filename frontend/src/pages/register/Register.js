@@ -47,7 +47,7 @@ const Register = () => {
       <div className="main_register">
         <div className="register_header">
           <div className="header">
-            <Link to="/">
+            <Link className="link" to="/">
               <span>x</span>
             </Link>
           </div>

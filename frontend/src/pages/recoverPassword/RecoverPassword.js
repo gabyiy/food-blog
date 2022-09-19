@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Store } from "../../Store";
 import { getError } from "../../utils";
-
+import "./RecoverPassword.css";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -17,8 +17,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-const RecoverPassword = () => {  
-
+const RecoverPassword = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [key, setKey] = useState("");
@@ -40,20 +39,41 @@ const RecoverPassword = () => {
       dispach({ type: "FETCH_SUCCESS", payload: data });
       ctxDispatch({ type: "USER_RESET", payload: data });
       localStorage.setItem("userReset", JSON.stringify(data));
-      navigate("/")
+      navigate("/");
     } catch (err) {
-      toast.error(getError(err))
+      toast.error(getError(err));
     }
   };
 
   // console.log(user.token);
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <input onChange={(e) => setEmail(e.target.value)} />
-        <button type="submit">Submit</button>
-      </form>
-     
+    <div className="page_blur">
+      <div className="main_register">
+        <div className="register_header">
+          <div className="header">
+            <Link className="link" to="/">
+              <span>x</span>
+            </Link>
+          </div>
+          <h1>Recover Password</h1>
+        </div>
+
+        <form className="register_form" onSubmit={submitHandler}>
+          <div className="reg_line">
+            <div className="wrap_input  ">
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div className="reg_btn_wrapper">
+            <button className="btn_register" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
