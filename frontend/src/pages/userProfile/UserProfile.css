@@ -1,29 +1,51 @@
 .mainDivUserProfile {
   display: flex;
-  justify-content: space-around;
   padding-top: 50px;
+  flex-direction: column;
+  text-align: center;
 }
-.divFormReset form {
+.divFormReset{
+  display: flex;
+  padding-top: 30px;
+justify-content: space-around;
+background-color: #e6e6e6 ;
+margin-top: 30px;
+}
+.spanP p{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 10px 15px 10px;
+}
+ form {
   display: flex;
   flex-direction: column;
   width: fit-content;
   height: fit-content;
-  background-color: #e6e6e6;
-  border: 2px soild #eee;
   justify-content: center;
   align-items: center;
   margin: 15px 15px;
-  -webkit-box-shadow: 2px 3px 8px #eee;
-  -moz-box-shadow: 2px 3px 8px #eee;
-  box-shadow: 2px 3px 8px #eee;
-}
 
+}
+.spanReset{
+width: 100%;
+}
+.spanReset span{
+font-size: 30px;
+font-weight: 700;
+}
 .formReset input {
   margin: 10px 10px 10px;
-  width: 25rem;
+  width: 50rem;
   height: 40px;
   outline: none;
   border: none;
+  text-align: center;
+}
+ .gg{
+  float: left;
+  width: 10em;
+  margin-right: 1em;
+
 }
 
 .formReset button {
@@ -42,6 +64,7 @@
   gap: 6px;
   cursor: pointer;
   width: 70%;
+  margin-bottom: 10px;
 }
 
 .formReset button:hover {

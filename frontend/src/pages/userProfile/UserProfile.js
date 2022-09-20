@@ -55,31 +55,48 @@ const UserProfile = () => {
   };
   return (
     <div className="mainDivUserProfile">
-      <div>
-        <span>Hi {userInfo.name} </span>
+      <div className="spanReset">
+      <span>Wellcome {userInfo.name} </span>
+      <p>In Here You Can Change You'r Personal Data :</p>
       </div>
       <div className="divFormReset">
+    
+      <div className="spanP">
+       <p>Change Name :</p>
+       <p>Change Email :</p>
+       <p>Change Password :</p>
+       <p>Confirm Passowrd :</p>
+      </div>
         <form className="formReset" onSubmit={sumbitHandler}>
+       
+      
+        
           <input
-            placeholder="Chande Name"
+            placeholder=" Name"
             onChange={(e) => setName(e.target.value)}
           />
+      
+
           <input
-            placeholder="Change Email"
+            placeholder=" Email"
             onChange={(e) => setEamil(e.target.value)}
           />
+
           <input
-            placeholder="Change Password"
+            placeholder=" Password"
             onChange={(e) => setPassword(e.target.value)}
           />
+          
+              
           <input
             placeholder="Confirm Password"
             onChange={(e) => setPasswordConfirmation(e.target.value)}
           />
-          <button type="submit">Submit.</button>
+       
+          <button className="buttonReset" type="submit">Submit</button>
         </form>
       </div>
-    </div>
+      </div>
   );
 };
 
