@@ -1,8 +1,9 @@
 import React, { useContext, useReducer, useState } from "react";
-import { Store } from "../Store";
+import { Store } from "../../Store";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { getError } from "../utils";
+import { getError } from "../../utils";
+import "./UserProfile.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,26 +54,26 @@ const UserProfile = () => {
     }
   };
   return (
-    <div>
+    <div className="mainDivUserProfile">
       <div>
         <span>Hi {userInfo.name} </span>
       </div>
-      <div>
-        <form onSubmit={sumbitHandler}>
+      <div className="divFormReset">
+        <form className="formReset" onSubmit={sumbitHandler}>
           <input
-            placeholder="chande Name"
+            placeholder="Chande Name"
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            placeholder="change Email"
+            placeholder="Change Email"
             onChange={(e) => setEamil(e.target.value)}
           />
           <input
-            placeholder="change Password"
+            placeholder="Change Password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <input
-            placeholder="confirm Password"
+            placeholder="Confirm Password"
             onChange={(e) => setPasswordConfirmation(e.target.value)}
           />
           <button type="submit">Submit.</button>

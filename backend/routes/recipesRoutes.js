@@ -11,43 +11,40 @@ recipeRouter.get("/", async (req, res) => {
 
 function paginatedResults(model) {
   return async (req, res, next) => {
-    const page = parseInt(req.query.page)
-    const limit = parseInt(req.query.limit)
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
 
-    const startIndex = (page - 1) * limit
-    const endIndex = page * limit
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
 
-    const results = {}
+    const results = {};
 
-    if (endIndex < await model.countDocuments().exec()) {
+    if (endIndex < (await model.countDocuments().exec())) {
       results.next = {
         page: page + 1,
-        limit: limit
-      }
+        limit: limit,
+      };
     }
-    
+
     if (startIndex > 0) {
       results.previous = {
         page: page - 1,
-        limit: limit
-      }
+        limit: limit,
+      };
     }
     try {
-      results.results = await model.find().limit(limit).skip(startIndex).exec()
-      res.paginatedResults = results
-      next()
+      results.results = await model.find().limit(limit).skip(startIndex).exec();
+      res.paginatedResults = results;
+      next();
     } catch (e) {
-      res.status(500).json({ message: e.message })
+      res.status(500).json({ message: e.message });
     }
-  }
+  };
 }
 
-
-
-recipeRouter.get("/getAllRecipes",paginatedResults(Recipe),(req,res)=>{
- 
-  res.send(res.paginatedResults)
-})
+recipeRouter.get("/getAllRecipes", paginatedResults(Recipe), (req, res) => {
+  res.send(res.paginatedResults);
+});
 
 recipeRouter.get("/description/:name", async (req, res) => {
   const productDescription = await Recipe.findOne({
@@ -68,32 +65,32 @@ recipeRouter.get("/makeRecipe/:id", async (req, res) => {
     res.status(404).send({ message: "Product not found" });
   }
 });
-  
+
 const PAGE_SIZE = 3;
 
 recipeRouter.get(
-  '/search',
+  "/search",
   expressAsyncHandler(async (req, res) => {
     const { query } = req;
     const pageSize = query.pageSize || PAGE_SIZE;
     const page = query.page || 1;
-    const category = query.category || '';
-    const rating = query.rating || '';
-    const order = query.order || '';
-    const searchQuery = query.query || '';
+    const category = query.category || "";
+    const rating = query.rating || "";
+    const order = query.order || "";
+    const searchQuery = query.query || "";
 
     const queryFilter =
-      searchQuery && searchQuery !== 'all'
+      searchQuery && searchQuery !== "all"
         ? {
             name: {
               $regex: searchQuery,
-              $options: 'i',
+              $options: "i",
             },
           }
         : {};
-    const categoryFilter = category && category !== 'all' ? { category } : {};
+    const categoryFilter = category && category !== "all" ? { category } : {};
     const ratingFilter =
-      rating && rating !== 'all'
+      rating && rating !== "all"
         ? {
             rating: {
               $gte: Number(rating),
@@ -102,22 +99,22 @@ recipeRouter.get(
         : {};
 
     const sortOrder =
-      order === 'featured'
+      order === "featured"
         ? { featured: -1 }
-        : order === 'lowest'
+        : order === "lowest"
         ? { price: 1 }
-        : order === 'highest'
+        : order === "highest"
         ? { price: -1 }
-        : order === 'toprated'
+        : order === "toprated"
         ? { rating: -1 }
-        : order === 'newest'
+        : order === "newest"
         ? { createdAt: -1 }
         : { _id: -1 };
 
     const recipes = await Recipe.find({
       ...queryFilter,
       ...categoryFilter,
-      
+
       ...ratingFilter,
     })
       .sort(sortOrder)
@@ -127,7 +124,7 @@ recipeRouter.get(
     const countProducts = await Recipe.countDocuments({
       ...queryFilter,
       ...categoryFilter,
-    
+
       ...ratingFilter,
     });
     res.send({
@@ -139,17 +136,14 @@ recipeRouter.get(
   })
 );
 
-
-
-
 recipeRouter.post(
-  '/:id/reviews',
+  "/:id/reviews",
 
-  expressAsyncHandler(async (req, res) => {  
+  expressAsyncHandler(async (req, res) => {
     const recipeId = req.params.id;
 
     const recipe = await Recipe.findById(recipeId);
-    
+
     if (recipe) {
       // if (recipe.reviews.find((x) => x.name === req.user.name)) {
       //   return res
@@ -162,14 +156,14 @@ recipeRouter.post(
       };
       recipe.reviews.push(review);
       recipe.numReviews = recipe.reviews.length;
-     
+
       const updateRecipe = await recipe.save();
       res.status(201).send({
-        message: 'Review Created',
+        message: "Review Created",
         review: updateRecipe.reviews[updateRecipe.reviews.length - 1],
       });
     } else {
-      res.status(404).send({ message: 'Recipe Not Found' });
+      res.status(404).send({ message: "Recipe Not Found" });
     }
   })
 );

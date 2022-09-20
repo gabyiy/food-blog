@@ -1,0 +1,22 @@
+.searchAllMainDiv {
+  background-color: rgba(114, 63, 95, 0.9);
+  width: fit-content;
+  height: fit-content;
+}
+.searchAllMainDiv:hover {
+  background-color: black;
+  transition: all 0.5s linear;
+}
+.searchAllLink {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.searchAllLink:hover {
+  color: white;
+}
+.searchAllLink p {
+  padding: 10px 10px 10px 10px;
+}

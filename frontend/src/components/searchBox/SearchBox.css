@@ -1,0 +1,38 @@
+.formDivSearch {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: fit-content;
+}
+.formSearch {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.inputSearch {
+  width: 30rem;
+  height: 3rem;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.btnSearch {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  vertical-align: middle;
+  color: rgba(114, 63, 95, 0.9);
+
+  padding-left: 10px;
+}
+
+.orForm {
+  font-family: "Water Brush";
+  font-size: 40px;
+  color: #a9a9a9;
+  padding: 0 15px 0 15px;
+}

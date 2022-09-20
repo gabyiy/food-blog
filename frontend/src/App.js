@@ -6,7 +6,7 @@ import Home from "./pages/home/Home";
 import Register from "./pages/register/Register";
 import Login2 from "../src/pages/login/Login2";
 import Recipe from "./pages/recipe/Recipe";
-import UserProfile from "./pages/UserProfile";
+import UserProfile from "./pages/userProfile/UserProfile";
 import { ToastContainer } from "react-toastify";
 import HowToMakeRecipe from "./pages/howToMakeRecipe/HowToMakeRecipe";
 import SearchScreen from "./pages/searchScreen/SearchScreen";
@@ -19,8 +19,7 @@ const App = () => {
   const { state } = useContext(Store);
   const { userReset } = state;
 
-
-  //console.log(userReset);
+  console.log(userReset);
   return (
     <BrowserRouter>
       <div className="app">
@@ -36,12 +35,14 @@ const App = () => {
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path="search" element={<SearchScreen />} />
           <Route path="/recover" element={<RecoverPassword />} />
-     {!userReset?"":
+          {!userReset ? (
+            ""
+          ) : (
             <Route
               path={`/reset-password/${userReset.oldUser._id}/${userReset.token}`}
               element={<ResetPassword />}
             />
-     }
+          )}
 
           <Route path="/searchAll" element={<SearchAllRecipes />} />
         </Routes>

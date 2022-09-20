@@ -43,6 +43,12 @@
   justify-content: center;
   flex: 1;
 }
+.searcBoxAndSearchAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 20 0;
+}
 @media (max-width: 550px) {
   .intro {
     flex-direction: column;

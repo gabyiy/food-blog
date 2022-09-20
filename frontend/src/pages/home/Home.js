@@ -69,11 +69,11 @@ const Home = () => {
               </div>
             )}
           </div>
-        
-        <div>
-          <SearchBox/>
-          <SearchAll/>
-        </div>
+
+          <div className="searcBoxAndSearchAll">
+            <SearchBox />
+            <SearchAll />
+          </div>
         </section>
       </main>
     </>

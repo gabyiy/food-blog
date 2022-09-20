@@ -1,0 +1,49 @@
+.mainDivUserProfile {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+.divFormReset form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  background-color: #e6e6e6;
+  border: 2px soild #eee;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 15px;
+  -webkit-box-shadow: 2px 3px 8px #eee;
+  -moz-box-shadow: 2px 3px 8px #eee;
+  box-shadow: 2px 3px 8px #eee;
+}
+
+.formReset input {
+  margin: 10px 10px 10px;
+  width: 25rem;
+  height: 40px;
+  outline: none;
+  border: none;
+}
+
+.formReset button {
+  border: none;
+  outline: none;
+  padding: 8.5px 12px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 600;
+  font-style: 14px;
+  background: rgba(114, 63, 95, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  width: 70%;
+}
+
+.formReset button:hover {
+  filter: brightness(85%);
+}
