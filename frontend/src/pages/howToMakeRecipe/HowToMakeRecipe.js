@@ -84,12 +84,13 @@ const HowToMakeRecipe = () => {
                 <div className="firstTextFirstImg entry-content italic">
                   <p>{detail.firstTextFirstImg}</p>
                 </div>
-                <div className="jumpRecipe">
-                  <i class="fa fa-light fa-arrow-down"></i>
-                  <a href="#recipe">
+                <a href="#recipe">
+                  <div className="jumpRecipe">
+                    <i class="fa fa-light fa-arrow-down"></i>
                     <p>JUMP TO RECIPE</p>
-                  </a>
-                </div>
+                  </div>
+                </a>
+
                 <div className="allImg">
                   <img src={detail.firstImg} alt="pasta" />
                 </div>

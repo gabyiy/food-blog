@@ -7,6 +7,7 @@ import LoadingBox from "../../components/LoadingBox";
 import SearchRecipes from "../../components/searchRecipes/SearchRecipes";
 import SearchBox from "../../components/searchBox/SearchBox";
 import SearchAll from "../../components/searchAll/SearchAll";
+import Footer from "../../components/footer/Footer";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -76,6 +77,7 @@ const Home = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

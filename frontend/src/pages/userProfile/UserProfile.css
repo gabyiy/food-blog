@@ -4,19 +4,19 @@
   flex-direction: column;
   text-align: center;
 }
-.divFormReset{
+.divFormReset {
   display: flex;
   padding-top: 30px;
-justify-content: space-around;
-background-color: #e6e6e6 ;
-margin-top: 30px;
+  justify-content: space-around;
+  background-color: #e6e6e6;
+  margin-top: 30px;
 }
-.spanP p{
+.spanP p {
   font-size: 20px;
   font-weight: 600;
   padding: 10px 10px 15px 10px;
 }
- form {
+.formReset {
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -24,14 +24,13 @@ margin-top: 30px;
   justify-content: center;
   align-items: center;
   margin: 15px 15px;
-
 }
-.spanReset{
-width: 100%;
+.spanReset {
+  width: 100%;
 }
-.spanReset span{
-font-size: 30px;
-font-weight: 700;
+.spanReset span {
+  font-size: 30px;
+  font-weight: 700;
 }
 .formReset input {
   margin: 10px 10px 10px;
@@ -41,11 +40,10 @@ font-weight: 700;
   border: none;
   text-align: center;
 }
- .gg{
+.gg {
   float: left;
   width: 10em;
   margin-right: 1em;
-
 }
 
 .formReset button {
