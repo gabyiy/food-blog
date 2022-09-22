@@ -1,7 +1,9 @@
 .footerMainDiv {
   width: 100%;
-  height: 10rem;
-  padding: 20px 20px 10px 20px;
+  height: fit-content;
+  padding: 20px 20px 20px;
+  background-color: #000000;
+  color: white;
 }
 
 .detailsFooter {
@@ -12,4 +14,83 @@
 .termsBlog {
   display: flex;
 }
+
+.footerTitle span {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: 500;
+}
+.linkFooter {
+  text-decoration: none;
+  color: white;
+}
+.linkFooter:hover {
+  color: white;
+}
+
+.iconsFooter {
+  display: flex;
+}
+.iconFooter {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.iconFooter a {
+  color: white;
+}
+.contactUsFooter {
+  margin-bottom: 1rem;
+}
+.hrFooter {
+  color: white;
+}
+.termsBlog {
+  color: white;
+}
+.privacyTerms {
+  display: flex;
+  margin-left: 30rem;
+}
+.privacyTerms p {
+  padding-right: 15px;
+}
+@media (max-width: 550px) {
+  .footerMainDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .allInconsFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactUsFooter {
+    padding-top: 10px;
+  }
+  .detailsFooter {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detailsFooter {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .termsBlog {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .privacyTerms {
+    margin: auto;
+    padding-top: 10px;
+  }
+}
+
 /* https://webflow.com/blog/website-footer-design-examples?utm_source=google&utm_medium=search&utm_campaign=Google-Search-Dynamic-Search-Ads-Global-BBSS&utm_term=aud-520743546121:dsa-1729073405028___617245336990___ss_paid-bb&gclid=Cj0KCQjw7KqZBhCBARIsAI-fTKKnoZgtTDYIB3aMyMEiU6OJtdNwKFzNiQMSqKAJuQLfNkSlvqrK8u8aApVQEALw_wcB */
