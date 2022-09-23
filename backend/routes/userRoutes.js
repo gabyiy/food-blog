@@ -146,12 +146,17 @@ userRouter.put(
   isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
-    console.log(user);
+    console.log(req.user._id);
     if (user) {
       user.name = req.body.name || user.name;
       user.email = req.body.email || user.email;
-      if (req.body.password) {
+      if (req.body.password === req.body.passwordConfirmation) {
         user.password = bcrypt.hashSync(req.body.password, 8);
+      }
+      if (req.body.password !== req.body.passwordConfirmation) {
+        res
+          .status(400)
+          .send({ message: "Password and ConfirmPassword dident mach" });
       }
       const updatedUser = await user.save();
 

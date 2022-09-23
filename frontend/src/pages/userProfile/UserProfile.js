@@ -38,6 +38,7 @@ const UserProfile = () => {
         "/api/users/replaceProfile",
         {
           password,
+          passwordConfirmation,
           name,
           email,
         },
@@ -56,26 +57,21 @@ const UserProfile = () => {
   return (
     <div className="mainDivUserProfile">
       <div className="spanReset">
-      <span>Wellcome {userInfo.name} </span>
-      <p>In Here You Can Change You'r Personal Data :</p>
+        <span>Wellcome {userInfo.name} </span>
+        <p>In Here You Can Change You'r Personal Data :</p>
       </div>
       <div className="divFormReset">
-    
-      <div className="spanP">
-       <p>Change Name :</p>
-       <p>Change Email :</p>
-       <p>Change Password :</p>
-       <p>Confirm Passowrd :</p>
-      </div>
+        <div className="spanP">
+          <p>Change Name :</p>
+          <p>Change Email :</p>
+          <p>Change Password :</p>
+          <p>Confirm Passowrd :</p>
+        </div>
         <form className="formReset" onSubmit={sumbitHandler}>
-       
-      
-        
           <input
             placeholder=" Name"
             onChange={(e) => setName(e.target.value)}
           />
-      
 
           <input
             placeholder=" Email"
@@ -86,17 +82,18 @@ const UserProfile = () => {
             placeholder=" Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          
-              
+
           <input
             placeholder="Confirm Password"
             onChange={(e) => setPasswordConfirmation(e.target.value)}
           />
-       
-          <button className="buttonReset" type="submit">Submit</button>
+
+          <button className="buttonReset" type="submit">
+            Submit
+          </button>
         </form>
       </div>
-      </div>
+    </div>
   );
 };
 

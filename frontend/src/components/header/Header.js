@@ -17,6 +17,7 @@ const Header = () => {
   const [recipesActive, setRecipesActive] = useState(false);
   const [registerActive, setRegisterActive] = useState(false);
   const [loginActive, setLoginActive] = useState(false);
+  const [profileActive, setProfileActivate] = useState(false);
 
   const setHomeActivator = () => {
     setHomeActive(true);
@@ -43,6 +44,13 @@ const Header = () => {
     setLoginActive(true);
     setRecipesActive(false);
   };
+  const profileActivator = () => {
+    setHomeActive(false);
+    setRegisterActive(false);
+    setLoginActive(false);
+    setRecipesActive(false);
+    setProfileActivate(true);
+  };
   return (
     <div className="head border_b">
       <nav className="navbar navbar-expand-lg navbar-light main_div ">
@@ -58,13 +66,14 @@ const Header = () => {
           </Link>
           <div className="d-flex">
             {userInfo ? (
-              <div className="dropdown ">
+              <div className={profileActive ? "dropdown active" : "dropdown"}>
                 <button
                   className="btn  dropdown-toggle"
                   type="button"
                   id="dropdownMenu2"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  onClick={() => profileActivator()}
                 >
                   {userInfo.name}
                 </button>

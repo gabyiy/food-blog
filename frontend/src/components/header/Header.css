@@ -41,6 +41,23 @@
   font-weight: 700;
   font-size: 18px;
 }
+.dropdown {
+  padding-top: 17px;
+}
+.dropdown:active {
+  border: none;
+}
+.dropdown-menu {
+  transition: 0.2s linear;
+  margin-top: 5px !important;
+}
+.dropdown-item {
+  transition: 0.2s linear;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 .border_b {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
