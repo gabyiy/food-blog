@@ -19,6 +19,7 @@ function reducer(state, action) {
       return { ...state, userInfo: null };
     case "USER_RESET":
       return { ...state, userReset: action.payload };
+   
     default:
       return state;
   }

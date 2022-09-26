@@ -4,10 +4,11 @@ import Recipe from "../models/recipeModel.js";
 
 const recipeRouter = express.Router();
 
-recipeRouter.get("/", async (req, res) => {
+recipeRouter.get("/", expressAsyncHandler(async (req, res) => {
   const recipes = await Recipe.find();
   res.send(recipes);
-});
+
+}));
 
 function paginatedResults(model) {
   return async (req, res, next) => {

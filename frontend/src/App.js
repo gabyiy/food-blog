@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
@@ -35,6 +37,7 @@ const App = () => {
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path="search" element={<SearchScreen />} />
           <Route path="/recover" element={<RecoverPassword />} />
+      
           {!userReset ? (
             ""
           ) : (

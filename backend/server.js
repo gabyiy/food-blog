@@ -6,10 +6,12 @@ import seedRouter from './routes/seedRoutes.js';
 import recipeRouter from './routes/recipesRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import nodemailer from "nodemailer"
+import cors from "cors"
 
 
 dotenv.config();
 const app = express();
+app.use(cors())  
 //ca sa ne citeasca rutele din postman trebuie sa folosim  exress.json
 app.use(express.json());
 app.set("view engine","ejs")

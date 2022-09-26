@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useReducer, useState } from 'react';
+import CaruselRecipes from '../../components/caruselRecipes/CaruselRecipes';
 import LoadingBox from '../../components/LoadingBox';
 import { getError } from '../../utils';
 
@@ -58,6 +59,7 @@ const SearchAllRecipes = () => {
       <button onClick={() =>recipes.length===4?setPage(Number(page) +1) :setPage( 1)}>+</button>
       <button onClick={() => setPage(page ==1 ?  page ==1: page - 1)}>-</button>
       
+      <CaruselRecipes/>
     </div>
   );
 };

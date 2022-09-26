@@ -1,13 +1,15 @@
 import Section2Main from "../../components/Section2Main/Section2Main";
 import Section2Second from "../../components/Section2Second/Section2Second";
 import "./Home.css";
-import React, { useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import LoadingBox from "../../components/LoadingBox";
 import SearchRecipes from "../../components/searchRecipes/SearchRecipes";
 import SearchBox from "../../components/searchBox/SearchBox";
 import SearchAll from "../../components/searchAll/SearchAll";
 import Footer from "../../components/footer/Footer";
+import { Store } from "../../Store";
+import { toast } from "react-toastify";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -23,8 +25,11 @@ const reducer = (state, action) => {
 };
 
 const Home = () => {
+  const {state,dispach:ctxDispatch}=useContext(Store)
+  const {recipess}=state
+
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
-    loading: true,
+    loading: false,
     error: "",
     recipes: [],
   });
@@ -35,13 +40,17 @@ const Home = () => {
 
       try {
         const result = await axios.get("/api/recipes");
+
         dispach({ type: "FETCH_SUCCESS", payload: result.data });
+
       } catch (error) {
         dispach({ type: "FETCH_FAIL", payload: error.data });
       }
     };
     fetchMainRecipe();
   }, []);
+
+
   return (
     <>
       <main className="main">
