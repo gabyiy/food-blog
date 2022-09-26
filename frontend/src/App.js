@@ -16,6 +16,8 @@ import SearchAllRecipes from "./pages/searchAllRecipes.js/SearchAllRecipes";
 import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
 import { Store } from "./Store";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   const { state } = useContext(Store);
