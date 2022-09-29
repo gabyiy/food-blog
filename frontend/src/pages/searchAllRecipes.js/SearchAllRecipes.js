@@ -3,6 +3,8 @@ import React, { useEffect, useReducer, useState } from "react";
 import Carusel from "../../components/carusel/Carusel";
 import LoadingBox from "../../components/LoadingBox";
 import { getError } from "../../utils";
+import { useMediaQuery } from "react-responsive";
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -40,6 +42,11 @@ const SearchAllRecipes = () => {
     fetchRecipes();
   }, [page, error, limit]);
 
+
+  const view2 = useMediaQuery({
+    query: "(min-width: 950px)",
+  });
+  console.log(view2);
   return (
     <div>
       {loading ? (

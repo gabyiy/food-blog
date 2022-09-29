@@ -1,6 +1,7 @@
-import React, { useEffect, useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import Slider from "react-slick";
 import axios from "axios";
+import { useMediaQuery } from "react-responsive";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,6 +17,23 @@ const reducer = (state, action) => {
 };
 
 const Carusel = () => {
+  const [view,setView]= useState()
+
+  const view1 = useMediaQuery({
+    query: "(min-width: 539px)",
+  });
+  const view2 = useMediaQuery({
+    query: "(min-width: 850px)",
+  });
+  const view3 = useMediaQuery({
+    query: "(min-width: 1170px)",
+  });
+
+  if(view3){
+    setView(4)
+  }else if (view2){
+    setView(3)
+  }
   const sliderRef = useRef(null);
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
     loading: true,
@@ -62,12 +80,7 @@ const Carusel = () => {
         </div>
       </div>
       <div style={{ margin: 30 }}>
-        <Slider
-          ref={sliderRef}
-          slidesToShow={4}
-          slidesToScroll={slide}
-          dots={true}
-        >
+      <Slider ref={sliderRef}  slidesToShow={view} slidesToScroll={1}>
           {recipes.map((recipe) => (
             <div style={{ margin: 20 }}>
               <img
