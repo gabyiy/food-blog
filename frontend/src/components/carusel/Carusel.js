@@ -23,6 +23,7 @@ const Carusel = () => {
     recipes: [],
   });
 
+  const slide = 1;
   useEffect(() => {
     const fetchMainRecipe = async () => {
       dispach({ type: "FETCH_REQUEST" });
@@ -37,47 +38,23 @@ const Carusel = () => {
     fetchMainRecipe();
   }, []);
   console.log(recipes);
+  console.log(sliderRef);
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginRight: 10,
-        }}
-      >
-        <div style={{ paddingLeft: 10 }}>
+      <div className="mainSliderDiv">
+        <div className="h1Div">
           <h1>Recipes</h1>
         </div>
-        <div style={{ paddingRight: 10, display: "flex" }}>
+        <div className="buttonsCaruselDiv">
           <div
-            style={{
-              width: 40,
-              height: 40,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 7,
-              boxShadow: "0 1px 3px rgb(0 0 0/100%)",
-              cursor: "pointer",
-              marginRight: 10,
-            }}
+            className="buttonCaruselPrev"
             onClick={() => sliderRef.current.slickPrev()}
           >
             {" "}
             prev
           </div>
           <div
-            style={{
-              width: 40,
-              height: 40,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 7,
-              boxShadow: "0 1px 3px rgb(0 0 0/100%)",
-              cursor: "pointer",
-            }}
+            className="buttonCaruselNext"
             onClick={() => sliderRef.current.slickNext()}
           >
             next
@@ -85,7 +62,12 @@ const Carusel = () => {
         </div>
       </div>
       <div style={{ margin: 30 }}>
-        <Slider ref={sliderRef} slidesToShow={4} slidesToScroll={4}>
+        <Slider
+          ref={sliderRef}
+          slidesToShow={4}
+          slidesToScroll={slide}
+          dots={true}
+        >
           {recipes.map((recipe) => (
             <div style={{ margin: 20 }}>
               <img
