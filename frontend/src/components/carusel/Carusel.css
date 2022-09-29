@@ -1,0 +1,37 @@
+.mainSliderDiv {
+  display: "flex";
+  justify-content: "space-between";
+  margin-right: 10px;
+}
+
+.h1Div {
+  padding-left: 10px;
+}
+
+.buttonsCaruselDiv {
+  padding-right: 10px;
+  display: "flex";
+}
+
+.buttonCaruselPrev {
+  width: 40px;
+  height: 40px;
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  border-radius: 7px;
+  box-shadow: "0 1px 3px rgb(0 0 0/100%)";
+  cursor: "pointer";
+  margin-right: 10px;
+}
+.buttonCaruselNext {
+  width: 40px;
+  height: 40px;
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  border-radius: 7px;
+  box-shadow: "0 1px 3px rgb(0 0 0/100%)";
+  cursor: "pointer";
+  margin-right: 10px;
+}
