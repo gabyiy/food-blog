@@ -38,6 +38,7 @@ useEffect(()=>{
     setShowScroll(1)
   )
 },[view3,view2,view1])
+
   const sliderRef = useRef(null);
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
     loading: true,
@@ -45,7 +46,6 @@ useEffect(()=>{
     recipes: [],
   });
 
-  const slide = 1;
   useEffect(() => {
     const fetchMainRecipe = async () => {
       dispach({ type: "FETCH_REQUEST" });
@@ -59,10 +59,9 @@ useEffect(()=>{
     };
     fetchMainRecipe();
   }, []);
-  console.log(recipes);
   console.log(sliderRef);
   return (
-    <div>
+    <div className="caruselPageDiv">
       <div className="mainSliderDiv">
         <div className="h1Div">
           <h1>Recipes</h1>
@@ -83,14 +82,19 @@ useEffect(()=>{
           </div>
         </div>
       </div>
-      <div style={{ margin: 30 }}>
-      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll}>
+      <div className="sliderDiv">
+      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={2} className="slider">
           {recipes.map((recipe) => (
-            <div style={{ margin: 20 }}>
-              <img
-                style={{ width: 250, objectFit: "contain", borderRadius: 10 }}
+            <div className="mainCaruselMap">
+            <div>
+              <img className="imgCarusel"
+         
                 src={recipe.icon}
               />
+              </div>
+              <div className="carsuelRecipeName">
+                <p>{recipe.name}</p>
+              </div>
             </div>
           ))}
         </Slider>
