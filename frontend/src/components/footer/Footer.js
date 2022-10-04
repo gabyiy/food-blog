@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="contactUsFooter">CONTACT US</div>
-          <div>gabyiy2000@yahoo.com</div>
+          <div>gabyiy2000@hotmail.com</div>
         </div>
       </div>
       <hr className="hrFooter"></hr>
