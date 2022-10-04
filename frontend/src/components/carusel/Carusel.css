@@ -1,25 +1,37 @@
 .caruselPageDiv{
   justify-content: center;
+  margin-bottom: 30px;
 }
 .mainSliderDiv {
   display: flex;
   justify-content:space-around;
   margin-right: 10px;
   width: auto;
-  height: 10rem;
-}
-.slider{
-  justify-content:space-around!important;
-
+  height: 5rem;
 }
 
-.h1Div {
+
+.h1Div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-clipboard-list{
+  display: flex;
+  font-size: 30px;
+ color:  #fcb900;
+ padding-top: 15px;
+}
+.h1Div h1 {
   padding-left: 10px;
+  font-weight: 900;
+  color: rgba(114, 63, 95, 0.9);
 }
 
 .buttonsCaruselDiv {
-  padding-right: 10px;
   display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .buttonCaruselPrev {
@@ -29,22 +41,36 @@
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  box-shadow: 0 1px 3px rgb(0 0 0/100%);
   cursor: pointer;
+  margin-top: 30px;
+  border: 1px solid  #A9A9A9;
   margin-right: 10px;
+
+ 
 }
+
+.buttonCaruselPrev:hover{
+  box-shadow: 0 1px 3px;
+
+}
+
+
 .buttonCaruselNext {
+  margin-top: 30px;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  box-shadow: 0 1px 3px rgb(0 0 0/100%);
+  border: 1px solid  #A9A9A9;
   cursor: pointer;
-  margin-right: 10px;
 }
 
+.buttonCaruselNext:hover{
+  box-shadow: 0 1px 3px;
+
+}
 .sliderDiv{
   display: block;
   flex-direction: column;
@@ -53,22 +79,20 @@
   justify-content: center;
   align-items: center;
 }
-.mainCaruselMap{
-  width:100px !important; 
- height: fit-content;
- margin-bottom: 20px;
- text-align: center;
- justify-content: center;
- align-items: center;
- display: flex;
+
+
+.imgContainerCarusel{
+  display: grid;
+  justify-content: center;
+  padding-bottom: 20px;
+
 }
-
-
 .imgCarusel{
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 700px;
   object-fit: contain;
    border-radius: 10px;
+ 
 }
 .carsuelRecipeName{
   text-align: center;
@@ -80,4 +104,7 @@
   text-align: center;
   justify-content: center;
 align-self: center;
+}
+.slick-slider{
+  align-items: center;
 }

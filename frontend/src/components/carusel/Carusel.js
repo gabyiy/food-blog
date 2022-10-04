@@ -1,9 +1,13 @@
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import Slider from "react-slick";
 import axios from "axios";
+import Footer from "../footer/Footer"
 import { useMediaQuery } from "react-responsive";
-import "./Carusel.css"
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
+import "./Carusel.css"
+import { Link } from "react-router-dom";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -31,7 +35,7 @@ const Carusel = () => {
   });
 useEffect(()=>{
   if(view3){
-    setShowScroll(4) 
+    setShowScroll(6) 
   }else if (view2){
     setShowScroll(3)
   }else if(view1) (
@@ -64,29 +68,18 @@ useEffect(()=>{
     <div className="caruselPageDiv">
       <div className="mainSliderDiv">
         <div className="h1Div">
-          <h1>Recipes</h1>
+        <p><i class="fa fa-thin fa-clipboard-list"></i></p>
+          <h1>More Recipes</h1>
+
         </div>
-        <div className="buttonsCaruselDiv">
-          <div
-            className="buttonCaruselPrev"
-            onClick={() => sliderRef.current.slickPrev()}
-          >
-            {" "}
-            prev
-          </div>
-          <div
-            className="buttonCaruselNext"
-            onClick={() => sliderRef.current.slickNext()}
-          >
-            next
-          </div>
-        </div>
+
       </div>
       <div className="sliderDiv">
-      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={2} className="slider">
+      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={1} className="slider">
           {recipes.map((recipe) => (
+            <Link to={`/recipes/${recipe.name}`}>
             <div className="mainCaruselMap">
-            <div>
+            <div className="imgContainerCarusel">
               <img className="imgCarusel"
          
                 src={recipe.icon}
@@ -96,9 +89,28 @@ useEffect(()=>{
                 <p>{recipe.name}</p>
               </div>
             </div>
+            </Link>
           ))}
         </Slider>
+        <div className="buttonsCaruselDiv">
+          <div
+            className="buttonCaruselPrev"
+            onClick={() => sliderRef.current.slickPrev()}
+          >
+            {" "}
+  
+        <ArrowBackIosIcon/>
+          </div>
+          <div
+            className="buttonCaruselNext"
+            onClick={() => sliderRef.current.slickNext()}
+          >   
+          <ArrowForwardIosIcon/> 
+          </div>
+        </div>
+        
       </div>
+   
     </div>
   );
 };

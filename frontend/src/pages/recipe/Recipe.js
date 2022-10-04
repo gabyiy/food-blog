@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './Recipe.css';
 import { Store } from '../../Store';
+import Footer from '../../components/footer/Footer';
+import Carusel from '../../components/carusel/Carusel';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -46,15 +48,13 @@ const Recipe = () => {
   }, [name]);
 
 
-  const submitHandler=(e)=>{
-    e.preventDefault()
-  }
-  console.log(recipe);
+
   return loading ? (
     <div>Loading...</div>
   ) : error ? (
     <div>Eroror</div>
   ) : (
+    <div>
     <div className="section1">
       <div className="mainDiv">
         <div className="imgFeatures">
@@ -83,6 +83,9 @@ const Recipe = () => {
           </div>
         </div>
       </div>
+     </div>
+     <Carusel/>
+     <Footer/>
      </div>
   );
 };

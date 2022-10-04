@@ -4,6 +4,7 @@ import Carusel from "../../components/carusel/Carusel";
 import LoadingBox from "../../components/LoadingBox";
 import { getError } from "../../utils";
 import { useMediaQuery } from "react-responsive";
+import Footer from "../../components/footer/Footer";
 
 
 const reducer = (state, action) => {
@@ -71,6 +72,7 @@ const SearchAllRecipes = () => {
         -
       </button>
       <Carusel />
+      <Footer/>
     </div>
   );
 };

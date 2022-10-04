@@ -52,10 +52,11 @@
 }
 .termsBlog {
   color: white;
+  justify-content: space-between;
 }
 .privacyTerms {
   display: flex;
-  margin-left: 30rem;
+  text-align: center;
 }
 .privacyTerms p {
   padding-right: 15px;

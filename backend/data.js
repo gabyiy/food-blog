@@ -17,7 +17,7 @@ const data = {
   ],
   recipes: [
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Creamy-Shrimp-Pasta-with-Corn-1-840x1200.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Pasta-Salad-with-Italian-Dressing.jpg",
       name: "Pasta",
       description: `Ugh, of COURSE we would eat pasta for every single  meal if we could. But let's be reasonable, maybe just 8 times per week? Just, like, how do you choose between fork twirly or perfectly chewy or positively smothered in all the best sauces? Oh pasta, we love you so.`,
       featured: `Creamy Shrimp Pasta With Corn And Tomatos`,
@@ -83,7 +83,7 @@ const data = {
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Elotes-Quinoa-Salad-2-840x1200.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Elotes-Quinoa-Salad-2.jpg",
       name: "Lunch",
       description: `Whether you're planning to meal prep for the week or you're looking for an amazing sandwich or salad to chomp on at your desk, we've gone through our recipes and gathered a bunch for lunch!`,
       featured: `Elote Style Quinoa Salad`,
@@ -136,7 +136,7 @@ const data = {
     },
 
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Curry-Hummus-1-840x1200.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Curry-Hummus-1.jpg",
       name: " Snacks",
       description: `To be clear, we can make almost anything a snack around here. Spare buffalo chicken taco? Couple forkfuls of cold noodle salad from the fridge? Who put this homemade oreo here? But ok, we also have a whole slew of more traditional type snackables for you to choose from.`,
       featured: `churry hummus`,
@@ -179,7 +179,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Avocado-Shrimp-Salad-840x1200.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Avocado-Shrimp-Salad.jpg",
       name: "Avocado",
       description: `Is there anything this buttery, nutritious, delectable little green guy doesn't improve?! Full of healthy fats and creamy texture, it makes every single thing it's smushed on, chunked on, or mixed into a whole bunch more delicious.`,
       featured: `super quick avocado shrimp salad`,
@@ -229,7 +229,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Chicken-Tikka-Masala-Bowls-3-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Chicken-Tikka-Masala-Bowls-3.jpg",
       name: "quick and easy",
       description: `There's no tiiiiiiiiiiiiime! But is there ever? If you're feeling like you need something super quick and super easy, then you came to the right place. Let's get you eating, stat!`,
       featured: `cripsy chiken tikka bowls with mint sauce`,
@@ -282,7 +282,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Sausage-and-Peppers-6-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Sausage-and-Peppers-6.jpg",
       name: "dinner",
       description: `"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!`,
       featured: `griled sausage and peppers with garlic aioli`,
@@ -335,13 +335,61 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Spirali-1-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Spirali-2-1.jpg",
       name: "vegetarian",
       description: `Eating more plant-forward meals is not only great for your body but great for the planet too! Whether you're a long-time vegetarian looking for some new inspiration or someone just trying to add a few more veggie-friendly options to their menu, here's the place to find what you're looking for.`,
       featured: `creamy garlic sun-dried tomato pasta`,
+      recipeDetails: [
+        {
+          firstTextFirstImg:
+            "You are thisclose to enjoying Creamy Garlic Sun-Dried Tomato Pasta! Garlicky spirali noodles and tender sun-dried tomatoes in a creamy, luscious sauce with a heavy dusting of Parmesan cheese.",
+          secondTextFirstImg: "",
+          thirdTextFirstImg: "",
+          firstImg:
+            "https://pinchofyum.com/wp-content/uploads/Spirali-2-1.jpg",
+          firstTextSecondImg:
+            "ALERT ALERT ALERT! Only a small amount of time and a few ingredients stand between you and a skillet full of creamy, garlicky, flavorful, romantic, and dangerously good pasta. Tender sun-dried tomatoes, maybe some spinach, creamy sauce, bouncy noodles, and a heavy dusting of Parmesan. This is an urgent matter. I think you understand.",
+          secondTextSecondImg:
+            "A few important things for your review before you take a swim in this creamy, luscious pan of pasta:",
+          thirdTextSecondImg: "First of all, can you ever go wrong with garlic, white wine, and cream in a sauce? Hint: no. It’s just a cheat code for greatness. It makes short ingredient lists everywhere very, very happy.",
+          secondImg:
+            "https://pinchofyum.com/wp-content/uploads/Spirali-1-3.jpg",
+          firstYoutubeText: "",
+          secondYoutubeTxt: "",
+          youtubeDescription: "",
+          youtubeLink: "",
+          makingTime: "30 minutes",
+          yeld: "2-4",
+          makingDescription: `
+
+          You are thisclose to enjoying Creamy Garlic Sun-Dried Tomato Pasta! Garlicky spirali noodles and tender sun-dried tomatoes in a creamy, luscious sauce with a heavy dusting of Parmesan cheese.
+          `,
+       ingredients:[ "8 ounces DeLallo spirali pasta (okay, you don’t have to use spirali, but it is SO FUN)",
+        "2 cloves garlic, minced",
+         "1/4 cup DeLallo sun-dried tomatoes packed in oil, sliced or chopped",
+          "about 1/3 cup dry white wine",
+         "2/3 – 3/4 cup heavy cream",
+        
+            "up to 1/2 cup reserved pasta water",
+      "salt and pepper to taste ",
+        "1–2 tablespoons white vinegar or lemon juice",
+      "a big bunch of chopped chives or parsley",
+       ],
+        instructions:[
+            "Cook the pasta: Cook the pasta according to package directions.",
+
+       
+            "Sauté the good stuff: Heat a skillet over medium heat. Use a little bit of the oil from the sun-dried tomatoes to sauté the garlic and sun-dried tomatoes until soft and fragrant, 2-3 minutes. ",
+      
+            "Make the sauce: Add the wine; let it sizzle out and reduce so the flavor gets real good. Add the cream; bring to a simmer. Season with salt and pepper. ",
+        
+            "Finish: Stir in the cooked pasta, adding the reserved pasta water as needed to help coat the noodles in the sauce. Finish with chives and Parmesan and a top-up on your glass of wine. SO GOOD.",
+        ]
+        },
+      ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Socca-with-Whipped-Feta-3-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Socca-with-Whipped-Feta-3.jpg",
       name: "healthy",
       description: `Maybe you're switching up some eating habits, maybe you're coming off a week of all cookies all the time, maybe you just have a bunch of kale to use up. Whatever the reason, here's the place to search all the healthy things!`,
       featured: `soca with wipped feta and tomato salad`,
@@ -395,7 +443,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-5-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-5.jpg",
       name: "instant pot",
       description: `Was there ever a more magical tool in the land?! Here are a bunch of our faves using our most beloved little kitchen helper.`,
       featured: `instant pot hawaiian chicken tacos with halapeno ranch slaw`,
@@ -448,10 +496,10 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/BBQ-Tofu-Bowls-4-183x183.jpg",
-      name: "vegan",
+      icon: "https://pinchofyum.com/wp-content/uploads/Family-Style-Pitas-4.jpg",
+      name: "Vegan",
       description: `This is the place to go for all the plant-based goodness. These recipes are keeping it vegan but still super satisfying and super delicious. Let's eat some plants!`,
-      featured: `sheet pan bbq tofu`,
+      featured: `Sheet Pan Bbq Tofu`,
       recipeDetails: [
         {
           firstTextFirstImg: `Sheet Pan BBQ Tofu! BBQ-spice-crusted baked tofu that’s made in a snap. Serve it in bowls, add it to salads, or eat it straight off the pan!
@@ -500,10 +548,10 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Healthy-Summer-Salad-Jars-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Quinoa-Summer-Salad-with-Shrimp.jpg",
       name: "meal prep",
       description: `Meal prep gets big love from us because it's so great to not even have to THINK about what to cook every day. Spend a few hours getting everything prepped and then the rest of your week is made! Now your brain space can be filled with, well...all the other stuff.`,
-      featured: `summer quinoa jars with lemon dill dressing`,
+      featured: `Summer Quinoa Salad Jars with Lemon Dill Dressing`,
       recipeDetails: [
         {
           firstTextFirstImg: `Summer Quinoa Salads with Lemon Dill Dressing! Hello shrimp, quinoa, tomato, cucumber, feta – my favorite healthy meal prep!
@@ -553,10 +601,10 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Summer-Soup-2-183x183.jpg",
-      name: "soup",
+      icon: "https://pinchofyum.com/wp-content/uploads/Summer-Soup-2.jpg",
+      name: "Soup",
       description: `Soup is the beeeeest! Honestly, it's one of our favorite food groups. There is nothing quite like curling up with a steaming cozy bowl of soup slurped by the spoonful or devoured with crusty bread dips. Yes yes and yes.`,
-      featured: `clean eating instant pot  summer soup`,
+      featured: `Clean Eating Instant Pot Summer Soup`,
       recipeDetails: [
         {
           firstTextFirstImg: `Clean Eating Instant Pot Summer Soup! The perfect blend of comforting and fresh for the season. Packed with all the fresh summer produce and super customizable to whatever you have on hand!
@@ -605,10 +653,10 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
     {
-      icon: "https://pinchofyum.com/wp-content/uploads/Couscous-Salad-1-3-183x183.jpg",
+      icon: "https://pinchofyum.com/wp-content/uploads/Couscous-Salad-1-2.jpg",
       name: "salads",
       description: `Traditional lettuce-chomping salads but also noodley salads, mayo-based salads, grain salads...so many ways to salad! We promise these recipes will have you feeling full and happy.`,
-      featured: `couscous salad with lime basil vinaigrette`,
+      featured: `Couscous Salad with Lime Basil Vinaigrette`,
       recipeDetails: [
         {
           firstTextFirstImg: `A bright, zippy, unexpectedly delicious couscous salad that’s packed with sweet potatoes, black beans, spinach, feta, and more – all tossed with a life-changing lime basil vinaigrette!

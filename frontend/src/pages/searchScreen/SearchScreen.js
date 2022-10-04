@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useReducer, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Carusel from '../../components/carusel/Carusel.js';
+import Footer from '../../components/footer/Footer.js';
 import LoadingBox from '../../components/LoadingBox.js';
 import SearchBox from '../../components/searchBox/SearchBox.js';
 import { getError } from "../../utils.js"
@@ -57,7 +59,8 @@ dispach({type:"FETCH_FAIL",payload:getError(error)})
             ))}
  </div>
           )}
-          <SearchBox/>
+          <Carusel/>
+          <Footer/>
   </div>
 
   )
