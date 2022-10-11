@@ -5,6 +5,7 @@ import LoadingBox from "../../components/LoadingBox";
 import { getError } from "../../utils";
 import { useMediaQuery } from "react-responsive";
 import Footer from "../../components/footer/Footer";
+import Slider from "react-slick";
 
 
 const reducer = (state, action) => {
@@ -71,6 +72,11 @@ const SearchAllRecipes = () => {
       <button onClick={() => setPage(page == 1 ? page == 1 : page - 1)}>
         -
       </button>
+      <div className="h1Div">
+        <p><i className="fa fa-thin fa-clipboard-list"></i></p>
+          <h1>More Recipes</h1>
+
+        </div>
       <Carusel />
       <Footer/>
     </div>

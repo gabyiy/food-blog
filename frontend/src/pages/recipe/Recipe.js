@@ -21,6 +21,9 @@ const reducer = (state, action) => {
 
 
 const Recipe = () => {
+const caruselImg="fa-thin fa-trophy-star";
+const caruselName = "Top Rated Instant Pot Recipes";
+
   const params = useParams();
   const { name } = params;
 
@@ -83,6 +86,12 @@ const Recipe = () => {
           </div>
         </div>
       </div>
+     </div>
+    
+     <div className='caruselHeader'>
+     
+     <p><i class="fa fa-thin fa-trophy"></i></p>
+      <h1>Top Rated Instant Pot Recipes</h1>
      </div>
      <Carusel/>
      <Footer/>

@@ -20,3 +20,20 @@
 .searchAllLink p {
   padding: 10px 10px 10px 10px;
 }
+
+.h1Div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-clipboard-list{
+  display: flex;
+  font-size: 30px;
+ color:  #fcb900;
+ padding-top: 15px;
+}
+.h1Div h1 {
+  padding-left: 10px;
+  font-weight: 900;
+  color: rgba(114, 63, 95, 0.9);
+}
