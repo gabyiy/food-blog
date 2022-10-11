@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import axios from "axios";
 import Footer from "../footer/Footer"
 import { useMediaQuery } from "react-responsive";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 import "./Carusel.css"
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ const reducer = (state, action) => {
   }
 };
 
-const Carusel = () => {
+const Carusel = (props) => {
   const [showScroll,setShowScroll]= useState()
 
   const view1 = useMediaQuery({
@@ -37,7 +37,7 @@ useEffect(()=>{
   if(view3){
     setShowScroll(6) 
   }else if (view2){
-    setShowScroll(3)
+    setShowScroll(4)
   }else if(view1) (
     setShowScroll(1)
   )
@@ -67,11 +67,7 @@ useEffect(()=>{
   return (
     <div className="caruselPageDiv">
       <div className="mainSliderDiv">
-        <div className="h1Div">
-        <p><i class="fa fa-thin fa-clipboard-list"></i></p>
-          <h1>More Recipes</h1>
-
-        </div>
+       
 
       </div>
       <div className="sliderDiv">
@@ -82,7 +78,7 @@ useEffect(()=>{
             <div className="imgContainerCarusel">
               <img className="imgCarusel"
          
-                src={recipe.icon}
+                src={recipe.icon} 
               />
               </div>
               <div className="carsuelRecipeName">
@@ -99,7 +95,7 @@ useEffect(()=>{
           >
             {" "}
   
-        <ArrowBackIosIcon/>
+            <ArrowBackIosNewIcon/> 
           </div>
           <div
             className="buttonCaruselNext"

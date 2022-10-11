@@ -1,0 +1,9 @@
+.buttonsCaruselSearchAll {
+  margin-top: 30px;
+}
+.sliderMainDiv {
+  display: flex;
+}
+.sliderMainDiv .slider {
+  width: 90%;
+}

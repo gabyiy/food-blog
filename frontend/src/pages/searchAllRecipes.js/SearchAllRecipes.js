@@ -1,11 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import Carusel from "../../components/carusel/Carusel";
 import LoadingBox from "../../components/LoadingBox";
 import { getError } from "../../utils";
 import { useMediaQuery } from "react-responsive";
 import Footer from "../../components/footer/Footer";
-
+import Slider from "react-slick";
+import "./SearchAllRecipes.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,7 +21,19 @@ const reducer = (state, action) => {
   }
 };
 
+//recipes.length === 4 ? setPage(Number(page) + 1) : setPage(1)
+//setPage(page == 1 ? page == 1 : page - 1)}>
+
 const SearchAllRecipes = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
+  const sliderRef = useRef(null);
+
   const [page, setPage] = useState("1");
   const [limit, setLimit] = useState(4);
 
@@ -43,11 +56,9 @@ const SearchAllRecipes = () => {
     fetchRecipes();
   }, [page, error, limit]);
 
-
   const view2 = useMediaQuery({
     query: "(min-width: 950px)",
   });
-  console.log(view2);
   return (
     <div>
       {loading ? (
@@ -55,24 +66,40 @@ const SearchAllRecipes = () => {
       ) : error ? (
         <h1>{error}</h1>
       ) : (
-        <div>
-          {recipes.map((recipe, i) => (
-            <h1 key={i}>{recipe.name}</h1>
-          ))}
+        <div className="sliderMainDiv">
+          <div>
+            <button onClick={() => sliderRef.current.slickPrev()}>+</button>
+          </div>
+          <Slider
+            className="slider"
+            ref={sliderRef}
+            {...settings}
+            dots={true}
+            speed={1000}
+          >
+            {recipes.map((recipe, i) => (
+              <div className="mainDivCaruselSearchAll" key={i}>
+                <h1>{recipe.name}</h1>
+              </div>
+            ))}
+          </Slider>
+          <div>
+            <button onClick={() => sliderRef.current.slickNext()}>-</button>
+          </div>
         </div>
       )}
-      <button
-        onClick={() =>
-          recipes.length === 4 ? setPage(Number(page) + 1) : setPage(1)
-        }
-      >
-        +
-      </button>
-      <button onClick={() => setPage(page == 1 ? page == 1 : page - 1)}>
-        -
-      </button>
+      <div className="buttonsCaruselSearchAll">
+        <button onClick={() => sliderRef.current.slickPrev()}>+</button>
+        <button onClick={() => sliderRef.current.slickNext()}>-</button>
+      </div>
+      <div className="h1Div">
+        <p>
+          <i className="fa fa-thin fa-clipboard-list"></i>
+        </p>
+        <h1>More Recipes</h1>
+      </div>
       <Carusel />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
