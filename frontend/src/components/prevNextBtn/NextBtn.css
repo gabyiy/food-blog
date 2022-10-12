@@ -1,0 +1,15 @@
+.arrowForwordBtn{
+    height: 100px;
+margin-right: 10px;
+    color: white;
+    background-color: #fcb900 ;
+ margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.arrowForwordBtn:hover{
+    background-color: black;
+    box-shadow: 0 3px 10px #888888;
+}

@@ -1,0 +1,18 @@
+.arrowBackBtn{
+    height: 100px;
+    margin-left: 10px;
+    color: white;
+    background-color: #fcb900 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+.arrowBackBtn:hover{
+    background-color: black;
+        box-shadow: 0 3px 10px #888888;
+      
+      
+}

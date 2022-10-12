@@ -123,7 +123,7 @@ const data = {
         "1 cup chopped fresh cilantro",
         ],
         instructions:[
-           "Cook quinoa and prep ingredients. ",
+           "Cook Quinoa And Prep Ingredients. ",
 
         
             "Drizzle a generous amount of olive oil in a skillet and add the pepper rings. Cook over medium heat, stirring occasionally, for about 20 minutes or until very soft and roasty-looking. Squeeze a little lime juice in the pan to lift all the browned bits off the bottom of the pan when you’re done! More flavor!",
@@ -139,7 +139,7 @@ const data = {
       icon: "https://pinchofyum.com/wp-content/uploads/Curry-Hummus-1.jpg",
       name: " Snacks",
       description: `To be clear, we can make almost anything a snack around here. Spare buffalo chicken taco? Couple forkfuls of cold noodle salad from the fridge? Who put this homemade oreo here? But ok, we also have a whole slew of more traditional type snackables for you to choose from.`,
-      featured: `churry hummus`,
+      featured: `Churry Hummus`,
       recipeDetails: [
         {
           firstTextFirstImg: "",
@@ -182,7 +182,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       icon: "https://pinchofyum.com/wp-content/uploads/Avocado-Shrimp-Salad.jpg",
       name: "Avocado",
       description: `Is there anything this buttery, nutritious, delectable little green guy doesn't improve?! Full of healthy fats and creamy texture, it makes every single thing it's smushed on, chunked on, or mixed into a whole bunch more delicious.`,
-      featured: `super quick avocado shrimp salad`,
+      featured: `Super Quick Avocado Shrimp Salad`,
       recipeDetails: [
         {
           firstTextFirstImg: `My favorite clean eating summer salad! Avocado Shrimp Salad with shrimp, avocado, cucumber, dill and chives, salt and pepp, and a big squeeze of lemon. This is such an easy recipe!
@@ -230,9 +230,9 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Chicken-Tikka-Masala-Bowls-3.jpg",
-      name: "quick and easy",
+      name: "Quick And Easy",
       description: `There's no tiiiiiiiiiiiiime! But is there ever? If you're feeling like you need something super quick and super easy, then you came to the right place. Let's get you eating, stat!`,
-      featured: `cripsy chiken tikka bowls with mint sauce`,
+      featured: `Cripsy Chiken Tikka Bowls With Mint Sauce`,
       recipeDetails: [
         {
           firstTextFirstImg: `Bringing you these addicting Chicken Tikka Bowls! Crispy bits of chicken tenders, crispy cucumbers, and briny pickled onions, all on a bed of fluffy quinoa with a swoop of cool mint sauce on top. You absolutely cannot go wrong with these bowls.
@@ -283,7 +283,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Sausage-and-Peppers-6.jpg",
-      name: "dinner",
+      name: "Dinner",
       description: `"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!`,
       featured: `griled sausage and peppers with garlic aioli`,
       recipeDetails: [
@@ -336,9 +336,9 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Spirali-2-1.jpg",
-      name: "vegetarian",
+      name: "Vegetarian",
       description: `Eating more plant-forward meals is not only great for your body but great for the planet too! Whether you're a long-time vegetarian looking for some new inspiration or someone just trying to add a few more veggie-friendly options to their menu, here's the place to find what you're looking for.`,
-      featured: `creamy garlic sun-dried tomato pasta`,
+      featured: `Creamy Garlic Sun-dried Tomato Pasta`,
       recipeDetails: [
         {
           firstTextFirstImg:
@@ -390,9 +390,9 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Socca-with-Whipped-Feta-3.jpg",
-      name: "healthy",
+      name: "Healthy",
       description: `Maybe you're switching up some eating habits, maybe you're coming off a week of all cookies all the time, maybe you just have a bunch of kale to use up. Whatever the reason, here's the place to search all the healthy things!`,
-      featured: `soca with wipped feta and tomato salad`,
+      featured: `Soca With Wipped Feta And Tomato Salad`,
       recipeDetails: [
         {
           firstTextFirstImg:
@@ -444,9 +444,9 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Hawaiian-Chicken-Tacos-5.jpg",
-      name: "instant pot",
+      name: "Instant Pot",
       description: `Was there ever a more magical tool in the land?! Here are a bunch of our faves using our most beloved little kitchen helper.`,
-      featured: `instant pot hawaiian chicken tacos with halapeno ranch slaw`,
+      featured: `Instant Pot Hawaiian Chicken Tacos With Halapeno Ranch Slaw`,
       recipeDetails: [
         {
           firstTextFirstImg: `These Instant Pot Hawaiian Chicken Tacos are out of this WORLD. Juicy pineapple and spiced chicken crisped under the broiler, tucked into tortillas, and rolled up with creamy jalapeño ranch slaw.
@@ -549,7 +549,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Quinoa-Summer-Salad-with-Shrimp.jpg",
-      name: "meal prep",
+      name: "Meal Prep",
       description: `Meal prep gets big love from us because it's so great to not even have to THINK about what to cook every day. Spend a few hours getting everything prepped and then the rest of your week is made! Now your brain space can be filled with, well...all the other stuff.`,
       featured: `Summer Quinoa Salad Jars with Lemon Dill Dressing`,
       recipeDetails: [
@@ -654,7 +654,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     },
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Couscous-Salad-1-2.jpg",
-      name: "salads",
+      name: "Salads",
       description: `Traditional lettuce-chomping salads but also noodley salads, mayo-based salads, grain salads...so many ways to salad! We promise these recipes will have you feeling full and happy.`,
       featured: `Couscous Salad with Lime Basil Vinaigrette`,
       recipeDetails: [
@@ -709,49 +709,46 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
       ],
     },
 
-    // {
-    //   icon: "https://pinchofyum.com/wp-content/uploads/Creamy-Shrimp-Pasta-with-Corn-1-800x800.jpg",
-    //   name: "Pasta",
-    //   description: "Creamy Shrip Pasta with Corn and Tomatos",
-    //   recipeDetails: [
-    //     {
-    //       firstTextFirstImg: "",
-    //       secondTextFirstImg: "",
-    //       thirdTextFirstImg: "",
-    //       firstImg: "",
-    //       firstTextSecondImg: "",
-    //       secondTextSecondImg: "",
-    //       thirdTextSecondImg: "",
-    //       secondImg: "",
-    //       firstYoutubeText: "",
-    //       secondYoutubeTxt: "",
-    //       youtubeDescription: "",
-    //       youtubeLink: "",
-    //       makingTime: "",
-    //       yeld: "",
-    //       makingDescription: "",
-    //       firstIngredient: "",
-    //       secondIngredient: "",
-    //       thirdIngredient: "",
-    //       fifthIngredient: "",
-    //       sixtIngredient: "",
-    //       sevenIngredient: "",
-    //       eigthIngrdient: " ",
-    //       naineIngredient: "",
-    //       tentIngredient: "",
-    //       elevenIngredient: "",
-    //       tweleveIngredient: "",
-    //       thirtenIngredient: "",
-    //       forteenIngredient: "",
-    //       fifthIngredient: "",
-    //       firstInstruction: "",
+    {
+      icon: "https://pinchofyum.com/wp-content/uploads/Smash-burgers-2-2.jpg",
+      name: "Burger",
+      description: "Honestly, we love a sandwich any time of day, so we’ve got ideas for breakfast, lunch, dinner, or just sandwich o’clock here because you can never really go wrong with a bunch of delicious things.",
+      featured:"The Ultimate Wild Burger",  
+      recipeDetails: [
+        {
+          firstTextFirstImg: "The famous Smash Burger! Deeply crisped, craggy, juicy, squashed patties covered with melty cheese, piled on a buttery bun, and topped with a dreamy zip of secret sauce. ",
+          secondTextFirstImg: "",
+          thirdTextFirstImg: "",
+          firstImg: "https://pinchofyum.com/wp-content/uploads/Smash-burgers-1-2.jpg",
+          firstTextSecondImg: "Oh, the smash burger. The deeply crisped, craggy, juicy, squashed patty. The drip-melt of the cheese. The pile of your burger essentials like bright sweet tomato, ruffly lettuce, fried onions if you are a star. The buttery toast of the brioche bun. The dreamy zip of the secret sauce. ",
+          secondTextSecondImg: "Are you drooling? Crying? Screaming? Some combination of all three? Welp, us too. So, don your aprons for this one, folks (you’ll need it). This is an absolute burger game-changer.",
+          thirdTextSecondImg: "",
+          secondImg: "https://pinchofyum.com/wp-content/uploads/Smash-burgers-3-2.jpg",
+          firstYoutubeText: "",
+          secondYoutubeTxt: "",
+          youtubeDescription: "",
+          youtubeLink: "",
+          makingTime: " 35 minutes",
+          yeld: "4 burger patties",
+          makingDescription: "The famous Smash Burger! Deeply crisped, craggy, juicy, squashed patties covered with melty cheese, piled on a buttery bun, and topped with a dreamy zip of secret sauce. ",
+          ingredients:[
+          "4 tablespoons butter",
+       "1 tablespoon Worcestershire sauce",
+       "a couple swishes of fish sauce (about 1 teaspoon)",
+        "1 teaspoon smoked paprika",
+        
+          ],
+          instructions:[
+        "Mix the smash burger sauce in a small bowl. In a larger bowl, place the ground beef and pour the sauce over. Mix with your hands to get it well-distributed through the meat. Form into 4 balls. Place the balls in the fridge for 20-30 minutes while you prep everything else. You can even pop it in the freezer for a few minutes – you just want them to be pretty cold so the butter mixture doesn’t immediately melt out everywhere once you start cooking them.",
 
-    //       secondInstruction: "",
-    //       thirdInstruction: "",
-    //       forthInstruction: "",  
-    //     },
-    //   ],
-    // },
+         "Butter the buns and toast them on your skillet or griddle until golden.",
+        "Prep the toppings and house sauce (see notes).",
+        "Cut a small piece of parchment paper that you’ll use on top of the burgers to prevent sticking.",  
+      "Place the parchment paper on top of each burger and then, using a heavy, flat tool, press the burgers down as flat as you can get them in one swift motion. They’ll be super sizzly and splattery, but they should make a nice, round, thin smash burger shape on the griddle. (The ideal tool for this is a cast iron grill press, but a flat spatula can work in a pinch). Cook for a few minutes and then flip and top with cheese right away. Leave them undisturbed for another 1-2 minutes to melt the cheese and get a max amount of flavorful browning on the back side."
+          ]
+        },
+      ],
+    },
     // {
     //   icon: "https://pinchofyum.com/wp-content/uploads/Udon-2-800x800.jpg",
     //   name: "Pasta",

@@ -35,7 +35,7 @@ const Carusel = (props) => {
   });
 useEffect(()=>{
   if(view3){
-    setShowScroll(6) 
+    setShowScroll(4) 
   }else if (view2){
     setShowScroll(4)
   }else if(view1) (
@@ -71,18 +71,18 @@ useEffect(()=>{
 
       </div>
       <div className="sliderDiv">
-      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={1} className="slider">
+      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={2} className="slider">
           {recipes.map((recipe) => (
             <Link to={`/recipes/${recipe.name}`}>
             <div className="mainCaruselMap">
             <div className="imgContainerCarusel">
               <img className="imgCarusel"
          
-                src={recipe.icon} 
+                src={recipe.icon} alt="img"
               />
               </div>
               <div className="carsuelRecipeName">
-                <p>{recipe.name}</p>
+                <p className="pName">{recipe.name}</p>
               </div>
             </div>
             </Link>

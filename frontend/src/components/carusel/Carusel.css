@@ -1,6 +1,7 @@
 .caruselPageDiv{
   justify-content: center;
   margin-bottom: 30px;
+  display: flex;
 }
 .mainSliderDiv {
   display: flex;
@@ -59,6 +60,7 @@ justify-content: center;
 .sliderDiv{
   display: block;
   flex-direction: column;
+  max-width: 1140px;
 
   width: auto !important;
   justify-content: center;
@@ -69,12 +71,11 @@ justify-content: center;
 .imgContainerCarusel{
   display: grid;
   justify-content: center;
-  padding-bottom: 20px;
+  padding: 10px 0 10px 0;
 
 }
 .imgCarusel{
   height: 350px;
-  width: 700px;
   object-fit: contain;
    border-radius: 10px;
  
@@ -92,4 +93,16 @@ align-self: center;
 }
 .slick-slider{
   align-items: center;
+}
+
+/* asa scoatem arrow default la slick */
+.slick-prev::before,.slick-next::before{
+  display: none;
+}
+
+.pName{
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none!important;
 }
