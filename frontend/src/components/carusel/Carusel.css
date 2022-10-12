@@ -67,7 +67,11 @@ justify-content: center;
   align-items: center;
 }
 
-
+.mainCaruselMap:hover{
+    opacity: 0.6;
+  
+  
+}
 .imgContainerCarusel{
   display: grid;
   justify-content: center;
@@ -80,6 +84,7 @@ justify-content: center;
    border-radius: 10px;
  
 }
+
 .carsuelRecipeName{
   text-align: center;
   justify-content: center;
