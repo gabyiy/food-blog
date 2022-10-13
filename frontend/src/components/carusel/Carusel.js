@@ -25,7 +25,7 @@ const Carusel = (props) => {
   const [showScroll,setShowScroll]= useState()
 
   const view1 = useMediaQuery({
-    query: "(min-width: 539px)",
+    query: "(min-width: 550px)",
   });
   const view2 = useMediaQuery({
     query: "(min-width: 850px)",
