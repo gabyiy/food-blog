@@ -9,56 +9,52 @@
 .sliderMainDiv .slider {
   width: 90%;
 }
-.mainDivCaruselSearchAll{
-  display:flex;
+.mainDivCaruselSearchAll {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.imgContainerCaruselSearchAll{
+.imgContainerCaruselSearchAll {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
 }
 
-.imgCaruselSearchAll{
+.imgCaruselSearchAll {
   height: 350px;
   width: 350px;
-   border-radius: 10px;
+  border-radius: 10px;
 }
 
-.slick-arrow{
- display: none;
+.slick-arrow {
+  display: none;
 }
 
-
-
-
-div.forwordArrowSearchAll{
+div.forwordArrowSearchAll {
   display: flex;
   z-index: 100;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  background:rgba(114, 63, 95, 0.9);
+  background: rgba(114, 63, 95, 0.9);
   border-radius: 50%;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 
-.forwordArrowSearchAll:hover{
+.forwordArrowSearchAll:hover {
   background-color: #fcb900;
   color: white;
 }
 
-.searchAllMoreRecipes{
+.searchAllMoreRecipes {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px 0 30px 0;
-
 }
 .searchAllMoreRecipes h1 {
   padding-left: 10px;
@@ -66,11 +62,9 @@ div.forwordArrowSearchAll{
   color: rgba(114, 63, 95, 0.9);
 }
 
-.fa-list-ul{
+.fa-list-ul {
   display: flex;
   font-size: 30px;
- color:  #fcb900;
- padding-top: 15px;
+  color: #fcb900;
+  padding-top: 15px;
 }
-
- 

@@ -39,3 +39,21 @@
 .btnSearch:hover {
   filter: brightness(50%);
 }
+
+@media (max-width: 550px) {
+  .formDivSearch {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .formSearch {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputSearch {
+    width: 15rem;
+  }
+  .btnSearch {
+    margin-top: 10px;
+  }
+}

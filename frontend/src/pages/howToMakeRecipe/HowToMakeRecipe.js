@@ -75,7 +75,7 @@ const HowToMakeRecipe = () => {
         ) : error ? (
           <h1>{error}</h1>
         ) : (
-          <div>
+          <div className="howToMakeMainDiv">
             <div>
               <p className="title">{recipe.featured}</p>
             </div>
