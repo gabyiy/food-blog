@@ -68,7 +68,7 @@ const HowToMakeRecipe = () => {
   console.log();
 
   return (
-    <div className="page">
+  
       <div className="mainContainer">
         {loading ? (
           <LoadingBox></LoadingBox>
@@ -120,9 +120,9 @@ const HowToMakeRecipe = () => {
                 </div>
                 <div id="recipe">
                   <div className="saladTipe">
-                    <div className="recipeImg">
+                    {/* <div className="recipeImg">
                       <img src={detail.secondImg} alt="secondImg" />
-                    </div>
+                    </div> */}
                     <p>{recipe.featured}</p>
                     <hr></hr>
                     <div className="timeYeld">
@@ -213,7 +213,6 @@ const HowToMakeRecipe = () => {
           </div>
         )}
       </div>
-    </div>
   );
 };
 
