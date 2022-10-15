@@ -3,6 +3,13 @@ import "./Header.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Store } from "../../Store";
 
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 const Header = () => {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -52,6 +59,7 @@ const Header = () => {
     setProfileActivate(true);
   };
   return (
+    <div>
     <div className="head border_b">
       <nav className="navbar navbar-expand-lg navbar-light main_div ">
         <div className="container-fluid ">
@@ -181,7 +189,39 @@ const Header = () => {
         </div>
       </nav>
     </div>
+
+
+<Navbar collapseOnSelect expand="lg" bg="white" variant="white">
+      <Container  >
+        <Navbar.Brand  href="#home" className="logo">Food Blog</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className='m-auto' />
+        <Navbar.Collapse id="responsive-navbar-nav"  className='m-auto'>
+          <Nav className="me-auto"> 
+          </Nav>
+          <Nav>
+          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+            
+            </NavDropdown>
+            <Nav.Link href="#deets" className="links">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes" className="links">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+   
+  </div>
+  
   );
+
+
 };
 
 export default Header;

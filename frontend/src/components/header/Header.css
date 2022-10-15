@@ -30,6 +30,12 @@
   transform: translateX(0);
 }
 
+
+.containerNavBar{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .dropdown {
   padding-top: 1.5rem;
   background-color: white;
