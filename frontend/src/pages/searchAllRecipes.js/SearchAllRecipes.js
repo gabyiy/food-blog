@@ -10,15 +10,18 @@ import "./SearchAllRecipes.css"
 const SearchAllRecipes = () => {
  
   return (
-    <div>
+    <div clasName>
    
    <div className='searchAllMoreRecipes'>
      
      <p><i class="fa fa-thin fa-list-ul"></i></p>
       <h1>All recipes</h1>
      </div>
+     <div className="lol">
       <Carusel />
+   
       <Footer />
+      </div>
     </div>
   );
 };

@@ -3,6 +3,13 @@ import "./Header.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Store } from "../../Store";
 
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 const Header = () => {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -19,11 +26,12 @@ const Header = () => {
   const [loginActive, setLoginActive] = useState(false);
   const [profileActive, setProfileActivate] = useState(false);
 
-  const setHomeActivator = () => {
+  const homeActivator = () => {
     setHomeActive(true);
     setRegisterActive(false);
     setLoginActive(false);
     setRecipesActive(false);
+    setProfileActivate(false)
   };
   const recipeActivator = () => {
     setHomeActive(false);
@@ -52,13 +60,14 @@ const Header = () => {
     setProfileActivate(true);
   };
   return (
-    <div className="head border_b">
+    <div>
+    {/* <div className="head border_b">
       <nav className="navbar navbar-expand-lg navbar-light main_div ">
         <div className="container-fluid ">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div
               className="navbar-brand logo"
-              onClick={() => setHomeActivator()}
+              onClick={() => homeActivator()}
             >
               {" "}
               Food Blog
@@ -120,7 +129,7 @@ const Header = () => {
               id="navbarNav"
             >
               <ul className="navbar-nav  ">
-                <li className="nav-item " onClick={() => setHomeActivator()}>
+                <li className="nav-item " onClick={() => homeActivator()}>
                   <Link
                     className={
                       homeActive ? "nav-link links active" : "nav-link links "
@@ -180,8 +189,44 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </div> */}
+
+
+<Navbar collapseOnSelect expand="lg" bg="white" variant="white">
+      <Container  >
+        <Navbar.Brand  href="#home" className="logo"    onClick={() => homeActivator()}>Food Blog</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className=' navBarTogler' />
+        <Navbar.Collapse id="responsive-navbar-nav"  className='m-auto'>
+          <Nav className="me-auto"> 
+          </Nav>
+          <Nav    className="mr-auto my-2 my-lg-0 navDrop"
+                              
+                                navbarScroll>
+                                {userInfo? <NavDropdown title={userInfo.name}  className= {profileActive ? "dropdown active" : "dropdown"} onClick={() => profileActivator()} id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1"  onClick={signoutHandler}>Sign Out</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+             Profile
+              </NavDropdown.Item>
+                        
+            </NavDropdown>:""}
+         
+            <Nav.Link href="#deets"  className={homeActive?"links active":"links"} onClick={() => homeActivator()}>Home</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes" className={recipesActive?"links active":"links"} onclick={()=>recipeActivator()} >
+           Recipes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+   
+
+
+   
+  </div>
+  
   );
+
+
 };
 
 export default Header;

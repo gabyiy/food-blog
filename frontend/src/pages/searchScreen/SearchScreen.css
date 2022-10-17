@@ -123,6 +123,9 @@
     justify-content: center;
     align-items: center;
   }
+  .slickFlexSearch{
+    align-items: center;
+  }
 
   .imgFeatures {
     padding: 0px;

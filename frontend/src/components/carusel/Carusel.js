@@ -25,7 +25,7 @@ const Carusel = (props) => {
   const [showScroll,setShowScroll]= useState()
 
   const view1 = useMediaQuery({
-    query: "(min-width: 550px)",
+    query: "(max-width: 550px)",
   });
   const view2 = useMediaQuery({
     query: "(min-width: 850px)",
@@ -37,7 +37,7 @@ useEffect(()=>{
   if(view3){
     setShowScroll(4) 
   }else if (view2){
-    setShowScroll(4)
+    setShowScroll(3)
   }else if(view1) (
     setShowScroll(1)
   )

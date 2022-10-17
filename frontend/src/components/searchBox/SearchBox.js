@@ -6,20 +6,32 @@ const SearchBox = () => {
   const [query, setQuery] = useState("");
 
   const submitHandler = (e) => {
+
     e.preventDefault();
-    navigate(`/search/?query=${query}`);
-  };
+    
+}
+
+const search =(evt)=>{
+if(evt.key==="Enter"){
+
+  navigate(`/search/?query=${query}`);
+  setQuery("")
+}
+}
+  console.log(query);
   return (
     <div className="formDivSearch">
       <form onSubmit={submitHandler} className="formSearch">
         <input
           className="inputSearch"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={e => setQuery(e.target.value)}
+  
+  value={query}
+  
+  onKeyPress={search}
           placeholder="Search Recipe"
         />
-        <button type="submit" className="btnSearch">
-          <i class="fa fa-2x fa-search" aria-hidden="true"></i>
-        </button>
+      
       </form>
       <div>
         <p className="orForm">or</p>

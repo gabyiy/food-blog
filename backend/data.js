@@ -550,7 +550,7 @@ Curry Hummus! smooth, creamy, and perfect for a healthy snack or in a wrap for a
     {
       icon: "https://pinchofyum.com/wp-content/uploads/Quinoa-Summer-Salad-with-Shrimp.jpg",
       name: "Meal Prep",
-      description: `Meal prep gets big love from us because it's so great to not even have to THINK about what to cook every day. Spend a few hours getting everything prepped and then the rest of your week is made! Now your brain space can be filled with, well...all the other stuff.`,
+      description: `Meal prep gets big love from us because it's so great to not even have to THINK about what to cook every day.`,
       featured: `Summer Quinoa Salad Jars with Lemon Dill Dressing`,
       recipeDetails: [
         {
