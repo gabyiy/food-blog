@@ -5,6 +5,8 @@ import './Recipe.css';
 import { Store } from '../../Store';
 import Footer from '../../components/footer/Footer';
 import Carusel from '../../components/carusel/Carusel';
+import LoadingBox from "../../components/LoadingBox";
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,7 +55,7 @@ const caruselName = "Top Rated Instant Pot Recipes";
 
 
   return loading ? (
-    <div>Loading...</div>
+    <div><LoadingBox></LoadingBox></div>
   ) : error ? (
     <div>Eroror</div>
   ) : (
