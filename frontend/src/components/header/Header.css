@@ -88,9 +88,16 @@
   color: black;
 }
 
+#collasible-nav-dropdown {
+  text-align: center;
+}
+
 @media (max-width: 550px) {
   .navDrop {
     justify-content: center;
     align-items: center;
+  }
+  .dropdown-item {
+    text-align: center;
   }
 }
