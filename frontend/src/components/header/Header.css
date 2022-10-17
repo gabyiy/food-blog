@@ -30,10 +30,10 @@
   transform: translateX(0);
 }
 
-#collasible-nav-dropdown{
-  color: black!important;
+#collasible-nav-dropdown {
+  color: black !important;
 }
-.containerNavBar{
+.containerNavBar {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -79,11 +79,18 @@
   text-transform: uppercase;
 }
 
+.linksHeader {
+  text-decoration: none !important;
+  color: black;
+}
+.linksHeader:hover {
+  text-decoration: none !important;
+  color: black;
+}
 
-@media(max-width:550px){
-  .navDrop{
-justify-content: center;
-align-items: center;
+@media (max-width: 550px) {
+  .navDrop {
+    justify-content: center;
+    align-items: center;
   }
-
 }
