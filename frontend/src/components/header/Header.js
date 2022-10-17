@@ -39,6 +39,7 @@ const Header = () => {
     setHomeActive(false);
     setRegisterActive(false);
     setLoginActive(false);
+    setProfileActivate(false);
   };
   const reisterActivator = () => {
     setHomeActive(false);
@@ -195,7 +196,8 @@ const Header = () => {
       </div> */}
 
       <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
-        <Container>
+    
+        <Container className="containerHead">
           <Navbar.Brand className="logo" onClick={() => homeActivator()}>
             <Link to="/" className="linksHeader">
               Food Blog
@@ -271,9 +273,13 @@ const Header = () => {
                 ""
               )}
             </Nav>
+            
           </Navbar.Collapse>
+        
         </Container>
+    
       </Navbar>
+      <div className="hrHeader"></div>
     </div>
   );
 };

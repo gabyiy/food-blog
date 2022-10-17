@@ -41,6 +41,9 @@
   align-items: center;
   margin-right: 10px;
 }
+.allInconsFooter{
+  text-align: center;
+}
 .iconFooter a {
   color: white;
 }

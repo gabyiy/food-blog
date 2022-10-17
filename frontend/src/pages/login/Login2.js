@@ -5,6 +5,7 @@ import { Store } from "../../Store.js";
 import Axios from "axios";
 import { toast } from "react-toastify";
 import { getError } from "../../utils.js";
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 const Login2 = () => {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -40,7 +41,7 @@ const Login2 = () => {
         <div className="register_header">
           <div className="header">
             <Link className="link" to="/">
-              <span>x</span>
+           <ExitToAppIcon/>
             </Link>
           </div>
           <h1>Login</h1>

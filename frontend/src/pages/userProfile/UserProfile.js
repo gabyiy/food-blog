@@ -3,6 +3,8 @@ import { Store } from "../../Store";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
+import Footer from "../../components/footer/Footer";
+
 import "./UserProfile.css";
 
 const reducer = (state, action) => {
@@ -62,10 +64,12 @@ const UserProfile = () => {
       </div>
       <div className="divFormReset">
         <div className="spanP">
+        
           <p>Change Name :</p>
+      
           <p>Change Email :</p>
           <p>Change Password :</p>
-          <p>Confirm Passowrd :</p>
+          <p>Confirm Passowrd:</p>
         </div>
         <form className="formReset" onSubmit={sumbitHandler}>
           <input
@@ -93,6 +97,7 @@ const UserProfile = () => {
           </button>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 };

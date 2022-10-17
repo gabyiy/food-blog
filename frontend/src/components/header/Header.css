@@ -10,6 +10,12 @@
   padding: 0;
 }
 
+.navbar.navbar-expand-lg{
+  padding-bottom: 0px;
+}
+.containerHead.container{
+padding-bottom: 0px;
+}
 .logo {
   font-family: "Dancing Script", cursive;
   font-size: 30px;
@@ -85,13 +91,17 @@
 }
 .linksHeader:hover {
   text-decoration: none !important;
-  color: black;
+  color: #fcb900;
 }
 
 #collasible-nav-dropdown {
   text-align: center;
 }
 
+
+.hrHeader{
+  border-top: 1px solid#D3D3D3; 
+}
 @media (max-width: 550px) {
   .navDrop {
     justify-content: center;

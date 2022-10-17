@@ -115,3 +115,10 @@
     flex-direction: column;
   }
 }  */
+
+
+@media(max-width:550px){
+  .sliderDiv{
+    max-width: 350px;
+  }
+}

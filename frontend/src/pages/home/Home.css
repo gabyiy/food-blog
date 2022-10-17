@@ -73,3 +73,9 @@
   justify-content: center;
   margin: 20px 0 20px 0;
 }
+
+@media (max-width:550px){
+  .section2_main{
+    margin-top: 30px;
+  }
+}
