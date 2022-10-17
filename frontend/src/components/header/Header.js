@@ -26,11 +26,12 @@ const Header = () => {
   const [loginActive, setLoginActive] = useState(false);
   const [profileActive, setProfileActivate] = useState(false);
 
-  const setHomeActivator = () => {
+  const homeActivator = () => {
     setHomeActive(true);
     setRegisterActive(false);
     setLoginActive(false);
     setRecipesActive(false);
+    setProfileActivate(false)
   };
   const recipeActivator = () => {
     setHomeActive(false);
@@ -60,13 +61,13 @@ const Header = () => {
   };
   return (
     <div>
-    <div className="head border_b">
+    {/* <div className="head border_b">
       <nav className="navbar navbar-expand-lg navbar-light main_div ">
         <div className="container-fluid ">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div
               className="navbar-brand logo"
-              onClick={() => setHomeActivator()}
+              onClick={() => homeActivator()}
             >
               {" "}
               Food Blog
@@ -128,7 +129,7 @@ const Header = () => {
               id="navbarNav"
             >
               <ul className="navbar-nav  ">
-                <li className="nav-item " onClick={() => setHomeActivator()}>
+                <li className="nav-item " onClick={() => homeActivator()}>
                   <Link
                     className={
                       homeActive ? "nav-link links active" : "nav-link links "
@@ -188,34 +189,38 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </div> */}
 
 
 <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
       <Container  >
-        <Navbar.Brand  href="#home" className="logo">Food Blog</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className='m-auto' />
+        <Navbar.Brand  href="#home" className="logo"    onClick={() => homeActivator()}>Food Blog</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className=' navBarTogler' />
         <Navbar.Collapse id="responsive-navbar-nav"  className='m-auto'>
           <Nav className="me-auto"> 
           </Nav>
-          <Nav>
-          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <Nav    className="mr-auto my-2 my-lg-0 navDrop"
+                              
+                                navbarScroll>
+                                {userInfo? <NavDropdown title={userInfo.name}  className= {profileActive ? "dropdown active" : "dropdown"} onClick={() => profileActivator()} id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1"  onClick={signoutHandler}>Sign Out</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+             Profile
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-            
-            </NavDropdown>
-            <Nav.Link href="#deets" className="links">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes" className="links">
-              Dank memes
+                        
+            </NavDropdown>:""}
+         
+            <Nav.Link href="#deets"  className={homeActive?"links active":"links"} onClick={() => homeActivator()}>Home</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes" className={recipesActive?"links active":"links"} onclick={()=>recipeActivator()} >
+           Recipes
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   
+
+
    
   </div>
   

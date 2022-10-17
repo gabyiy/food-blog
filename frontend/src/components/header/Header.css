@@ -30,7 +30,9 @@
   transform: translateX(0);
 }
 
-
+#collasible-nav-dropdown{
+  color: black!important;
+}
 .containerNavBar{
   justify-content: center;
   align-items: center;
@@ -75,4 +77,13 @@
   color: black !important;
   line-height: 1.5rem;
   text-transform: uppercase;
+}
+
+
+@media(max-width:550px){
+  .navDrop{
+justify-content: center;
+align-items: center;
+  }
+
 }
