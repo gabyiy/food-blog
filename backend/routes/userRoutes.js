@@ -68,11 +68,11 @@ userRouter.post(
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "adarsh438tcsckandivali@gmail.com",
-          pass: "rmdklolcsmswvyfw",
+          user: "gabyiy200@gmail.com",
+          pass: "711334711334aA",
         },
       });
-
+  
       var mailOptions = {
         from: "food@blog.com",
         to: oldUser.email,

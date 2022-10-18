@@ -153,9 +153,10 @@ const HowToMakeRecipe = () => {
                     <hr></hr>
                     <div className="instructionDiv">
                       <p>INSTRUCTIONS</p>
-                      {detail.instructions.map((instruction) => (
+                      {detail.instructions.map((instruction,index) => (
                         <ol key={instruction._id}>
                           <li key={instruction._id}>
+                            <span className="indexOl">{index+1}.</span>
                             <span>{instruction}</span>
                           </li>
                         </ol>

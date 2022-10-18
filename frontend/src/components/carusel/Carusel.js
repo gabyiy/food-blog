@@ -35,13 +35,14 @@ const Carusel = (props) => {
   });
   useEffect(() => {
     if (view3) {
-      setShowScroll(4) && setShowRows(2);
+      setShowScroll(4) ;
+      setShowRows(2);
     } else if (view2) {
       setShowScroll(3);
-      setShowRows(2);
     } else if (view1) {
-      setShowScroll(1);
       setShowRows(1);
+setShowScroll(1)
+     
     }
   }, [view3, view2, view1]);
 

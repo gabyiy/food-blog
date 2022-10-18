@@ -7,8 +7,17 @@ a {
   text-decoration: none;
 }
 .mainContainer {
-  width: 50rem;
   height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mai{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
 }
 .title {
   font-size: 2.6rem;
@@ -255,6 +264,16 @@ a {
   color: white;
 }
 
+
+ol li{
+  list-style-type: none;
+}
+span.indexOl{
+  padding-right: 5px;
+  color: rgba(114, 63, 95, 0.9);
+  font-size: 20px;
+  font-weight: 700;
+}
 @media (max-width: 550px) {
   .mainContainer {
     width: auto;
