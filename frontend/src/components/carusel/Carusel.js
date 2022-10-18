@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import Slider from "react-slick";
 import axios from "axios";
-import Footer from "../footer/Footer"
+import Footer from "../footer/Footer";
 import { useMediaQuery } from "react-responsive";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-import "./Carusel.css"
+import "./Carusel.css";
 import { Link } from "react-router-dom";
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,8 +22,8 @@ const reducer = (state, action) => {
 };
 
 const Carusel = (props) => {
-  const [showScroll,setShowScroll]= useState()
-
+  const [showScroll, setShowScroll] = useState();
+  const [showRows, setShowRows] = useState();
   const view1 = useMediaQuery({
     query: "(max-width: 550px)",
   });
@@ -33,15 +33,17 @@ const Carusel = (props) => {
   const view3 = useMediaQuery({
     query: "(min-width: 1170px)",
   });
-useEffect(()=>{
-  if(view3){
-    setShowScroll(4) 
-  }else if (view2){
-    setShowScroll(3)
-  }else if(view1) (
-    setShowScroll(1)
-  )
-},[view3,view2,view1])
+  useEffect(() => {
+    if (view3) {
+      setShowScroll(4) && setShowRows(2);
+    } else if (view2) {
+      setShowScroll(3);
+      setShowRows(2);
+    } else if (view1) {
+      setShowScroll(1);
+      setShowRows(1);
+    }
+  }, [view3, view2, view1]);
 
   const sliderRef = useRef(null);
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
@@ -66,25 +68,27 @@ useEffect(()=>{
   console.log(sliderRef);
   return (
     <div className="caruselPageDiv">
-      <div className="mainSliderDiv">
-       
-
-      </div>
+      <div className="mainSliderDiv"></div>
       <div className="sliderDiv">
-      <Slider ref={sliderRef}  slidesToShow={showScroll} slidesToScroll={showScroll} dots={true} speed={500} rows={2} className="slider">
+        <Slider
+          ref={sliderRef}
+          slidesToShow={showScroll}
+          slidesToScroll={showScroll}
+          dots={true}
+          speed={500}
+          rows={showRows}
+          className="slider"
+        >
           {recipes.map((recipe) => (
             <Link to={`/recipes/${recipe.name}`}>
-            <div className="mainCaruselMap">
-            <div className="imgContainerCarusel">
-              <img className="imgCarusel"
-         
-                src={recipe.icon} alt="img"
-              />
+              <div className="mainCaruselMap">
+                <div className="imgContainerCarusel">
+                  <img className="imgCarusel" src={recipe.icon} alt="img" />
+                </div>
+                <div className="carsuelRecipeName">
+                  <p className="pName">{recipe.name}</p>
+                </div>
               </div>
-              <div className="carsuelRecipeName">
-                <p className="pName">{recipe.name}</p>
-              </div>
-            </div>
             </Link>
           ))}
         </Slider>
@@ -94,19 +98,16 @@ useEffect(()=>{
             onClick={() => sliderRef.current.slickPrev()}
           >
             {" "}
-  
-            <ArrowBackIosNewIcon/> 
+            <ArrowBackIosNewIcon />
           </div>
           <div
             className="buttonCaruselNext"
             onClick={() => sliderRef.current.slickNext()}
-          >   
-          <ArrowForwardIosIcon/> 
+          >
+            <ArrowForwardIosIcon />
           </div>
         </div>
-        
       </div>
-   
     </div>
   );
 };

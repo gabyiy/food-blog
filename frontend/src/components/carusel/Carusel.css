@@ -1,4 +1,4 @@
- .caruselPageDiv {
+.caruselPageDiv {
   justify-content: center;
   margin-bottom: 30px;
   display: flex;
@@ -9,7 +9,7 @@
   margin-right: 10px;
   width: auto;
   height: 1rem;
-} 
+}
 
 .buttonsCaruselDiv {
   display: flex;
@@ -86,7 +86,7 @@
 }
 .slick-slider {
   align-items: center;
-} 
+}
 
 /* asa scoatem arrow default la slick*/
 .slick-next::before {
@@ -116,9 +116,11 @@
   }
 }  */
 
-
-@media(max-width:550px){
-  .sliderDiv{
-    max-width: 350px;
+@media (max-width: 550px) {
+  .sliderDiv {
+    max-width: 300px;
+  }
+  .pName {
+    padding-bottom: 20px;
   }
 }

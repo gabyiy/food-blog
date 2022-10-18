@@ -1,3 +1,4 @@
+import ExitToApp from "@mui/icons-material/ExitToApp";
 import axios from "axios";
 import React, { useState, useReducer, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -39,6 +40,7 @@ const RecoverPassword = () => {
       dispach({ type: "FETCH_SUCCESS", payload: data });
       ctxDispatch({ type: "USER_RESET", payload: data });
       localStorage.setItem("userReset", JSON.stringify(data));
+      toast.success("Email for recover you'r password sent");
       navigate("/");
     } catch (err) {
       toast.error(getError(err));
@@ -52,7 +54,7 @@ const RecoverPassword = () => {
         <div className="register_header">
           <div className="header">
             <Link className="link" to="/">
-              <span>x</span>
+              <ExitToApp className="exitToApp" />
             </Link>
           </div>
           <h1>Recover Password</h1>
@@ -62,6 +64,7 @@ const RecoverPassword = () => {
           <div className="reg_line">
             <div className="wrap_input  ">
               <input
+                className="email_password"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
               />

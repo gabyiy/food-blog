@@ -5,8 +5,7 @@ import { Store } from "../../Store.js";
 import Axios from "axios";
 import { toast } from "react-toastify";
 import { getError } from "../../utils.js";
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -50,7 +49,7 @@ const Register = () => {
         <div className="register_header">
           <div className="header">
             <Link className="link" to="/">
-          <ExitToAppIcon/>
+              <ExitToAppIcon className="exitToApp" />
             </Link>
           </div>
           <h1>Register</h1>
@@ -82,6 +81,7 @@ const Register = () => {
           <div className="reg_line">
             <div className="wrap_input   ">
               <input
+                className="email_password"
                 placeholder="Enter Password"
                 name="password"
                 type="password"
@@ -107,9 +107,7 @@ const Register = () => {
           </div>
         </form>
       </div>
-   
     </div>
-   
   );
 };
 

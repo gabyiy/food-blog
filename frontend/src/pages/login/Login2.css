@@ -127,3 +127,12 @@
 .recoverPasswordLink {
   text-align: center;
 }
+
+@media (max-width: 550px) {
+  .main_register {
+    width: 350px !important;
+  }
+  .email_password {
+    width: 320px !important;
+  }
+}

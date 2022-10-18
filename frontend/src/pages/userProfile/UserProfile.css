@@ -69,13 +69,17 @@
   filter: brightness(85%);
 }
 
-
-@media(max-width:550px){
-  .divFormReset{
- margin: 0 10px 30px 10px;
- 
+@media (max-width: 550px) {
+  .divFormReset {
+    margin: 0 10px 30px 10px;
   }
-.formReset input{
-  width: 150px;
-}
+  .formReset input {
+    width: 150px;
+  }
+  .spanP {
+    margin-top: 20px;
+  }
+  .spanP p {
+    font-size: 15px;
+  }
 }

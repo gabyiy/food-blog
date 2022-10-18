@@ -255,25 +255,29 @@ a {
   color: white;
 }
 
-
-@media(max-width:550px){
-  .mainContainer{
+@media (max-width: 550px) {
+  .mainContainer {
     width: auto;
-  display:flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .howToMakeMainDiv{
+  div.mai {
+    width: 350px;
+  }
+  .howToMakeMainDiv {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
   }
-  .allImg{
+  .allImg {
     padding: 0;
   }
-  .textArea{
+  .textArea {
     width: 20rem;
   }
-#recipe{
-  margin: 0;
-}
+  #recipe {
+    margin: 0;
+  }
 }
