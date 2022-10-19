@@ -167,8 +167,8 @@ const HowToMakeRecipe = () => {
               </div>
             ))}
 
-            <div>
-              <h2>Reviews</h2>
+            <div className="reviewDiv">
+              <h2 className="writeReview" >Reviews</h2>
               {recipe.reviews.length === 0 && (
                 <MessageBox>
                   <p className="noMessageBox"> There are no reviews</p>
@@ -189,7 +189,7 @@ const HowToMakeRecipe = () => {
                     <div className="formDiv">
                       <form onSubmit={submitHandler}>
                         <div className="h2FormDiv">
-                          <h2>Write a review</h2>
+                          <h2 >Write a review</h2>
                         </div>
                         <div>
                           <textarea
@@ -200,13 +200,13 @@ const HowToMakeRecipe = () => {
                         </div>
                         <div className="divButtonCommit">
                           <button type="submit" className="buttonComment">
-                            POST COMMENT
+                            POST REVIEW
                           </button>
                         </div>
                       </form>
                     </div>
                   ) : (
-                    <div>You need to login to leave a cmment</div>
+                    <div>You need to login to leave a review</div>
                   )}
                 </li>
               </ul>

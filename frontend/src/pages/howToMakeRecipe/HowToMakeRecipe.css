@@ -212,6 +212,10 @@ a {
   color: black;
   font-weight: 500;
 }
+
+.reviewDiv{
+  width: 100%;
+}
 .ulReviews {
   padding: 0;
 }
@@ -239,7 +243,6 @@ a {
   width: 100%;
   height: fit-content;
   background-color: #e6e6e6;
-  padding: 10px 0 0 10px;
 
   text-align: center;
 }
@@ -274,6 +277,9 @@ span.indexOl{
   font-size: 20px;
   font-weight: 700;
 }
+.writeReview{
+  text-align: center;
+}
 @media (max-width: 550px) {
   .mainContainer {
     width: auto;
@@ -294,7 +300,7 @@ span.indexOl{
     padding: 0;
   }
   .textArea {
-    width: 20rem;
+    width: 23rem;
   }
   #recipe {
     margin: 0;
