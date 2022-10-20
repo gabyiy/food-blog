@@ -65,10 +65,7 @@ const Header = () => {
   console.log(homeActive);
   return (
     <div>
-    
-
       <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
-    
         <Container className="containerHead">
           <Navbar.Brand className="logo" onClick={() => homeActivator()}>
             <Link to="/" className="linksHeader">
@@ -145,11 +142,8 @@ const Header = () => {
                 ""
               )}
             </Nav>
-            
           </Navbar.Collapse>
-        
         </Container>
-    
       </Navbar>
       <div className="hrHeader"></div>
     </div>
