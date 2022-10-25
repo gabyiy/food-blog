@@ -5,6 +5,7 @@ import LoadingBox from "../../components/LoadingBox";
 import { Store } from "../../Store";
 import MessageBox from "../../components/messageBox/MessageBox.js";
 import "./HowToMakeRecipe.css";
+import Header from "../../components/header/Header";
 
 const reducer = (state, action) => {
   const navigate = useNavigate;
@@ -68,7 +69,8 @@ const HowToMakeRecipe = () => {
   console.log();
 
   return (
-  
+    <div>
+      <Header />
       <div className="mainContainer">
         {loading ? (
           <LoadingBox></LoadingBox>
@@ -153,10 +155,10 @@ const HowToMakeRecipe = () => {
                     <hr></hr>
                     <div className="instructionDiv">
                       <p>INSTRUCTIONS</p>
-                      {detail.instructions.map((instruction,index) => (
+                      {detail.instructions.map((instruction, index) => (
                         <ol key={instruction._id}>
                           <li key={instruction._id}>
-                            <span className="indexOl">{index+1}.</span>
+                            <span className="indexOl">{index + 1}.</span>
                             <span>{instruction}</span>
                           </li>
                         </ol>
@@ -168,7 +170,7 @@ const HowToMakeRecipe = () => {
             ))}
 
             <div className="reviewDiv">
-              <h2 className="writeReview" >Reviews</h2>
+              <h2 className="writeReview">Reviews</h2>
               {recipe.reviews.length === 0 && (
                 <MessageBox>
                   <p className="noMessageBox"> There are no reviews</p>
@@ -189,7 +191,7 @@ const HowToMakeRecipe = () => {
                     <div className="formDiv">
                       <form onSubmit={submitHandler}>
                         <div className="h2FormDiv">
-                          <h2 >Write a review</h2>
+                          <h2>Write a review</h2>
                         </div>
                         <div>
                           <textarea
@@ -214,6 +216,7 @@ const HowToMakeRecipe = () => {
           </div>
         )}
       </div>
+    </div>
   );
 };
 

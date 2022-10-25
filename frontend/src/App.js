@@ -28,7 +28,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
         <ToastContainer position="bottom-center" limit={1} />
 
         <Routes>

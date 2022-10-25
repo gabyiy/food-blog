@@ -54,6 +54,8 @@ const Home = () => {
 
   return (
     <>
+      <Header />
+
       <main className="main">
         <section>
           <div className="intro">

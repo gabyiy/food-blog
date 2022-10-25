@@ -6,6 +6,7 @@ import { Store } from "../../Store";
 import Footer from "../../components/footer/Footer";
 import Carusel from "../../components/carusel/Carusel";
 import LoadingBox from "../../components/LoadingBox";
+import Header from "../../components/header/Header";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -50,51 +51,56 @@ const Recipe = () => {
     fetchMainRecipe();
   }, [name]);
 
-  return loading ? (
+  return (
     <div>
-      <LoadingBox></LoadingBox>
-    </div>
-  ) : error ? (
-    <div>Eroror</div>
-  ) : (
-    <div>
-      <div className="section1">
-        <div className="mainDiv">
-          <div className="imgFeatures">
-            <div>
-              <img src={recipe.icon} className="recipeImgR" alt="img" />
-            </div>
-            <div className="featuredLink">
-              <div>
-                <span className="featuredRecipe">FEATURED RECIPE:</span>
-              </div>
-
-              <Link to={`/recipes/howIsMade/${recipe._id}`}>
-                <div className="spanFeature linkFeature">
-                  <span>{recipe.featured}</span>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="nameDescription">
-            <div>
-              <span className="recipeName">{recipe.name} Recipe</span>
-            </div>
-            <div>
-              <p className="descriptionP">{recipe.description}</p>
-            </div>
-          </div>
+      <Header />
+      {loading ? (
+        <div>
+          <LoadingBox></LoadingBox>
         </div>
-      </div>
+      ) : error ? (
+        <div>Eroror</div>
+      ) : (
+        <div>
+          <div className="section1">
+            <div className="mainDiv">
+              <div className="imgFeatures">
+                <div>
+                  <img src={recipe.icon} className="recipeImgR" alt="img" />
+                </div>
+                <div className="featuredLink">
+                  <div>
+                    <span className="featuredRecipe">FEATURED RECIPE:</span>
+                  </div>
 
-      <div className="caruselHeader">
-        <p>
-          <i class="fa fa-thin fa-trophy"></i>
-        </p>
-        <h1>More Easy to Make Recipes</h1>
-      </div>
-      <Carusel />
-      <Footer />
+                  <Link to={`/recipes/howIsMade/${recipe._id}`}>
+                    <div className="spanFeature linkFeature">
+                      <span>{recipe.featured}</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="nameDescription">
+                <div>
+                  <span className="recipeName">{recipe.name} Recipe</span>
+                </div>
+                <div>
+                  <p className="descriptionP">{recipe.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="caruselHeader">
+            <p>
+              <i class="fa fa-thin fa-trophy"></i>
+            </p>
+            <h1>More Easy to Make Recipes</h1>
+          </div>
+          <Carusel />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };

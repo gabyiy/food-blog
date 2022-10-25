@@ -90,7 +90,7 @@ const ResetPassword = () => {
         </div>
       ) : (
         <div className="page_blur">
-          <div className="main_register">
+          <div className="main_register resetMain">
             <div className="register_header">
               <h1>Password Changed</h1>
             </div>
