@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "slick-carousel/slick/slick.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -24,7 +24,7 @@ const App = () => {
   const { state } = useContext(Store);
   const { userReset } = state;
 
-  console.log(userReset);
+  console.log(userReset.oldUser.token);
   return (
     <BrowserRouter>
       <div className="app">
@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/recipes/howIsMade/:_id" element={<HowToMakeRecipe />} />
           <Route path="search" element={<SearchScreen />} />
           <Route path="/recover" element={<RecoverPassword />} />
-      
+
           {!userReset ? (
             ""
           ) : (

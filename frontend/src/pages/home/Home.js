@@ -10,6 +10,7 @@ import SearchAll from "../../components/searchAll/SearchAll";
 import Footer from "../../components/footer/Footer";
 import { Store } from "../../Store";
 import { toast } from "react-toastify";
+import Header from "../../components/header/Header";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -25,8 +26,10 @@ const reducer = (state, action) => {
 };
 
 const Home = () => {
-  const {state,dispach:ctxDispatch}=useContext(Store)
-  const {recipess}=state
+  const { state, dispach: ctxDispatch } = useContext(Store);
+  const { userReset } = state;
+
+  console.log(userReset.oldUser.token);
 
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
     loading: false,
@@ -42,14 +45,12 @@ const Home = () => {
         const result = await axios.get("/api/recipes");
 
         dispach({ type: "FETCH_SUCCESS", payload: result.data });
-
       } catch (error) {
         dispach({ type: "FETCH_FAIL", payload: error.data });
       }
     };
     fetchMainRecipe();
   }, []);
-
 
   return (
     <>

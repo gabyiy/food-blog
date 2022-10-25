@@ -32,6 +32,7 @@ const Register = () => {
       ctxDispatch({ type: "USER_SIGNIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
       navigate("/");
+      toast.success("Register successfully");
     } catch (err) {
       toast.error(getError(err));
     }
