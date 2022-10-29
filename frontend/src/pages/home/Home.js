@@ -29,8 +29,6 @@ const Home = () => {
   const { state, dispach: ctxDispatch } = useContext(Store);
   const { userReset } = state;
 
-  console.log(userReset.oldUser.token);
-
   const [{ loading, error, recipes }, dispach] = useReducer(reducer, {
     loading: false,
     error: "",

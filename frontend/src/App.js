@@ -24,7 +24,6 @@ const App = () => {
   const { state } = useContext(Store);
   const { userReset } = state;
 
-  console.log(userReset.oldUser.token);
   return (
     <BrowserRouter>
       <div className="app">
