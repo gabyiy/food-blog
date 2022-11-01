@@ -35,6 +35,7 @@ const ResetPassword = () => {
     if (newPassword === confirmNewPassword) {
       setHome(true);
       toast.success("Password changed successfully");
+      navigate("/")
     }
     console.log(newPassword, confirmNewPassword);
   };
