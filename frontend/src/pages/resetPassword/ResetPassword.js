@@ -45,7 +45,6 @@ const ResetPassword = () => {
   //   console.log(newPassword, confirmNewPassword);
   // };
 
-  console.log(home);
   return (
     <div>
       {!home ? (

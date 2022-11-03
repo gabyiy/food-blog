@@ -121,7 +121,6 @@ userRouter.post(
     const password = req.body.newPassword;
     const confirmPassword = req.body.confirmNewPassword;
 
-    console.log( req.body.newPassword);
     const oldUser = await User.findOne({ _id: id });
     if (!oldUser) {
       return res.json({ status: "User Not Exists!!" });
