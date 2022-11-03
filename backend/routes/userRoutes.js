@@ -65,9 +65,9 @@ userRouter.post(
         secret,
         { expiresIn: "5m" }
       );
-      const link = `https://food-blog-gabi.herokuapp.com/reset-password/${oldUser._id}/${token}`;
+      //    const link = `https://food-blog-gabi.herokuapp.com/reset-password/${oldUser._id}/${token}`;
 
-      // const link = `http://localhost:3000/reset-password/${oldUser._id}/${token}`;
+      const link = `http://localhost:3000/reset-password/${oldUser._id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -121,6 +121,7 @@ userRouter.post(
     const password = req.body.newPassword;
     const confirmPassword = req.body.confirmNewPassword;
 
+    console.log( req.body.newPassword);
     const oldUser = await User.findOne({ _id: id });
     if (!oldUser) {
       return res.json({ status: "User Not Exists!!" });
