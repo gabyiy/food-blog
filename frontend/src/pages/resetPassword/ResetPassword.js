@@ -35,7 +35,7 @@ const ResetPassword = () => {
       toast.error(getError(err));
     }
 
-
+  };
 
   // const ifPasswordMatch = () => {
   //   if (newPassword === confirmNewPassword) {
