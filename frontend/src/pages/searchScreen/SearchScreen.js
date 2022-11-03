@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 import './SearchScreen.css';
 import { PrevBtn } from '../../components/prevNextBtn/PrevBtn.js';
 import { NextBtn } from '../../components/prevNextBtn/NextBtn.js';
+import Header from '../../components/header/Header.js';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -60,6 +61,7 @@ const SearchScreen = () => {
 
   return (
     <div>
+    <Header />
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

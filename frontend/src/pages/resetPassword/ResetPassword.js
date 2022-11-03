@@ -36,7 +36,6 @@ const ResetPassword = () => {
     }
 
 
-  };
 
   // const ifPasswordMatch = () => {
   //   if (newPassword === confirmNewPassword) {
