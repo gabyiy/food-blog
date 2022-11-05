@@ -18,6 +18,11 @@ const ResetPassword = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
+    if (newPassword === confirmNewPassword) {
+      setHome(true);
+       toast.success("Password changed successfully");
+       navigate("/")
+     }
     try {
       const { data } = await axios.post(
         `/api/users/reset-password/${userReset.oldUser._id}/${userReset.token}`,
@@ -29,16 +34,16 @@ const ResetPassword = () => {
     } catch (err) {
       toast.error(getError(err));
     }
-  };
 
-  const ifPasswordMatch = () => {
-    if (newPassword === confirmNewPassword) {
-      setHome(true);
-      toast.success("Password changed successfully");
-     // navigate("/")
-    }
-    console.log(newPassword, confirmNewPassword);
-  };
+   };
+
+  // const ifPasswordMatch = () => {
+  //   if (newPassword === confirmNewPassword) {
+  //     setHome(true);
+  //     toast.success("Password changed successfully");
+  //   }
+  //   console.log(newPassword, confirmNewPassword);
+  // };
 
   return (
     <div>
@@ -81,7 +86,7 @@ const ResetPassword = () => {
                 <button
                   className="btn_register"
                   type="submit"
-                  onClick={ifPasswordMatch}
+                 // onClick={ifPasswordMatch}
                 >
                   Change Password
                 </button>
