@@ -1,8 +1,14 @@
+.userProfilePage{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
 .mainDivUserProfile {
   display: flex;
   padding-top: 50px;
   flex-direction: column;
   text-align: center;
+  flex-grow: 1;
 }
 .divFormReset {
   display: flex;
@@ -69,6 +75,10 @@
   filter: brightness(85%);
 }
 
+/* .botomDiv{
+  height: 14vh;
+} */
+
 @media (max-width: 550px) {
   .divFormReset {
     margin: 0 10px 30px 10px;
@@ -81,5 +91,8 @@
   }
   .spanP p {
     font-size: 15px;
+  }
+  .botomDiv{
+    height: auto;
   }
 }

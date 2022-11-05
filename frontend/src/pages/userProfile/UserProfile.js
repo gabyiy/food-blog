@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
 import Footer from "../../components/footer/Footer";
+import Header from '../../components/header/Header.js';
 
 import "./UserProfile.css";
 
@@ -57,6 +58,9 @@ const UserProfile = () => {
     }
   };
   return (
+    <div className="userProfilePage">
+        <Header/>
+
     <div className="mainDivUserProfile">
       <div className="spanReset">
         <span>Wellcome {userInfo.name} </span>
@@ -97,8 +101,12 @@ const UserProfile = () => {
           </button>
         </form>
       </div>
-      <Footer/>
+     <div className="botomDiv">
+
+     </div>
     </div>
+    <Footer/>
+  </div>
   );
 };
 
